@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-STATUS = ((0, "Draft"). (1, "Publoshed"))
+STATUS = ((0, "Draft"), (1, "Publoshed"))
 
 """
 class Post(models.Model):
@@ -48,6 +48,8 @@ class WorkoutSession(models.Model):
         if not self.slug:
             self.slug = self.generate_slug()
         super(WorkoutSession, self).save(*args, **kwargs)
+
+
 """
     class Meta:
         ordering = ["-created_on"]
