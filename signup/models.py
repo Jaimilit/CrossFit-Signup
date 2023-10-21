@@ -10,8 +10,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
-    # Add the 'slug' field
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True,
+                            default="default-slug")
     date = models.DateField()
     session_creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="created_sessions"
