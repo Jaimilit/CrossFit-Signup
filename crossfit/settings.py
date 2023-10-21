@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com',
-                 'crossfit-signup.herokuapp.com', 'crossfit-signup-4bbbc5fa58ea.herokuapp.com', 'localhost']
+                 'crossfit-signup.herokuapp.com', 'crossfit-signup-4bbbc5fa58ea.herokuapp.com', 'http://8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com/' 'localhost']
 
 
 # Application definition
