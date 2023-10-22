@@ -19,5 +19,18 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(' ', include("signup.urls"), name="signup-urls"),
+    path('summernote/', include('django_summernote.urls')),
+
+]
+
+"""
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", include("blog.urls"), name="blog-urls"),
     path('summernote/', include('django_summernote.urls')),
 ]
+"""
