@@ -4,13 +4,12 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(WorkoutSession)
-class PostAdmin(SummernoteModelAdmin):
-
-   list_display = ('title', 'date', 'session_creator', 'status', 'created_on')
-   search_fields = ['title', 'content']
-   list_filter = ('status', 'created_on')
-   prepopulated_fields = {'slug': ('title',)}
-   summernote_fields = ('content',)
+class WorkoutSessionAdmin(SummernoteModelAdmin):
+    list_display = ('title', 'date', 'session_creator')
+    search_fields = ['title', 'content']
+    list_filter = ('date', 'session_creator')
+    prepopulated_fields = {'slug': ('title',)}
+    summernote_fields = ('content',)
 
 
 """
