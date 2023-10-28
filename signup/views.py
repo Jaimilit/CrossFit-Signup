@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import WorkoutSession
+from .forms import UserForm
 
 
 class WorkoutSession(generic.ListView):
@@ -26,6 +27,7 @@ class PostDetail(View):
                 "session": session,
                 "instructor": instructor,
                 "signed_up_count": signed_up_count,
+                "user_form": UserForm()
             },
         )
 
