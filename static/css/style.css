@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #23BBBB;
 }
 
 .brand {
@@ -9,14 +9,19 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+.navbar {
+    letter-spacing: 0.25rem;
+    background-color: #22577a;
+    margin-bottom: 0;
+    border: 0;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    z-index: 1000;
 }
 
-.thin {
-    font-weight: 300;
+text, h1 {
+    color: lightgray;
 }
-
 .light-bg {
     background-color: #fff;
 }
@@ -26,7 +31,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #4A4A4F;
 }
 
 .card {
@@ -140,3 +145,41 @@ body {
     background: transparent;
     border: none;
 }
+
+ #times {
+     background-image: url('../css/images/dublin-city.webp');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     overflow: hidden;
+
+ }
+
+ #times div {
+     color: #fafafa;
+     background-color: rgb(0, 0, 0, 0.6);
+     width: 20%;
+     height: 300px;
+     float: left;
+     padding-top: 30px 0 0 10px;
+     text-align: center;
+     border: 2px solid white;
+     box-sizing: border-box;
+ }
+
+ #times h2 {
+     color: #fafafa;
+ }
+
+ .calendar {
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     /* 7 columns for days of the week */
+ }
+
+ .day {
+     border: 1px solid #ccc;
+     padding: 10px;
+     text-align: center;
+ }
