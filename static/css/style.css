@@ -1,6 +1,7 @@
 body {
     font-family: 'Edu TAS Beginner', cursive;
     font-family: 'Montserrat', sans-serif;
+    color: black;
 }
 
 
@@ -61,7 +62,6 @@ text, h1 {
     text-align: center;
  }
 
-
  .row {
     background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
     background-position: center;
@@ -71,7 +71,84 @@ text, h1 {
     opacity: 0.2;
  }
 
- .services {
-    color: black;
-    opacity: 1;
+ body {
+     font-family: 'Edu TAS Beginner', cursive;
+     font-family: 'Montserrat', sans-serif;
+     color: black;
+ }
+
+
+
+ .navbar {
+     letter-spacing: 0.25rem;
+     margin-bottom: 0;
+     border: 0;
+     letter-spacing: 4px;
+     opacity: 0.9;
+     font-weight: bold;
+ }
+
+ .navbar-nav.ml-auto {
+     margin-right: auto;
+ }
+
+
+
+ .navbar-nav li a:hover {
+     color: #c7f9cc !important;
+ }
+
+
+ text,
+ h1 {
+     color: lightgray;
+     padding: 20px;
+     font-weight: 900;
+     text-align: center;
+ }
+
+ .light-bg {
+     background-color: #fff;
+ }
+
+
+ .home-overlay {
+     background-color: rgba(34, 87, 122, 0.7);
+     padding: 20px;
+     max-width: 800px;
+ }
+
+ .main-bg {
+     background-color: #4A4A4F;
+ }
+
+ .calendar {
+     margin: 10px;
+     display: grid;
+     grid-template-columns: repeat(7, 1fr);
+     color: whitesmoke;
+     /* 7 columns for days of the week */
+ }
+
+ .day {
+     border: 1px solid #ccc;
+     padding: 10px;
+     text-align: center;
+ }
+
+ .row {
+     background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 1rem;
+     opacity: 0.2;
+ }
+
+ .services h3,
+ .services p {
+     color: black;
+     /* Set the text color to black */
+     opacity: 1;
+     /* Make sure the text is fully opaque */
  }
