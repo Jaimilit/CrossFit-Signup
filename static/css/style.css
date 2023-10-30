@@ -18,107 +18,60 @@ body {
     margin-right: auto;
 }
 
+
+
 .navbar-nav li a:hover {
     color: #c7f9cc !important;
 }
 
-.nav-text {
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    font-weight: 500;
-}
 
 text, h1 {
     color: lightgray;
+    padding: 20px;
+    font-weight: 900;
+    text-align: center;
 }
+
 .light-bg {
     background-color: #fff;
+}
+
+
+.home-overlay {
+    background-color: rgba(34, 87, 122, 0.7);
+    padding: 20px;
+    max-width: 800px;
 }
 
 .main-bg {
     background-color: #4A4A4F;
 }
 
-.bg-photo {
-    background-image: url('https://www.pexels.com/photo/man-and-woman-holding-battle-ropes-1552242/');
-    color: whitesmoke;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 75vh;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
  .calendar {
-     display: grid;
-     grid-template-columns: repeat(7, 1fr);
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     color: whitesmoke;
      /* 7 columns for days of the week */
  }
 
  .day {
-     border: 1px solid #ccc;
-     padding: 10px;
-     text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
  }
 
 
- h1 {
-    text-align: center;
+ .row {
+    background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    opacity: 0.2;
+ }
+
+ .services {
+    color: black;
+    opacity: 1;
  }
