@@ -13,8 +13,8 @@ body {
     font-weight: bold;
 }
 
-.navbar-nav.ml-auto {
-    margin-right: auto;
+.navbar-nav {
+    margin-left: auto;
 }
 
 .navbar-nav li a:hover {
