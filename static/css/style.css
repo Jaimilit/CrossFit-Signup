@@ -1,5 +1,4 @@
 body {
-    font-family: 'Edu TAS Beginner', cursive;
     font-family: 'Montserrat', sans-serif;
     color: black;
 }
@@ -8,13 +7,20 @@ body {
     letter-spacing: 0.25rem;
     margin-bottom: 0;
     border: 0;
-    letter-spacing: 4px;
     opacity: 0.9;
     font-weight: bold;
 }
 
 .navbar-nav {
     margin-left: auto;
+}
+
+.navbar-brand {
+  float: left;
+}
+
+.nav-item {
+    margin: 0 20px;
 }
 
 .navbar-nav li a:hover {
@@ -85,8 +91,8 @@ text, h1 {
 
 .row::before {
     content: "";
-    background: rgba(0, 0, 0, 0.7);
     position: absolute;
+    background: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     width: 100%;
