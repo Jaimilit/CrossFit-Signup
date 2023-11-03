@@ -107,3 +107,40 @@ text, h1 {
     position: relative;
     z-index: 1;
 }
+
+/*login
+
+#logout */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    background-color: #22577a !important;
+    border-color: #22577a !important;
+}
+
+.btn-secondary:hover {
+    background-color: #38A3A5 !important;
+    color: white;
+    border-color: #22577a !important;
+}
