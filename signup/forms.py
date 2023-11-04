@@ -3,7 +3,7 @@ from django import forms
 from .models import WorkoutSession
 from django.contrib.auth.models import User
 from allauth.account.forms import SignupForm
-
+# from .models import GymSession
 
 
 # User form
@@ -32,6 +32,14 @@ class CustomSignupForm(SignupForm):
 
 
 """
+class GymSessionBookingForm(forms.Form):
+    session_choices = forms.ModelChoiceField(
+        queryset=GymSession.objects.all(),
+        empty_label="Select a session",
+        widget=forms.RadioSelect,
+    )
+
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment

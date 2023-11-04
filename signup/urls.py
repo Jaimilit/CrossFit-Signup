@@ -14,4 +14,6 @@ from django.urls import path
 urlpatterns = [
     path("", views.PostList.as_view(), name="home"),
 ]
+   # path('booking/', views.booking, name='booking'),
+
 """
