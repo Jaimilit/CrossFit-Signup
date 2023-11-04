@@ -153,23 +153,23 @@ text, h1 {
 
 /* Style headers for forms */
 .signup, .login, .logout {
-    color: whitesmoke;
+    color: black;
     font-weight: 300;
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* Style the introductory message for forms*/
-.signup, .login p {
-    color: whitesmoke;
+.signup, .login, .logout p {
+    color: black;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
 /* Style the form container */
-form {
+.container {
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 20px;
