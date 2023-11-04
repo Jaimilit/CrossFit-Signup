@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+<!-- Load booking page based on trip selected -->
+{% block content %}
+<h2 class="mb-3 text-center">Express your interest in the {{ route_name }} trip on {{ trip_date }}</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-white text-center">
+                        <!-- Booking form -->
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            {{ form | crispy }}
+
+                            <button class="btn btn-dark mb-2 mt-3" type="submit">Submit Booking Interest</button>
+                        </form>
+                        <a class="btn btn-danger mb-2 mt-3" href="{% url 'booking' %}" role="button">Cancel and Return to
+                            Routes Summary</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {% endblock %}

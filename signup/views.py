@@ -59,6 +59,10 @@ def post(self, request, slug, *args, **kwargs):
             },
         )
 
+def booking(request):
+    # Your view logic here
+    return render(request, 'booking.html')
+
 
 """
 class PostList(generic.ListView):
