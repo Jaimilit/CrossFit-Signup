@@ -144,3 +144,61 @@ text, h1 {
     color: white;
     border-color: #22577a !important;
 }
+
+//* For forms - login & signup */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style headers for forms */
+.signup, .login {
+    color: whitesmoke;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style the introductory message for forms*/
+.signup, .login p {
+    color: whitesmoke;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Style the form container */
+form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Style the form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style form labels */
+label {
+    font-weight: bold;
+    color: black;
+}
+
+/* Style form input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style links within the introductory message */
+.link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
