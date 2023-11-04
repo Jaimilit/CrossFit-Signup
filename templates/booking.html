@@ -29,3 +29,50 @@
     <a class="btn btn-danger mt-3" href="{% url 'booking' %}" role="button">Cancel and Return to Routes Summary</a>
 </div>
 {% endblock %}
+
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page header -->
+<div class="container">
+    <div class="row pt-3">
+        <div class="col align-self-start">
+            <div class="mb-3">
+                <h3>All available routes:</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Route Cards-->
+<div class="container">
+    <div class="row">
+        {% for route in route_list %}
+        <div class="col-lg-3 col-md-6 my-3">
+            <div class="card h-100">
+                {% if "placeholder" in route.featured_image.url %}
+                <img class="card-img-top image-responsive"
+                    src="https://res.cloudinary.com/mt226/image/upload/v1661519817/pexels-rachel-claire-6760957-min_uyft32.jpg"
+                    alt="sailing image" style="max-height: 300px">
+                {% else %}
+                <img class="card-img-top image-responsive" src=" {{ route.featured_image.url }}" alt="destination image"
+                    style="max-height: 300px">
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-uppercase text-center">{{ route.route_name }}</h5>
+                    <p>{{ route.description }}</p>
+                    <p>Duration (days): {{ route.duration }}</p>
+                    <p>Distance (nautical miles): {{ route.distance }}</p>
+                    <a href="{% url 'trips' route.id %}" class="btn btn-primary mt-auto align-self-center">View
+                        trips</a>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:4 %}
+        <div class="row">
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
