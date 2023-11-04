@@ -152,7 +152,7 @@ text, h1 {
 }
 
 /* Style headers for forms */
-.signup, .login {
+.signup, .login, .logout {
     color: whitesmoke;
     font-weight: 300;
     margin-bottom: 20px;
