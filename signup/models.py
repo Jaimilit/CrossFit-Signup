@@ -7,9 +7,11 @@ from django.utils.text import slugify  # Import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True, default="default-slug")
+    slug = models.SlugField(max_length=200, unique=True,
+                            default="default-slug")
     date = models.DateField()
     time = models.TimeField(default='00:00')
     session_creator = models.ForeignKey(
@@ -22,6 +24,8 @@ class WorkoutSession(models.Model):
     content = models.TextField()
     attendees = models.ManyToManyField(
         User, related_name='signed_up_for', blank=True)
+
+    objects = models.Manager()  # Define the default manager for the model
 
     def __str__(self):
         return self.title

@@ -1,23 +1,19 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import WorkoutSession
 from .forms import UserForm
-# from .forms import GymSession
 
 
-class WorkoutSession(generic.ListView):
+class WorkoutSessionListView(generic.ListView):
     model = WorkoutSession
-    # queryset = WorkoutSession.objects.filter(status=1).order_by("-created_on")
     queryset = WorkoutSession.objects.order_by("date")
     template_name = "index.html"
     paginate_by = 6
 
 
 class PostDetail(View):
-
     def get(self, request, slug, *args, **kwargs):
-        workout_sessions = WorkoutSession.objects.filter(status=1)
-        session = get_object_or_404(workout_sessions, slug=slug)
+        session = get_object_or_404(WorkoutSession, slug=slug)
         instructor = session.session_creator
         signed_up_count = session.attendees.count()
 
@@ -32,37 +28,41 @@ class PostDetail(View):
             },
         )
 
-
-def post(self, request, slug, *args, **kwargs):
-
-        workout_sessions = WorkoutSession.objects.filter(status=1)
-        session = get_object_or_404(workout_sessions, slug=slug)
+    def post(self, request, slug, *args, **kwargs):
+        session = get_object_or_404(WorkoutSession, slug=slug)
         instructor = session.session_creator
         signed_up_count = session.attendees.count()
 
         user_form = UserForm(data=request.POST)
         if user_form.is_valid():
-            user_form.instance.email = request.user.email
-            user_form.instance.name = request.user.username
-            user.post = post
+            user = user_form.save(commit=False)
+            user.email = request.user.email
+            user.name = request.user.username
+            user.session = session  # Associate the user with the session
             user.save()
+            return redirect("post_detail", slug=slug)
         else:
-            user_form = UserForm()
+            return render(
+                request,
+                "post_detail.html",
+                {
+                    "session": session,
+                    "instructor": instructor,
+                    "signed_up_count": signed_up_count,
+                    "user_form": user_form,
+                },
+            )
 
-        return render(
-            request,
-            "post_detail.html",
-            {
-                "session": session,
-                "instructor": instructor,
-                "signed_up_count": signed_up_count,
-                "user_form": UserForm()
-            },
-        )
 
 def booking(request):
     # Your view logic here
     return render(request, 'booking.html')
+
+
+def home(request):
+    # Modify the query to suit your needs
+    workout_sessions = WorkoutSession.objects.all()
+    return render(request, "index.html", {"workout_sessions": workout_sessions})
 
 """
 def gym_session_booking(request):
