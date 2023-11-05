@@ -31,6 +31,12 @@ class CustomSignupForm(SignupForm):
         return user
 
 
+class BookingForm(forms.Form):
+    session = forms.ModelChoiceField(
+        queryset=WorkoutSession.objects.all(), empty_label="Select a session")
+    # Add more fields if needed
+
+
 """
 class GymSessionBookingForm(forms.Form):
     session_choices = forms.ModelChoiceField(

@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import WorkoutSession
 from .forms import UserForm
+from .forms import BookingForm
+
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -55,8 +57,20 @@ class PostDetail(View):
 
 
 def booking(request):
-    # Your view logic here
-    return render(request, 'booking.html')
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            selected_session = form.cleaned_data["session"]
+            booking = Booking(user=request.user, session=selected_session)
+            booking.save()
+            # You can add more booking logic here
+
+    else:
+        form = BookingForm()
+
+    sessions = WorkoutSession.objects.all()
+    context = {"form": form, "sessions": sessions}
+    return render(request, "booking.html", context)
 
 
 def home(request):

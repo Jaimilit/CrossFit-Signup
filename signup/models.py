@@ -38,6 +38,11 @@ class WorkoutSession(models.Model):
             self.slug = self.generate_slug()
         super(WorkoutSession, self).save(*args, **kwargs)
 
+        
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    session = models.ForeignKey(WorkoutSession, on_delete=models.CASCADE)
+
 """
 class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)

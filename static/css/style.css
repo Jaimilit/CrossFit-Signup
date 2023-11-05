@@ -145,11 +145,12 @@ text, h1 {
     border-color: #22577a !important;
 }
 
-//* For forms - login & signup */
+/* For forms - login & signup 
 .container {
     text-align: center;
     padding: 20px;
 }
+*/
 
 /* Style headers for forms */
 .signup, .login, .logout {
