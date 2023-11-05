@@ -3,7 +3,12 @@ from django.views import generic, View
 from .models import WorkoutSession
 from .forms import UserForm
 from .forms import BookingForm
-
+from django.views.generic.edit import FormView
+from django.db.models.functions import ExtractDay, ExtractMonth
+from django.db.models import IntegerField
+from django.db.models import F
+from django.db.models import CharField
+from django.db.models import Value
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -77,6 +82,45 @@ def home(request):
     # Modify the query to suit your needs
     workout_sessions = WorkoutSession.objects.all()
     return render(request, "index.html", {"workout_sessions": workout_sessions})
+
+
+class BookingView(View):
+    def get(self, request):
+        # Fetch sessions grouped by day and sorted by time
+        sessions = WorkoutSession.objects.annotate(
+            day=ExtractDay('date', output_field=IntegerField()),
+            month=ExtractMonth('date', output_field=IntegerField())
+        ).annotate(
+            day_name=Case(
+                When(day=1, then=Value("Monday")),
+                When(day=2, then=Value("Tuesday")),
+                When(day=3, then=Value("Wednesday")),
+                When(day=4, then=Value("Thursday")),
+                When(day=5, then=Value("Friday")),
+                When(day=6, then=Value("Saturday")),
+                When(day=7, then=Value("Sunday")),
+                default=Value("Unknown"),
+                output_field=CharField()
+            )
+        ).order_by('day', 'time')
+
+        context = {
+            'days': sessions,
+        }
+        return render(request, 'booking.html', context)
+
+    def post(self, request):
+        # Handle form submission and booking logic here
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            selected_session = form.cleaned_data['session']
+            booking = Booking(user=request.user, session=selected_session)
+            booking.save()
+            # You can add more booking logic here
+
+        sessions = WorkoutSession.objects.all()
+        context = {'form': form, 'sessions': sessions}
+        return render(request, 'booking.html', context)
 
 """
 def gym_session_booking(request):

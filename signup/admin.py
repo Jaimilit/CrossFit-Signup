@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(WorkoutSession)
 class WorkoutSessionAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'date', 'instructor_name', 'session_creator')
+    list_display = ('title', 'date', 'time', 'instructor_name')
     search_fields = ['title', 'content']
     list_filter = ('date', 'session_creator')
     prepopulated_fields = {'slug': ('title',)}

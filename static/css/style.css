@@ -203,3 +203,11 @@ input[type="password"] {
     text-decoration: none;
     font-weight: bold;
 }
+
+.calendar-booking {
+    float: left;
+    width: 100%;
+    margin-bottom: 0.9375rem;
+    border: 1px solid #c1c3c5;
+    background: lightgray;
+}

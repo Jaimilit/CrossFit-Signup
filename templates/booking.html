@@ -10,30 +10,39 @@
         {{ form | crispy }}
     </form>
 
-    <div class="row">
-        {% for session in sessions %}
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ session.time }}</h5>
-                    <p class="card-text">Instructor: {{ session.instructor }}</p>
-                    <p class="card-text">Signed Up: {{ session.signups }} / {{ session.max_capacity }}</p>
-
-                    <button type="submit">Book Session</button>
-                    </form>
-                    
-                    <!-- Display available sessions -->
-                    <ul>
-                        {% for session in sessions %}
-                        <li>{{ session.title }} - {{ session.date }} - {{ session.time }}</li>
-                        {% endfor %}
-                    </ul>
-              </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-
-    </div>
+    <table id="calendar-booking" class="calendar-booking">
+        <thead>
+            <tr>
+                <th class="day">Monday</th>
+                <th class="day">Tuesday</th>
+                <th class="day">Wednesday</th>
+                <th class="day">Thursday</th>
+                <th class="day">Friday</th>
+                <th class="day">Saturday</th>
+                <th class="day">Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for day in days %}
+            <tr>
+                {% for _ in "1234" %}
+                <td>
+                    <h4>{{ day.day_name }}</h4>
+                    <div class="session-box">
+                        <strong>Title:</strong> {{ session.title }}<br>
+                        <strong>Time:</strong> {{ session.time }}<br>
+                        <strong>Instructor:</strong> {{ session.instructor }}<br>
+                        <strong>Available Spots:</strong> {{ session.available_spots }} / 10<br>
+                        <form method="POST" action="{% url 'book_session' session.id %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary">Book Session</button>
+                        </form>
+                    </div>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}
