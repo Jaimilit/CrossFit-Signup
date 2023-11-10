@@ -108,9 +108,22 @@ DATABASES = {
     }
 }
 """
+"""
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+"""
+
+database_url = os.environ.get("DATABASE_URL")
+
+if database_url and isinstance(database_url, bytes):
+    database_url = database_url.decode()
+
+DATABASES = {
+    'default': dj_database_url.parse(database_url) if database_url else {}
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
