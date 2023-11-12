@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="mb-3 text-center">Choose a Gym Session</h2>
+    <h2 class="mb-3 text-center">Choose a Gym Session hahahahhaha</h2>
 
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -23,11 +23,11 @@
             </tr>
         </thead>
         <tbody>
-            {% if sessions %}
-            {% for session in sessions %}
+            {% for day, sessions in days.items %}
             <tr>
+                {% for session in sessions %}
                 <td>
-                    <h4>{{ session.day_name }}</h4>
+                    <h4>{{ day }}</h4>
                     <div class="session-box">
                         <strong>Title:</strong> {{ session.title }}<br>
                         <strong>Time:</strong> {{ session.time }}<br>
@@ -35,17 +35,14 @@
                         <strong>Available Spots:</strong> {{ session.available_spots }} / 10<br>
                         <form method="POST" action="{% url 'book_session' session.id %}">
                             {% csrf_token %}
+                            {{ form | crispy }}
                             <button type="submit" class="btn btn-primary">Book Session</button>
                         </form>
                     </div>
                 </td>
+                {% endfor %}
             </tr>
             {% endfor %}
-            {% else %}
-            <tr>
-                <td colspan="7">No sessions available</td>
-            </tr>
-            {% endif %}
         </tbody>
     </table>
 </div>

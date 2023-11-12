@@ -19,6 +19,7 @@ from django.urls import path, include
 from signup import views
 
 
+
 # urlpatterns = [
    # path('admin/', admin.site.urls),
    # path("", include("signup.urls"), name="signup-urls"),
@@ -35,6 +36,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path("", views.WorkoutSessionListView.as_view(), name="home"),
     path("booking/", views.booking, name="booking"),
+
 ]
 
 """

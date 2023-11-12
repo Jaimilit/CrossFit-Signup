@@ -9,6 +9,7 @@ from django.db.models import IntegerField
 from django.db.models import F
 from django.db.models import CharField
 from django.db.models import Value
+from django.http import HttpResponse
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -104,9 +105,8 @@ class BookingView(View):
             )
         ).order_by('day', 'time')
 
-        context = {
-            'days': sessions,
-        }
+        context = {'sessions': sessions}
+
         return render(request, 'booking.html', context)
 
     def post(self, request):
@@ -121,6 +121,11 @@ class BookingView(View):
         sessions = WorkoutSession.objects.all()
         context = {'form': form, 'sessions': sessions}
         return render(request, 'booking.html', context)
+
+
+def book_session(request, session_id):
+    # Placeholder logic, replace with your actual view logic
+    return HttpResponse(f"Booking session {session_id}")
 
 """
 def gym_session_booking(request):
