@@ -5,7 +5,7 @@ from .forms import UserForm
 from .forms import BookingForm
 from django.views.generic.edit import FormView
 from django.db.models.functions import ExtractDay, ExtractMonth
-from django.db.models import IntegerField
+from django.db.models import IntegerField, Case, When, Value
 from django.db.models import F
 from django.db.models import CharField
 from django.db.models import Value
@@ -105,8 +105,14 @@ class BookingView(View):
             )
         ).order_by('day', 'time')
 
-        context = {'sessions': sessions}
+        # Group sessions by day
+        sessions_by_day = {}
+        for session in sessions:
+            if session.day_name not in sessions_by_day:
+                sessions_by_day[session.day_name] = []
+            sessions_by_day[session.day_name].append(session)
 
+        context = {'sessions_by_day': sessions_by_day}
         return render(request, 'booking.html', context)
 
     def post(self, request):
@@ -117,7 +123,10 @@ class BookingView(View):
             booking = Booking(user=request.user, session=selected_session)
             booking.save()
             # You can add more booking logic here
+            # Redirect to booking page after successful booking
+            return redirect('booking')
 
+        # If the form is not valid or there are other issues, reload the booking page
         sessions = WorkoutSession.objects.all()
         context = {'form': form, 'sessions': sessions}
         return render(request, 'booking.html', context)
