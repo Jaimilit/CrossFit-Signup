@@ -11,10 +11,9 @@ from django.db.models import CharField
 from django.db.models import Value
 from django.http import HttpResponse
 
-
 class WorkoutSessionListView(generic.ListView):
     model = WorkoutSession
-    queryset = WorkoutSession.objects.order_by("date")
+    queryset = WorkoutSession.objects.order_by("title")  # Change "title" to the field you want to order by
     template_name = "index.html"
     paginate_by = 6
 

@@ -1,16 +1,28 @@
 from django.contrib import admin
-from .models import WorkoutSession
-from django_summernote.admin import SummernoteModelAdmin
+from django.db.models import Case, When, Value, CharField  # Import CharField
 
+from .models import WorkoutSession
 
 @admin.register(WorkoutSession)
-class WorkoutSessionAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'date', 'time', 'instructor_name')
-    search_fields = ['title', 'content']
-    list_filter = ('date', 'session_creator')
-    prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('content',)
+class WorkoutSessionAdmin(admin.ModelAdmin):
+    list_display = ('title', 'time', 'instructor_name') 
 
+    def day_of_week(self, obj):
+        # Map the day of the week
+        return (
+            Case(
+                When(date__week_day=1, then=Value("Monday")),
+                When(date__week_day=2, then=Value("Tuesday")),
+                When(date__week_day=3, then=Value("Wednesday")),
+                When(date__week_day=4, then=Value("Thursday")),
+                When(date__week_day=5, then=Value("Friday")),
+                When(date__week_day=6, then=Value("Saturday")),
+                When(date__week_day=7, then=Value("Sunday")),
+                output_field=CharField(),
+            )
+        )
+
+    day_of_week.short_description = 'Day of the Week'
 
 """
 @admin.register(Post)

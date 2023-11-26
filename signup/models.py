@@ -12,7 +12,8 @@ class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True,
                             default="default-slug")
-    date = models.DateField()
+    # Remove or comment out the 'date' field
+    # date = models.DateField()
     time = models.TimeField(default='00:00')
     session_creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="created_sessions"

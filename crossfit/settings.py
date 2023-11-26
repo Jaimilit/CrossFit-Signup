@@ -33,8 +33,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com',
-                 'crossfit-signup.herokuapp.com', 'crossfit-signup-4bbbc5fa58ea.herokuapp.com', 'http://8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com/' 'localhost']
+ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com', 
+                '8000-jaimilit-crossfit-for-cr-vzklb5takw.us2.codeanyapp.com/',
+                 'crossfit-signup.herokuapp.com', 
+                 '8000-jaimilit-crossfit-for-cr-vzklb5takw.us2.codeanyapp.com', 
+                 'crossfit-signup-4bbbc5fa58ea.herokuapp.com', 
+                 'localhost'
+                 ]
 
 
 # Application definition
@@ -55,6 +60,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'signup',
+    # # 'crossfit',
 ]
 
 SITE_ID = 1
