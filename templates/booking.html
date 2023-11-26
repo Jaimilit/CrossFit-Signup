@@ -1,52 +1,47 @@
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
-
-{% block content %}
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
 <div class="container">
-    <h2 class="mb-3 text-center">Choose a Gym Session</h2>
-    <!-- 
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form | crispy }}
-    </form>
-    -->
-    <table id="calendar-booking" class="calendar-booking">
-        <thead>
-            <tr>
-                <th class="day">Monday</th>
-                <th class="day">Tuesday</th>
-                <th class="day">Wednesday</th>
-                <th class="day">Thursday</th>
-                <th class="day">Friday</th>
-                <th class="day">Saturday</th>
-                <th class="day">Sunday</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% if sessions %}
-            {% for session in sessions %}
-            <tr>
-                <td>
-                    <h4>{{ session.day_name }}</h4>
-                    <div class="session-box">
-                        <strong>Title:</strong> {{ session.title }}<br>
-                        <strong>Time:</strong> {{ session.time }}<br>
-                        <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-                        <strong>Available Spots:</strong> {{ session.available_spots }} / 10<br>
-                        <form method="POST" action="{% url 'book_session' session.id %}">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-primary">Book Session</button>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-            {% else %}
-            <tr>
-                <td colspan="7">No sessions available</td>
-            </tr>
-            {% endif %}
-        </tbody>
-    </table>
+  <h2 class="mb-3 text-center">Choose a Gym Session</h2>
+
+  <table id="calendar-booking" class="calendar-booking">
+    <thead>
+      <tr>
+        <th class="day">Monday</th>
+        <th class="day">Tuesday</th>
+        <th class="day">Wednesday</th>
+        <th class="day">Thursday</th>
+        <th class="day">Friday</th>
+        <th class="day">Saturday</th>
+        <th class="day">Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for day_name, sessions in sessions_by_day.items %}
+      <tr>
+        <td>
+          <h4>{{ day_name }}</h4>
+          {% for session in sessions %}
+          <div class="session-box">
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Available Spots:</strong> {{ session.available_spots }} /
+            10<br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endfor %}
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7">No sessions available</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 {% endblock %}

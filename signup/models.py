@@ -14,6 +14,7 @@ class WorkoutSession(models.Model):
                             default="default-slug")
     # Remove or comment out the 'date' field
     # date = models.DateField()
+    date = models.DateField(null=True, blank=True)
     time = models.TimeField(default='00:00')
     session_creator = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="created_sessions"
@@ -27,6 +28,11 @@ class WorkoutSession(models.Model):
         User, related_name='signed_up_for', blank=True)
 
     objects = models.Manager()  # Define the default manager for the model
+
+    @property
+    def day_of_week(self):
+        return self.date.strftime("%A")  # This assumes 'date' is a DateTimeField
+
 
     def __str__(self):
         return self.title

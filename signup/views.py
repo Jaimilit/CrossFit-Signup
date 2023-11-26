@@ -135,6 +135,28 @@ def book_session(request, session_id):
     # Placeholder logic, replace with your actual view logic
     return HttpResponse(f"Booking session {session_id}")
 
+
+def workout_sessions_by_day(request):
+    # Fetch sessions grouped by day and sorted by time
+    sessions = WorkoutSession.objects.all().order_by('time')
+
+    # Group sessions by day
+    sessions_by_day = {
+        'Monday': [],
+        'Tuesday': [],
+        'Wednesday': [],
+        'Thursday': [],
+        'Friday': [],
+        'Saturday': [],
+        'Sunday': []
+    }
+
+    for session in sessions:
+        sessions_by_day[session.day_of_week].append(session)
+
+    context = {'sessions_by_day': sessions_by_day}
+    return render(request, 'booking.html', context)
+
 """
 def gym_session_booking(request):
     sessions = GymSession.objects.all()
