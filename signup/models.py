@@ -26,6 +26,11 @@ class WorkoutSession(models.Model):
 
     slug = models.SlugField(max_length=200, unique=True, blank=True)
 
+    @property
+    def day_of_week(self):
+        return self.date.strftime("%A")  # This assumes 'date' is a DateTimeField
+
+
     def __str__(self):
         return self.title
 
