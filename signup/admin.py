@@ -1,12 +1,11 @@
 from django.contrib import admin
 from django.db.models import Case, When, Value, CharField  # Import CharField
-
 from .models import WorkoutSession
 
 @admin.register(WorkoutSession)
 class WorkoutSessionAdmin(admin.ModelAdmin):
     list_display = ('title', 'time', 'instructor_name') 
-
+"""
     def day_of_week(self, obj):
         # Map the day of the week
         return (
@@ -24,7 +23,7 @@ class WorkoutSessionAdmin(admin.ModelAdmin):
 
     day_of_week.short_description = 'Day of the Week'
 
-"""
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 

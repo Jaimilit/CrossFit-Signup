@@ -10,23 +10,10 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True,
-                            default="default-slug")
-    # Remove or comment out the 'date' field
-    # date = models.DateField()
     time = models.TimeField(default='00:00')
-    session_creator = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="created_sessions"
-    )
-    instructor_name = models.CharField(max_length=100, default="", blank=True)
-    featured_image = models.ImageField(
-        upload_to='workout_images/', default='placeholder.jpg')
-    excerpt = models.TextField(blank=True)
-    content = models.TextField()
-    attendees = models.ManyToManyField(
-        User, related_name='signed_up_for', blank=True)
+    instructor_name = models.CharField(max_length=200) 
 
-    objects = models.Manager()  # Define the default manager for the model
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -35,6 +22,7 @@ class WorkoutSession(models.Model):
         return slugify(self.title)
 
     def save(self, *args, **kwargs):
+        # Generate the slug only if it's not provided
         if not self.slug:
             self.slug = self.generate_slug()
         super(WorkoutSession, self).save(*args, **kwargs)
