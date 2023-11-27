@@ -7,11 +7,22 @@ from django.utils.text import slugify  # Import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+DAYS_OF_WEEK = (
+    ('Monday', 'Monday'),
+    ('Tuesday', 'Tuesday'),
+    ('Wednesday', 'Wednesday'),
+    ('Thursday', 'Thursday'),
+    ('Friday', 'Friday'),
+    ('Saturday', 'Saturday'),
+    ('Sunday', 'Sunday'),
+)
+
 
 class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
     time = models.TimeField(default='00:00')
-    instructor_name = models.CharField(max_length=200) 
+    instructor_name = models.CharField(max_length=200)
+    day = models.CharField(max_length=20, choices=DAYS_OF_WEEK, default='Monday')  # New field for the day
 
     slug = models.SlugField(max_length=200, unique=True, blank=True)
 

@@ -109,25 +109,11 @@ class BookingView(View):
         for session in sessions:
             if session.day_name not in sessions_by_day:
                 sessions_by_day[session.day_name] = []
-            sessions_by_day[session.day_name].append(session)
+            # Limit to 4 sessions per day
+            if len(sessions_by_day[session.day_name]) < 4:
+                sessions_by_day[session.day_name].append(session)
 
         context = {'sessions_by_day': sessions_by_day}
-        return render(request, 'booking.html', context)
-
-    def post(self, request):
-        # Handle form submission and booking logic here
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            selected_session = form.cleaned_data['session']
-            booking = Booking(user=request.user, session=selected_session)
-            booking.save()
-            # You can add more booking logic here
-            # Redirect to booking page after successful booking
-            return redirect('booking')
-
-        # If the form is not valid or there are other issues, reload the booking page
-        sessions = WorkoutSession.objects.all()
-        context = {'form': form, 'sessions': sessions}
         return render(request, 'booking.html', context)
 
 

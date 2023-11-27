@@ -4,7 +4,13 @@ from .models import WorkoutSession
 
 @admin.register(WorkoutSession)
 class WorkoutSessionAdmin(admin.ModelAdmin):
-    list_display = ('title', 'time', 'instructor_name') 
+    list_display = ('title', 'time', 'instructor_name', 'day')  # Add 'day' to display
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # Filter sessions by day to display in admin
+        return qs.filter(day='Monday')  # Remove the slicing operation here
+
 """
     def day_of_week(self, obj):
         # Map the day of the week
