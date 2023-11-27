@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="container">
   <h2 class="mb-3 text-center">Choose a Gym Session</h2>
 
@@ -15,17 +17,15 @@
       </tr>
     </thead>
     <tbody>
-      {% for day_name, sessions in sessions_by_day.items %}
       <tr>
         <td>
-          <h4>{{ day_name }}</h4>
+          <h4>{{ current_day }}</h4>
           {% for session in sessions %}
           <div class="session-box">
             <strong>Title:</strong> {{ session.title }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Available Spots:</strong> {{ session.available_spots }} /
-            10<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
@@ -36,11 +36,6 @@
           {% endfor %}
         </td>
       </tr>
-      {% empty %}
-      <tr>
-        <td colspan="7">No sessions available</td>
-      </tr>
-      {% endfor %}
     </tbody>
   </table>
 </div>

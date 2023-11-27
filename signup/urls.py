@@ -17,7 +17,7 @@ urlpatterns = [
     path('booking/', views.booking, name='booking'),
     path("", views.WorkoutSessionListView.as_view(), name="home"),
     path('book_session/<int:session_id>/', book_session, name='book_session'),
-
+    path('book_session/<int:session_id>/', views.book_session, name='book_session'),
 
 ]
 

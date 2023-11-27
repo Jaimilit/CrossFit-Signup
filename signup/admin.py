@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.db.models import Case, When, Value, CharField  # Import CharField
 from .models import WorkoutSession
+from datetime import datetime
+
 
 @admin.register(WorkoutSession)
 class WorkoutSessionAdmin(admin.ModelAdmin):
@@ -8,8 +10,8 @@ class WorkoutSessionAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        # Filter sessions by day to display in admin
-        return qs.filter(day='Monday')  # Remove the slicing operation here
+        current_day = datetime.now().strftime('%A')  # Get the current day as a string (e.g., 'Monday', 'Tuesday', etc.)
+        return qs.filter(day=current_day)
 
 """
     def day_of_week(self, obj):

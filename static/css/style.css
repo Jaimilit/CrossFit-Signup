@@ -205,7 +205,7 @@ input[type="password"] {
 }
 
 .calendar-booking {
-    float: left;
+    /* float: left; */
     width: 100%;
     margin-bottom: 0.9375rem;
     border: 1px solid #c1c3c5;

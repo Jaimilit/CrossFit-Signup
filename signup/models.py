@@ -1,9 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.utils.text import slugify  # Import slugify
+from django.utils.text import slugify
 
-# Create your models here.
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -23,13 +22,7 @@ class WorkoutSession(models.Model):
     time = models.TimeField(default='00:00')
     instructor_name = models.CharField(max_length=200)
     day = models.CharField(max_length=20, choices=DAYS_OF_WEEK, default='Monday')  # New field for the day
-
     slug = models.SlugField(max_length=200, unique=True, blank=True)
-
-    @property
-    def day_of_week(self):
-        return self.date.strftime("%A")  # This assumes 'date' is a DateTimeField
-
 
     def __str__(self):
         return self.title
@@ -43,7 +36,7 @@ class WorkoutSession(models.Model):
             self.slug = self.generate_slug()
         super(WorkoutSession, self).save(*args, **kwargs)
 
-        
+
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     session = models.ForeignKey(WorkoutSession, on_delete=models.CASCADE)

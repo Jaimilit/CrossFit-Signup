@@ -1,21 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import WorkoutSession
-from .forms import UserForm
-from .forms import BookingForm
+from .forms import UserForm, BookingForm
 from django.views.generic.edit import FormView
 from django.db.models.functions import ExtractDay, ExtractMonth
-from django.db.models import IntegerField, Case, When, Value
-from django.db.models import F
-from django.db.models import CharField
-from django.db.models import Value
-from django.http import HttpResponse
+from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
+from datetime import datetime
+
 
 class WorkoutSessionListView(generic.ListView):
     model = WorkoutSession
     queryset = WorkoutSession.objects.order_by("title")  # Change "title" to the field you want to order by
     template_name = "index.html"
-    paginate_by = 6
+    # paginate_by = 6
 
 
 class PostDetail(View):
@@ -23,7 +20,6 @@ class PostDetail(View):
         session = get_object_or_404(WorkoutSession, slug=slug)
         instructor = session.session_creator
         signed_up_count = session.attendees.count()
-
         return render(
             request,
             "post_detail.html",
@@ -31,7 +27,7 @@ class PostDetail(View):
                 "session": session,
                 "instructor": instructor,
                 "signed_up_count": signed_up_count,
-                "user_form": UserForm()
+                "user_form": UserForm(),
             },
         )
 
@@ -86,62 +82,29 @@ def home(request):
 
 class BookingView(View):
     def get(self, request):
-        # Fetch sessions grouped by day and sorted by time
-        sessions = WorkoutSession.objects.annotate(
-            day=ExtractDay('date', output_field=IntegerField()),
-            month=ExtractMonth('date', output_field=IntegerField())
-        ).annotate(
-            day_name=Case(
-                When(day=1, then=Value("Monday")),
-                When(day=2, then=Value("Tuesday")),
-                When(day=3, then=Value("Wednesday")),
-                When(day=4, then=Value("Thursday")),
-                When(day=5, then=Value("Friday")),
-                When(day=6, then=Value("Saturday")),
-                When(day=7, then=Value("Sunday")),
-                default=Value("Unknown"),
-                output_field=CharField()
-            )
-        ).order_by('day', 'time')
+        current_day = datetime.now().strftime('%A')  # Get the current day of the week
+        sessions = WorkoutSession.objects.filter(day=current_day)
+        context = {'sessions': sessions, 'current_day': current_day}
+        return render(request, 'booking.html', context)
 
-        # Group sessions by day
+"""
+class BookingView(View):
+    def get(self, request):
+        days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
         sessions_by_day = {}
-        for session in sessions:
-            if session.day_name not in sessions_by_day:
-                sessions_by_day[session.day_name] = []
-            # Limit to 4 sessions per day
-            if len(sessions_by_day[session.day_name]) < 4:
-                sessions_by_day[session.day_name].append(session)
+        for day in days_of_week:
+            # Retrieve sessions for each day
+            sessions = WorkoutSession.objects.filter(day=day)
+            sessions_by_day[day] = sessions
 
         context = {'sessions_by_day': sessions_by_day}
         return render(request, 'booking.html', context)
 
-
+"""
 def book_session(request, session_id):
     # Placeholder logic, replace with your actual view logic
     return HttpResponse(f"Booking session {session_id}")
-
-
-def workout_sessions_by_day(request):
-    # Fetch sessions grouped by day and sorted by time
-    sessions = WorkoutSession.objects.all().order_by('time')
-
-    # Group sessions by day
-    sessions_by_day = {
-        'Monday': [],
-        'Tuesday': [],
-        'Wednesday': [],
-        'Thursday': [],
-        'Friday': [],
-        'Saturday': [],
-        'Sunday': []
-    }
-
-    for session in sessions:
-        sessions_by_day[session.day_of_week].append(session)
-
-    context = {'sessions_by_day': sessions_by_day}
-    return render(request, 'booking.html', context)
 
 """
 def gym_session_booking(request):
