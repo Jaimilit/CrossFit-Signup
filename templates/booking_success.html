@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="booking_successful">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>Booking Successful</h3>
+            <p>Your booking was successful:</p>
+            <p>Title: {{ title }}</p>
+            <p>Day: {{ day }}</p>
+            <p>Time: {{ time }}</p>
+            <p>Instructor: {{ instructor }}</p>
+            <a href="{% url 'booking' %}" class="btn btn-primary">Back to Booking</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
