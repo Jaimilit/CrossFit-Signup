@@ -8,10 +8,10 @@ from datetime import datetime
 class WorkoutSessionAdmin(admin.ModelAdmin):
     list_display = ('title', 'time', 'instructor_name', 'day')  # Add 'day' to display
 
-    def get_queryset(self, request):
-        qs = super().get_queryset(request)
-        current_day = datetime.now().strftime('%A')  # Get the current day as a string (e.g., 'Monday', 'Tuesday', etc.)
-        return qs.filter(day=current_day)
+    #def get_queryset(self, request):
+     #   qs = super().get_queryset(request)
+      #  current_day = datetime.now().strftime('%A')  # Get the current day as a string (e.g., 'Monday', 'Tuesday', etc.)
+       # return qs.filter(day=current_day)
 
 """
     def day_of_week(self, obj):
