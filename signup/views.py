@@ -5,6 +5,8 @@ from .forms import UserForm, BookingForm
 from django.views.generic.edit import FormView
 from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
 from datetime import datetime
+from django.http import HttpResponse
+
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -65,11 +67,34 @@ class PostDetail(View):
             )
 """
 def booking(request):
+    if request.method == 'POST':
+        session_id = request.POST.get('session_id')  # Get the session ID from the submitted form
+        session = get_object_or_404(WorkoutSession, pk=session_id)  # Fetch the session using the session_id
+        # Create a booking for the current user and the selected session
+        Booking.objects.create(
+            user=request.user,
+            session_title=session.title,
+            session_time=session.time,
+            session_day=session.day,
+            session_instructor=session.instructor_name
+        )
+        messages.success(request, 'Your workout session is booked successfully!')
+        # Redirect the user to a success page or reload the current page
+        return redirect('booking')  # Replace 'booking' with the correct URL name for this view
+
+    # If it's a GET request or after processing the POST request, display available sessions
+    sessions = WorkoutSession.objects.all()
+    context = {'sessions': sessions}
+    return render(request, 'booking.html', context)
+
+
+"""
+def booking(request):
     sessions = WorkoutSession.objects.all()  # Fetch all available workout sessions
     context = {'sessions': sessions}
     return render(request, 'booking.html', context)
 
-"""
+
 def booking(request):
 
     if request.method == 'POST':
