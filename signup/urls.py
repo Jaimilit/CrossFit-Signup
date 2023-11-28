@@ -16,6 +16,7 @@ urlpatterns = [
     #path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('booking/', views.booking, name='booking'),
     path("", views.WorkoutSessionListView.as_view(), name="home"),
+    path('booking/<int:session_id>/', views.booking, name='booking'),
     path('book_session/<int:session_id>/', book_session, name='book_session'),
     path('book_session/<int:session_id>/', views.book_session, name='book_session'),
 

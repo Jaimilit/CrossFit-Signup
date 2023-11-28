@@ -1,9 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
-from .models import WorkoutSession
+from .models import WorkoutSession, Booking
 from .forms import UserForm, BookingForm
 from django.views.generic.edit import FormView
-from django.db.models.functions import ExtractDay, ExtractMonth
 from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
 from datetime import datetime
 
@@ -15,46 +14,123 @@ class WorkoutSessionListView(generic.ListView):
     # paginate_by = 6
 
 
+"""
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         session = get_object_or_404(WorkoutSession, slug=slug)
         instructor = session.session_creator
-        signed_up_count = session.attendees.count()
+       # signed_up_count = session.attendees.count()
         return render(
             request,
             "post_detail.html",
             {
-                "session": session,
+                "title": title,
                 "instructor": instructor,
-                "signed_up_count": signed_up_count,
-                "user_form": UserForm(),
+                "day":day,
+                "time":time,
+              #  "signed_up_count": signed_up_count,
+               # "user_form": UserForm(),
+                "booking_form":BookingForm,
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
         session = get_object_or_404(WorkoutSession, slug=slug)
         instructor = session.session_creator
-        signed_up_count = session.attendees.count()
+       # signed_up_count = session.attendees.count()
 
-        user_form = UserForm(data=request.POST)
-        if user_form.is_valid():
-            user = user_form.save(commit=False)
-            user.email = request.user.email
-            user.name = request.user.username
-            user.session = session  # Associate the user with the session
-            user.save()
-            return redirect("post_detail", slug=slug)
+        bookingform = BookingForm(data=request.POST)
+
+        if bookingform.is_valid():
+            bookingform.instance.email = request.user.email
+            bookingform.instance.name = request.user.username
+            booking = bookingform.save
+            booking.save()
+
         else:
+            bookingform = BookingForm()
+
             return render(
                 request,
                 "post_detail.html",
                 {
-                    "session": session,
+                    "title": title,
                     "instructor": instructor,
-                    "signed_up_count": signed_up_count,
-                    "user_form": user_form,
+                    "day":day,
+                    "time":time,
+              #  "signed_up_count": signed_up_count,
+               # "user_form": UserForm(),
+                    "booking_form":BookingForm,
                 },
             )
+"""
+def booking(request):
+    sessions = WorkoutSession.objects.all()  # Fetch all available workout sessions
+    context = {'sessions': sessions}
+    return render(request, 'booking.html', context)
+
+"""
+def booking(request):
+
+    if request.method == 'POST':
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking_form = form.save(commit=False)
+            booking_form.user = request.user
+            booking_form.session_title = session.title
+            booking_form.session_time = session.time
+            booking_form.session_day = session.day
+            booking_form.session_instructor = session.instructor_name
+            booking_form.save()
+            messages.success(request, 'Your Workout is Booked')
+            return redirect('booking.html')
+    else:
+        initial_data = {
+            'session_title': session.title,
+            'session_time': session.time,
+            'session_day': session.day,
+            'session_instructor': session.instructor_name
+        }
+        form = BookingForm(initial=initial_data)
+    
+    context = {'form': form}
+    return render(request, 'booking.html', context)
+
+
+
+def booking(request):
+    if request.method == 'POST':
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking_form = form.save(commit=False)
+            booking_form.user = request.user
+            booking_form.save()
+            messages.success(request, 'Your Workout is Booked')
+            return redirect('booking.html')
+    else:
+        form = BookingForm()
+    
+    context = {
+        'form': form
+    }
+    return render(request, 'booking.html', context)
+
+"""
+
+
+def home(request):
+# Modify the query to suit your needs
+    workout_sessions = WorkoutSession.objects.all()
+    return render(request, "index.html", {"workout_sessions": workout_sessions})
+
+
+"""
+class BookingView(View):
+    def get(self, request):
+        current_day = datetime.now().strftime('%A')  # Get the current day of the week
+        sessions = WorkoutSession.objects.filter(day=current_day)
+        context = {'sessions': sessions, 'current_day': current_day}
+        return render(request, 'booking.html', context)
 
 
 def booking(request):
@@ -74,20 +150,6 @@ def booking(request):
     return render(request, "booking.html", context)
 
 
-def home(request):
-    # Modify the query to suit your needs
-    workout_sessions = WorkoutSession.objects.all()
-    return render(request, "index.html", {"workout_sessions": workout_sessions})
-
-
-class BookingView(View):
-    def get(self, request):
-        current_day = datetime.now().strftime('%A')  # Get the current day of the week
-        sessions = WorkoutSession.objects.filter(day=current_day)
-        context = {'sessions': sessions, 'current_day': current_day}
-        return render(request, 'booking.html', context)
-
-"""
 class BookingView(View):
     def get(self, request):
         days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -107,6 +169,7 @@ def book_session(request, session_id):
     return HttpResponse(f"Booking session {session_id}")
 
 """
+
 def gym_session_booking(request):
     sessions = GymSession.objects.all()
     if request.method == "POST":

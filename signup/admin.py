@@ -14,22 +14,6 @@ class WorkoutSessionAdmin(admin.ModelAdmin):
        # return qs.filter(day=current_day)
 
 """
-    def day_of_week(self, obj):
-        # Map the day of the week
-        return (
-            Case(
-                When(date__week_day=1, then=Value("Monday")),
-                When(date__week_day=2, then=Value("Tuesday")),
-                When(date__week_day=3, then=Value("Wednesday")),
-                When(date__week_day=4, then=Value("Thursday")),
-                When(date__week_day=5, then=Value("Friday")),
-                When(date__week_day=6, then=Value("Saturday")),
-                When(date__week_day=7, then=Value("Sunday")),
-                output_field=CharField(),
-            )
-        )
-
-    day_of_week.short_description = 'Day of the Week'
 
 
 @admin.register(Post)

@@ -19,7 +19,6 @@
     <tbody>
       <tr>
         <td>
-          <h4>Monday</h4>
           {% for session in sessions %}
             {% if session.day == 'Monday' %}
               <div class="session-box">
@@ -40,7 +39,6 @@
         </td>
         <!-- Repeat the structure for other days -->
         <td>
-          <h4>Tuesday</h4>
           {% for session in sessions %}
             {% if session.day == 'Tuesday' %}
               <div class="session-box">
@@ -60,7 +58,6 @@
           {% endfor %}
         </td>
         <td>
-          <h4>Wednesday</h4>
           {% for session in sessions %}
             {% if session.day == 'Wednesday' %}
               <div class="session-box">
@@ -80,7 +77,6 @@
           {% endfor %}
         </td>
         <td>
-          <h4>Thursday</h4>
           {% for session in sessions %}
             {% if session.day == 'Thursday' %}
               <div class="session-box">
@@ -100,7 +96,6 @@
           {% endfor %}
         </td>
         <td>
-          <h4>Friday</h4>
           {% for session in sessions %}
             {% if session.day == 'Friday' %}
               <div class="session-box">
@@ -120,7 +115,6 @@
           {% endfor %}
         </td>
         <td>
-          <h4>Saturday</h4>
           {% for session in sessions %}
             {% if session.day == 'Saturday' %}
               <div class="session-box">
@@ -140,7 +134,6 @@
           {% endfor %}
         </td>
         <td>
-          <h4>Sunday</h4>
           {% for session in sessions %}
             {% if session.day == 'Sunday' %}
               <div class="session-box">
@@ -159,8 +152,6 @@
             {% endif %}
           {% endfor %}
         </td>
-        <!-- Repeat this structure for other days: Wednesday, Thursday, Friday, Saturday, Sunday -->
-        <!-- Adjust the session.day check for each day -->
       </tr>
     </tbody>
   </table>

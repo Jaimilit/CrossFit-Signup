@@ -1,6 +1,6 @@
 # from .models import Comment
 from django import forms
-from .models import WorkoutSession
+from .models import WorkoutSession, Booking
 from django.contrib.auth.models import User
 from allauth.account.forms import SignupForm
 from django.forms.widgets import RadioSelect  # Add this import
@@ -33,16 +33,25 @@ class CustomSignupForm(SignupForm):
         return user
 
 
-class BookingForm(forms.Form):
-    session = forms.ModelChoiceField(
-        queryset=WorkoutSession.objects.all(),
-        empty_label=None,  # Remove the "Select a session" option
-        widget=RadioSelect,  # Use RadioSelect widget
-    )
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = '__all__'
+        labels = {
+            'user': 'Username',
+            'title': 'Title of Session'
+        }
 
 
 
 """
+class BookingForm(forms.Form):
+    session = forms.ModelChoiceField(
+        queryset=WorkoutSession.objects,  # Add filters if needed
+        label='Select a Workout Session',  # Better label for the field
+        empty_label=None  # Remove the default "Select a session" option
+    )
+
 class GymSessionBookingForm(forms.Form):
     session_choices = forms.ModelChoiceField(
         queryset=GymSession.objects.all(),

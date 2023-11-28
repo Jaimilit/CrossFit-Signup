@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
-
 STATUS = ((0, "Draft"), (1, "Published"))
 
 DAYS_OF_WEEK = (
@@ -39,7 +38,13 @@ class WorkoutSession(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    session = models.ForeignKey(WorkoutSession, on_delete=models.CASCADE)
+    session_title = models.CharField(max_length=200, default='WOD')
+    session_time = models.TimeField(default='00:00')
+    session_day = models.CharField(max_length=20, default='Monday')
+    session_instructor = models.CharField(max_length=200, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.user.username} booked {self.session_title} on {self.session_day} at {self.session_time}"
 
 """
 class WorkoutSession(models.Model):
@@ -85,8 +90,6 @@ class Post(models.Model):
     likes = models.ManyToManyField(
     User, related_name='blogpost_like', blank=True)
  
-
-
 
     class Meta:
         ordering = ["-created_on"]
