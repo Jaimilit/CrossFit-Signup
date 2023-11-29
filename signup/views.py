@@ -6,7 +6,7 @@ from django.views.generic.edit import FormView
 from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
 from datetime import datetime
 from django.http import HttpResponse
-
+from django.contrib import messages
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -66,29 +66,85 @@ class PostDetail(View):
                 },
             )
 """
-def booking(request):
-    if request.method == 'POST':
-        session_id = request.POST.get('session_id')  # Get the session ID from the submitted form
-        session = get_object_or_404(WorkoutSession, pk=session_id)  # Fetch the session using the session_id
-        # Create a booking for the current user and the selected session
-        Booking.objects.create(
-            user=request.user,
-            session_title=session.title,
-            session_time=session.time,
-            session_day=session.day,
-            session_instructor=session.instructor_name
-        )
-        messages.success(request, 'Your workout session is booked successfully!')
-        # Redirect the user to a success page or reload the current page
-        return redirect('booking')  # Replace 'booking' with the correct URL name for this view
 
-    # If it's a GET request or after processing the POST request, display available sessions
-    sessions = WorkoutSession.objects.all()
-    context = {'sessions': sessions}
-    return render(request, 'booking.html', context)
+
+def booking(request):
+    sessions = WorkoutSession.objects.all()  # Fetch all workout sessions for both GET and POST
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking_form = form.save(commit=False)
+            booking_form.user = request.user
+
+            # Extracting session_id from form or request.POST, then fetching the session
+            session_id = form.cleaned_data.get('session_id') or request.POST.get('session_id')
+            session = get_object_or_404(WorkoutSession, pk=session_id)
+
+            # Include session details into the booking
+            booking_form.session_title = session.title
+            booking_form.session_time = session.time
+            booking_form.session_day = session.day
+            booking_form.session_instructor = session.instructor_name
+            booking_form.save()
+
+            return redirect('booking_success')
+    else:
+        form = BookingForm()
+
+    return render(request, 'booking.html', {'form': form, 'sessions': sessions})
+
+
+def book_session(request, session_id):
+    if request.user.is_authenticated:
+        # Use 'filter' to retrieve multiple bookings
+        bookings = Booking.objects.filter(user=request.user)
+        context = {
+            'bookings': bookings  # Corrected variable name to 'bookings'
+        }
+        return render(request, 'booking_success.html', context)
+    else:
+        return redirect('../accounts/signup')
+
+def home(request):
+# Modify the query to suit your needs
+    workout_sessions = WorkoutSession.objects.all()
+    return render(request, "index.html", {"workout_sessions": workout_sessions})
 
 
 """
+def booking(request):
+    The view for the booking page. If user is logged in it renders the
+    booking.html, otherwise it redirects user to the login page or signup page.
+    
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking_form = form.save(commit=False)
+            booking_form.user = request.user
+            booking_form.save()
+            return redirect('booking')
+        else:
+            messages.error(request, "Please enter correct data")
+            return render(request, 'booking.html', {'form': form})
+    form = BookingForm()
+    return render(request, 'booking.html', {'form': form})
+
+
+def book_session(request):
+    This view checks if user is logged in and renders the
+    booking_successful.html page which shows user bookings and otherwise
+    it redirects to the signup page
+    
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(user=request.user)
+        context = {
+           'booking': booking
+        }
+        return render(request, 'booking_successful.html', context)
+    else:
+        return redirect('../accounts/signup')
+
 def booking(request):
     sessions = WorkoutSession.objects.all()  # Fetch all available workout sessions
     context = {'sessions': sessions}
@@ -142,13 +198,6 @@ def booking(request):
 
 """
 
-
-def home(request):
-# Modify the query to suit your needs
-    workout_sessions = WorkoutSession.objects.all()
-    return render(request, "index.html", {"workout_sessions": workout_sessions})
-
-
 """
 class BookingView(View):
     def get(self, request):
@@ -188,12 +237,7 @@ class BookingView(View):
         context = {'sessions_by_day': sessions_by_day}
         return render(request, 'booking.html', context)
 
-"""
-def book_session(request, session_id):
-    # Placeholder logic, replace with your actual view logic
-    return HttpResponse(f"Booking session {session_id}")
 
-"""
 
 def gym_session_booking(request):
     sessions = GymSession.objects.all()
