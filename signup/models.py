@@ -30,7 +30,6 @@ class WorkoutSession(models.Model):
         return slugify(self.title)
 
     def save(self, *args, **kwargs):
-        # Generate the slug only if it's not provided
         if not self.slug:
             self.slug = self.generate_slug()
         super(WorkoutSession, self).save(*args, **kwargs)
@@ -38,13 +37,10 @@ class WorkoutSession(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    session_title = models.CharField(max_length=200, default='WOD')
-    session_time = models.TimeField(default='00:00')
-    session_day = models.CharField(max_length=20, default='Monday')
-    session_instructor = models.CharField(max_length=200, null=True, blank=True)
+    workout_session = models.ForeignKey('WorkoutSession', on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.user.username} booked {self.session_title} on {self.session_day} at {self.session_time}"
+        return f"{self.user.username} booked {self.workout_session.title} on {self.workout_session.day} at {self.workout_session.time}"
 
 """
 class WorkoutSession(models.Model):

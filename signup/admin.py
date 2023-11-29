@@ -1,12 +1,19 @@
 from django.contrib import admin
 from django.db.models import Case, When, Value, CharField  # Import CharField
-from .models import WorkoutSession
+from .models import WorkoutSession, Booking
 from datetime import datetime
 
 
 @admin.register(WorkoutSession)
 class WorkoutSessionAdmin(admin.ModelAdmin):
     list_display = ('title', 'time', 'instructor_name', 'day')  # Add 'day' to display
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('user', 'workout_session')
+    list_filter = ('user', 'workout_session')
+
 
     #def get_queryset(self, request):
      #   qs = super().get_queryset(request)

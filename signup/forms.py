@@ -34,14 +34,18 @@ class CustomSignupForm(SignupForm):
 
 
 class BookingForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['workout_session'].queryset = WorkoutSession.objects.all()
+
     class Meta:
         model = Booking
         fields = '__all__'
         labels = {
             'user': 'Username',
-            'title': 'Title of Session'
+            'workout_session': 'Workout Session',  # Update the label if needed
+            # Add other labels as needed
         }
-
 
 
 """

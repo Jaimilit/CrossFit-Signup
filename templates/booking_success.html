@@ -5,10 +5,10 @@
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>Booking Successful</h3>
             <p>Your booking was successful:</p>
-            <p>Title: {{ title }}</p>
-            <p>Day: {{ day }}</p>
-            <p>Time: {{ time }}</p>
-            <p>Instructor: {{ instructor }}</p>
+            <p>Title: {{ booked_session.title }}</p>
+            <p>Day: {{ booked_session.day }}</p>
+            <p>Time: {{ booked_session.time }}</p>
+            <p>Instructor: {{ booked_session.instructor_name }}</p>
             <a href="{% url 'booking' %}" class="btn btn-primary">Back to Booking</a>
         </div>
     </div>
