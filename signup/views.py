@@ -34,23 +34,6 @@ def booking(request):
     }
     return render(request, 'booking.html', context)
 
-           # 
-           # session = get_object_or_404(WorkoutSession, pk=session_id)
-
-           # booking_form.session_title = session.title
-           # booking_form.session_time = session.time
-           # booking_form.session_day = session.day
-           # booking_form.session_instructor = session.instructor_name
-            
-            #messages.success(request, 'Booking is confirmed')
-            #return redirect('booking_success')
-        #else:
-        #    form = BookingForm()
-      #  context = {
-       #     'form': form
-      #  }
-       # return render(request, 'booking.html', context)
-
 
 def book_session(request, session_id):
     if request.user.is_authenticated:
@@ -62,15 +45,25 @@ def book_session(request, session_id):
         return render(request, 'booking_success.html', context)
     else:
         return redirect('../accounts/signup')
-       # try:
-        #    booking = Booking.objects.get(workout_session__id=session_id, user=request.user)
-         #   session = booking.workout_session
 
-          #  return render(request, 'booking_success.html', context)
-        #except Booking.DoesNotExist:
-         #   return redirect('accounts:signup')
-   # else:
-     #   return redirect('accounts:signup')
+def change_booking(request, session_id):
+    """The view that renders the change_booking page where the user can
+    update a current booking.
+    """
+    record = get_object_or_404(Booking, id=session_id)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=record)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You successfully updated your booking.')
+            return redirect('booking')  # Assuming 'bookings' is the URL name for bookings list
+    else:
+        form = BookingForm(instance=record)
+
+    context = {'form': form, 'record': record}
+    return render(request, 'change_booking.html', context)
+
 
 def home(request):
     workout_sessions = WorkoutSession.objects.all()
