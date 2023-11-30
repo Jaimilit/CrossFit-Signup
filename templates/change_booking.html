@@ -7,10 +7,11 @@
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>Booking Change</h3>
             <p>Your booking was changed:</p>
-            <p>Title: {{ record.title }}</p>
-            <p>Day: {{ record.day }}</p>
-            <p>Time: {{ record.time }}</p>
-            <p>Instructor: {{ record.instructor_name }}</p>
+            <p>Title: {{ booking.title }}</p>
+            <p>Day: {{ booking.day }}</p>
+            <p>Time: {{ booking.time }}</p>
+            <p>Instructor: {{ booking.instructor_name }}</p>
+            <!--
             <form method="POST" >
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -19,6 +20,7 @@
             </form>
             <a href="{% url 'booking' %}" class="btn btn-primary">Back to Bookings</a>
             <a href="{% url 'delete_booking' booked_session.id %}" class="btn btn-danger">Delete Booking</a>
+           -->
         </div>
     </div>
 </div>

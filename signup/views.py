@@ -15,6 +15,7 @@ class WorkoutSessionListView(generic.ListView):
     template_name = "index.html"
 
 def booking(request):
+    print("booked_session")
     sessions = WorkoutSession.objects.all()  # Retrieve all workout sessions
     if request.method == 'POST':
         form = BookingForm(request.POST)
@@ -38,9 +39,11 @@ def booking(request):
 def book_session(request, session_id):
     if request.user.is_authenticated:
         # Retrieve the booked session based on the session_id
-        booked_session = get_object_or_404(WorkoutSession, pk=session_id)
+        session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id) # Get get session based on ID
+        booking = Booking(user=request.user, workout_session=session_to_be_booked)  # create a booking from the user and the session
+        booking.save()  # save the booking in the database
         context = {
-            'booked_session': booked_session,  # Pass the booked session to the template
+            'booked_session': session_to_be_booked,  # Pass the booked session to the template       # Send data to next page using context
         }
         return render(request, 'booking_success.html', context)
     else:
@@ -51,7 +54,11 @@ def change_booking(request, session_id):
     update a current booking.
     """
     record = get_object_or_404(Booking, id=session_id)
-
+    context = {
+            'booked_session': booking,  # Pass the booked session to the template       # Send data to next page using context
+        }
+    return render(request, 'change_booking.html', context)
+"""
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=record)
         if form.is_valid():
@@ -62,12 +69,13 @@ def change_booking(request, session_id):
         form = BookingForm(instance=record)
 
     context = {'form': form, 'record': record}
-    return render(request, 'change_booking.html', context)
+"""
+        
+
 
 def delete_booking(request, session_id):
-    """
-    Function to delete a booking record
-    """
+    
+    
     record = get_object_or_404(Booking, id=session_id)
     
     if request.method == "POST":
@@ -76,6 +84,7 @@ def delete_booking(request, session_id):
             return redirect('booking')  # Redirect to the bookings list
 
     return render(request, 'delete_booking.html', {'record': record})
+
 
 
 def home(request):

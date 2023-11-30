@@ -41,6 +41,9 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.user.username} booked {self.workout_session.title} on {self.workout_session.day} at {self.workout_session.time}"
+    
+    def save(self, *args, **kwargs):
+        super(Booking, self).save(*args, **kwargs)
 
 """
 class WorkoutSession(models.Model):
