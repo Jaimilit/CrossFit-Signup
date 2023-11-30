@@ -11,7 +11,7 @@
             <p>Day: {{ record.day }}</p>
             <p>Time: {{ record.time }}</p>
             <p>Instructor: {{ record.instructor_name }}</p>
-            <!---->
+            <!--
             <form method="POST" action="{% url 'delete_booking' record.id %}">
                 {% csrf_token %}
                 <h3>Your Booking Has Been Deleted</h3>
@@ -19,7 +19,7 @@
             </form>
             <a href="{% url 'booking' %}" class="btn btn-primary">Back to Bookings</a>
             <a href="{% url 'delete_booking' session_id=record.id %}" class="btn btn-danger">Delete Booking</a>
-
+            -->
         </div>
     </div>
 </div>

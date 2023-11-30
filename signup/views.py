@@ -53,9 +53,12 @@ def change_booking(request, session_id):
     """The view that renders the change_booking page where the user can
     update a current booking.
     """
-    record = get_object_or_404(Booking, id=session_id)
+    booking = get_object_or_404(Booking, id=session_id)
+    session = booking.workout_session
+    user_bookings = Booking.objects.filter(user=request.user)
     context = {
-            'booked_session': booking,  # Pass the booked session to the template       # Send data to next page using context
+            'booked_session': session,  # Pass the booked session to the template       # Send data to next page using context
+            'user_bookings': user_bookings, # All bookings related to the user
         }
     return render(request, 'change_booking.html', context)
 """

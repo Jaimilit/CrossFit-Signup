@@ -5,13 +5,32 @@
 <div class="container">
     <div class="booking_change">
         <div class="col-md-8 mt-3 offset-md-2">
+            <!-- user_bookings -->
+            
+            
             <h3>Booking Change</h3>
-            <p>Your booking was changed:</p>
-            <p>Title: {{ booking.title }}</p>
-            <p>Day: {{ booking.day }}</p>
-            <p>Time: {{ booking.time }}</p>
-            <p>Instructor: {{ booking.instructor_name }}</p>
-            <!--
+                <h4>Hello {{request.user.username}} Bookings:</h4>
+                <ul>
+                {% for booking in user_bookings %}
+                    <li>
+                        Title: {{ booking.workout_session.title }}
+                        <!-- Delete button for each booking -->
+                        <form action="{% url 'delete_booking' booking.id %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-small btn-danger" onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
+                        </form>
+                    </li>
+                {% empty %}
+                    <li>No bookings found.</li>
+                {% endfor %}
+                </ul>
+                <!--
+            <p>Your booked_session was changed:</p>
+            <p>Title: {{ booked_session.title }}</p>
+            <p>Day: {{ booked_session.day }}</p>
+            <p>Time: {{ booked_session.time }}</p>
+            <p>Instructor: {{ booked_session.instructor_name }}</p>
+            
             <form method="POST" >
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -20,6 +39,7 @@
             </form>
             <a href="{% url 'booking' %}" class="btn btn-primary">Back to Bookings</a>
             <a href="{% url 'delete_booking' booked_session.id %}" class="btn btn-danger">Delete Booking</a>
+        
            -->
         </div>
     </div>
