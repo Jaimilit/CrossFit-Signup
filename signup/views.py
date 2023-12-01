@@ -62,18 +62,13 @@ def book_session(request, session_id):
             return render(request, 'already_booked.html', context)
 
         # Check if there are available spots before booking
-        available_spots = session_to_be_booked.available_spots
-        if available_spots > 0:
+        else:
             booking = Booking(user=user, workout_session=session_to_be_booked)
             booking.save()
             context = {
                 'booked_session': session_to_be_booked,
             }
             return render(request, 'booking_success.html', context)
-        else:
-            messages.warning(request, 'Sorry, no more spots available for this session')
-            return redirect('booking')
-
     else:
         return redirect('../accounts/signup')
 
