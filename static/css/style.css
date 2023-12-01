@@ -235,3 +235,7 @@ input[type="password"] {
     text-align: center;
     margin-bottom: 20px; /* Adjust margin as needed */
 }
+
+.center-text {
+    text-align: center;
+}

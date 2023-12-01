@@ -2,15 +2,14 @@
 {% block content %}
 <div class="container">
     <div class="booking_successful">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-2 center-text">
             <h3>Booking Successful</h3>
-            <p>Your booking was successful:</p>
             <p>Title: {{ booked_session.title }}</p>
             <p>Day: {{ booked_session.day }}</p>
             <p>Time: {{ booked_session.time }}</p>
             <p>Instructor: {{ booked_session.instructor_name }}</p>
            <!-- <a href="{% url 'change_booking' booked_session.id %}" class="btn btn-warning">Edit Booking</a> --> 
-            <a href="{% url 'booking' %}" class="btn btn-primary">Back to Booking</a>
+            <a href="{% url 'booking' %}" class="btn btn-primary">Go to Bookings</a>
             <a href="{% url 'my_bookings' %}" class="btn btn-primary">Go to My Bookings</a>
         </div>
     </div>

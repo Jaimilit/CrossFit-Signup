@@ -1,11 +1,8 @@
-# from .models import Comment
 from django import forms
 from .models import WorkoutSession, Booking
 from django.contrib.auth.models import User
-from allauth.account.forms import SignupForm
-from django.forms.widgets import RadioSelect  # Add this import
+# from allauth.account.forms import SignupForm
 
-# from .models import GymSession
 
 
 # User form
@@ -18,7 +15,7 @@ class UserForm(forms.ModelForm):
         }
 
 # Add custom fields to the allauth signup form
-
+"""
 class CustomSignupForm(SignupForm):
 
     first_name = forms.CharField(max_length=50, label='First Name')
@@ -31,7 +28,7 @@ class CustomSignupForm(SignupForm):
         user.save()
 
         return user
-
+"""
 
 class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -46,26 +43,3 @@ class BookingForm(forms.ModelForm):
             'workout_session': 'Workout Session',  # Update the label if needed
             # Add other labels as needed
         }
-
-
-"""
-class BookingForm(forms.Form):
-    session = forms.ModelChoiceField(
-        queryset=WorkoutSession.objects,  # Add filters if needed
-        label='Select a Workout Session',  # Better label for the field
-        empty_label=None  # Remove the default "Select a session" option
-    )
-
-class GymSessionBookingForm(forms.Form):
-    session_choices = forms.ModelChoiceField(
-        queryset=GymSession.objects.all(),
-        empty_label="Select a session",
-        widget=forms.RadioSelect,
-    )
-
-
-class CommentForm(forms.ModelForm):
-    class Meta:
-        model = Comment
-        fields = ('body',)
-"""

@@ -23,6 +23,7 @@ def my_bookings(request):
     }
     return render(request, 'my_bookings.html', context)
 
+@login_required
 def booking(request):
     print("booked_session")
     sessions = WorkoutSession.objects.all()  # Retrieve all workout sessions
@@ -100,47 +101,13 @@ def delete_booking(request, session_id):
         'form': form, 'record': record}
     return render(request, 'delete_booking.html', context)
 
-"""
-def delete_booking(request, session_id):
-    booking = get_object_or_404(Booking, id=session_id)
-    session = booking.workout_session
-    user_bookings = Booking.objects.filter(user=request.user)
-    
-    if request.method == "POST":
-        session_id = request.POST.get('session_id')
-        record = get_object_or_404(Booking, id=session_id)
-        record.delete()
-        messages.success(request, 'Your booking has been deleted.')
-        return redirect('my_bookings')  # Redirect to the bookings list
-
-        context = {
-        'form': form,
-        'booked_session': session,
-        'user_bookings': user_bookings,
-        'record': record,
-    }
-
-    return render(request, 'delete_booking.html', context, {'record': record})
-
-"""
 
 def home(request):
     workout_sessions = WorkoutSession.objects.all()
     return render(request, "index.html", {"workout_sessions": workout_sessions})
 
 
-"""
-def change_booking(request, session_id):
-    
-    booking = get_object_or_404(Booking, id=session_id)
-    session = booking.workout_session
-    user_bookings = Booking.objects.filter(user=request.user)
-    context = {
-            'booked_session': session,  # Pass the booked session to the template       # Send data to next page using context
-            'user_bookings': user_bookings, # All bookings related to the user
-        }
-    return render(request, 'my_bookings.html', context)
-"""
+
 
 
 

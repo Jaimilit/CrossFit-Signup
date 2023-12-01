@@ -1,8 +1,7 @@
 from . import views
 from django.urls import path
-from . import views
-from signup import views
-from .views import book_session
+# from signup import views
+
 
 
 urlpatterns = [
@@ -11,9 +10,5 @@ urlpatterns = [
     path('book_session/<int:session_id>/', views.book_session, name='book_session'),
     path('change_booking/<int:session_id>/', views.change_booking, name='change_booking'),
     path('delete_booking/<int:session_id>/', views.delete_booking, name='delete_booking'),
-    path('my_bookings/', views.my_bookings, name='my_bookings')
- 
+    path('my_bookings/', views.my_bookings, name='my_bookings'),
 ]
-
-#path("", views.WorkoutSessionListView.as_view(), name="home"),
-    #path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
