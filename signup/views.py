@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 # from datetime import datetime
 # from django.http import HttpResponse
 from django.contrib import messages
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -48,14 +50,25 @@ def booking(request):
 
 def book_session(request, session_id):
     if request.user.is_authenticated:
-        # Retrieve the booked session based on the session_id
-        session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id) # Get get session based on ID
-        booking = Booking(user=request.user, workout_session=session_to_be_booked)  # create a booking from the user and the session
-        booking.save()  # save the booking in the database
-        context = {
-            'booked_session': session_to_be_booked,  # Pass the booked session to the template       # Send data to next page using context
-        }
-        return render(request, 'booking_success.html', context)
+        session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id)
+        user = request.user
+
+        # Check if the user has already booked this session
+        existing_booking = Booking.objects.filter(user=user, workout_session=session_to_be_booked).first()
+        if existing_booking:
+            messages.warning(request, 'You have already booked this session.')
+            return redirect('my_bookings')
+
+        try:
+            booking = Booking(user=user, workout_session=session_to_be_booked)
+            booking.save()
+            context = {
+                'booked_session': session_to_be_booked,
+            }
+            return render(request, 'booking_success.html', context)
+        except IntegrityError as e:
+            messages.warning(request, 'Sorry, no more spots available for this session')
+            return redirect('booking')
     else:
         return redirect('../accounts/signup')
 

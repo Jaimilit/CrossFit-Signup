@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="booking_fail">
+        <div class="col-md-8 mt-3 offset-md-2 center-text">
+            <h3>Booking Failed</h3>
+            <h3>This Session is Full</h3>
+            <p>Title: {{ booked_session.title }}</p>
+            <p>Day: {{ booked_session.day }}</p>
+            <p>Time: {{ booked_session.time }}</p>
+            <p>Instructor: {{ booked_session.instructor_name }}</p>
+           <!-- <a href="{% url 'my_bookings' booked_session.id %}" class="btn btn-warning">Edit Booking</a> --> 
+            <a href="{% url 'booking' %}" class="btn btn-primary">Go to Bookings</a>
+            <a href="{% url 'my_bookings' %}" class="btn btn-primary">Go to My Bookings</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
