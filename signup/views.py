@@ -14,6 +14,10 @@ class WorkoutSessionListView(generic.ListView):
     queryset = WorkoutSession.objects.order_by("title")
     template_name = "index.html"
 
+def my_bookings(request):
+    # Your logic to retrieve user bookings or render the my_bookings.html template
+    return render(request, 'my_bookings.html', {})
+
 def booking(request):
     print("booked_session")
     sessions = WorkoutSession.objects.all()  # Retrieve all workout sessions
