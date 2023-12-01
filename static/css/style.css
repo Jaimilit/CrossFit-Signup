@@ -236,6 +236,6 @@ input[type="password"] {
     margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.center-text {
+.center-text, .session-box {
     text-align: center;
 }
