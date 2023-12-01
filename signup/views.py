@@ -4,6 +4,7 @@ from .models import WorkoutSession, Booking
 from .forms import UserForm, BookingForm
 from django.views.generic.edit import FormView
 from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
+from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from django.http import HttpResponse
 from django.contrib import messages
@@ -14,9 +15,13 @@ class WorkoutSessionListView(generic.ListView):
     queryset = WorkoutSession.objects.order_by("title")
     template_name = "index.html"
 
+@login_required
 def my_bookings(request):
-    # Your logic to retrieve user bookings or render the my_bookings.html template
-    return render(request, 'my_bookings.html', {})
+    user_bookings = Booking.objects.filter(user=request.user)
+    context = {
+        'user_bookings': user_bookings,
+    }
+    return render(request, 'my_bookings.html', context)
 
 def booking(request):
     print("booked_session")
@@ -54,9 +59,33 @@ def book_session(request, session_id):
         return redirect('../accounts/signup')
 
 def change_booking(request, session_id):
-    """The view that renders the change_booking page where the user can
-    update a current booking.
-    """
+    booking = get_object_or_404(Booking, id=session_id)
+    session = booking.workout_session
+    user_bookings = Booking.objects.filter(user=request.user)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You successfully updated your booking.')
+            return redirect('my_bookings')  # Redirect to the my_bookings page
+    else:
+        form = BookingForm(instance=booking)
+
+    context = {
+        'form': form,
+        'booked_session': session,
+        'user_bookings': user_bookings,
+    }
+    return render(request, 'my_bookings.html', context)
+
+
+
+
+
+"""
+def change_booking(request, session_id):
+    
     booking = get_object_or_404(Booking, id=session_id)
     session = booking.workout_session
     user_bookings = Booking.objects.filter(user=request.user)
@@ -64,8 +93,9 @@ def change_booking(request, session_id):
             'booked_session': session,  # Pass the booked session to the template       # Send data to next page using context
             'user_bookings': user_bookings, # All bookings related to the user
         }
-    return render(request, 'change_booking.html', context)
-"""
+    return render(request, 'my_bookings.html', context)
+
+blah blah blah
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=record)
         if form.is_valid():
@@ -81,7 +111,6 @@ def change_booking(request, session_id):
 
 
 def delete_booking(request, session_id):
-    
     
     record = get_object_or_404(Booking, id=session_id)
     
