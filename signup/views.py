@@ -72,6 +72,34 @@ def book_session(request, session_id):
     else:
         return redirect('../accounts/signup')
 
+
+def delete_booking(request, session_id):
+    """
+    Function enables user to delete a booking record
+    """
+    booking = get_object_or_404(Booking, id=session_id)
+    user = request.user
+
+    # Ensure the user deleting the booking is the one who made the booking
+    if booking.user == user:
+        if request.method == "POST":
+            booking.delete()
+            messages.success(request, 'Your booking has been deleted.')
+            return redirect('my_bookings')
+        
+        context = {'record': booking}
+        return render(request, 'delete_booking.html', context)
+    else:
+        # Redirect if the user doesn't have permission to delete this booking
+        return redirect('my_bookings')
+
+
+def home(request):
+    workout_sessions = WorkoutSession.objects.all()
+    return render(request, "index.html", {"workout_sessions": workout_sessions})
+
+
+"""
 def change_booking(request, session_id):
     booking = get_object_or_404(Booking, id=session_id)
     session = booking.workout_session
@@ -92,35 +120,7 @@ def change_booking(request, session_id):
         'user_bookings': user_bookings,
     }
     return render(request, 'my_bookings.html', context)
-
-
-def delete_booking(request, session_id):
     """
-    Function enables user to delete a booking record
-    """
-    booking = get_object_or_404(Booking, id=session_id)
-    session = booking.workout_session
-    user_bookings = Booking.objects.filter(user=request.user)
-    record = get_object_or_404(Booking, id=session_id)
-    
-    if request.method == "POST":
-        form = BookingForm(request.POST, instance=record)
-        if record.delete():
-            messages.success(request, 'Your booking has been deleted.')
-            return redirect('my_bookings')
-
-    form = BookingForm(instance=record)
-    context = {
-        'form': form, 'record': record}
-    return render(request, 'delete_booking.html', context)
-
-
-def home(request):
-    workout_sessions = WorkoutSession.objects.all()
-    return render(request, "index.html", {"workout_sessions": workout_sessions})
-
-
-
 
 
 
