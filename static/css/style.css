@@ -211,3 +211,27 @@ input[type="password"] {
     border: 1px solid #c1c3c5;
     background: lightgray;
 }
+
+.booking-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-details {
+    flex-grow: 1;
+    margin-bottom: 0; /* To remove bottom margin */
+}
+
+.delete-button {
+    margin-left: 10px; /* For some space between details and delete button */
+}
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}

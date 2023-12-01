@@ -117,7 +117,7 @@ def delete_booking(request, session_id):
     if request.method == "POST":
         if record.delete():
             messages.success(request, 'Your booking has been deleted.')
-            return redirect('booking')  # Redirect to the bookings list
+            return redirect('my_bookings')  # Redirect to the bookings list
 
     return render(request, 'delete_booking.html', {'record': record})
 
