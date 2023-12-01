@@ -10,6 +10,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.template import RequestContext
+
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -56,19 +58,22 @@ def book_session(request, session_id):
         # Check if the user has already booked this session
         existing_booking = Booking.objects.filter(user=user, workout_session=session_to_be_booked).first()
         if existing_booking:
-            messages.warning(request, 'You have already booked this session.')
-            return redirect('my_bookings')
+            context = {'booked_session': session_to_be_booked}
+            return render(request, 'already_booked.html', context)
 
-        try:
+        # Check if there are available spots before booking
+        available_spots = session_to_be_booked.available_spots
+        if available_spots > 0:
             booking = Booking(user=user, workout_session=session_to_be_booked)
             booking.save()
             context = {
                 'booked_session': session_to_be_booked,
             }
             return render(request, 'booking_success.html', context)
-        except IntegrityError as e:
+        else:
             messages.warning(request, 'Sorry, no more spots available for this session')
             return redirect('booking')
+
     else:
         return redirect('../accounts/signup')
 
