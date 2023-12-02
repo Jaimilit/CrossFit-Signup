@@ -72,47 +72,25 @@ def book_session(request, session_id):
     else:
         return redirect('../accounts/signup')
 
-def change_booking(request, session_id):
-    booking = get_object_or_404(Booking, id=session_id)
-    session = booking.workout_session
-    user_bookings = Booking.objects.filter(user=request.user)
-
-    if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'You successfully updated your booking.')
-            return redirect('my_bookings')  # Redirect to the my_bookings page
-    else:
-        form = BookingForm(instance=booking)
-
-    context = {
-        'form': form,
-        'booked_session': session,
-        'user_bookings': user_bookings,
-    }
-    return render(request, 'my_bookings.html', context)
-
-
 def delete_booking(request, session_id):
-    """
-    Function enables user to delete a booking record
-    """
-    booking = get_object_or_404(Booking, id=session_id)
-    session = booking.workout_session
-    user_bookings = Booking.objects.filter(user=request.user)
-    record = get_object_or_404(Booking, id=session_id)
-    
-    if request.method == "POST":
-        form = BookingForm(request.POST, instance=record)
-        if record.delete():
-            messages.success(request, 'Your booking has been deleted.')
-            return redirect('my_bookings')
+    if request.user.is_authenticated:
+        booking = get_object_or_404(Booking, id=session_id)
 
-    form = BookingForm(instance=record)
-    context = {
-        'form': form, 'record': record}
-    return render(request, 'delete_booking.html', context)
+        # Check if the user deleting the booking is the one who made the booking
+        if booking.user == request.user:
+            if request.method == "POST":
+                booking.delete()
+                # Redirect to my_bookings after deletion
+                return redirect('my_bookings')  # Ensure 'my_bookings' is the correct URL name
+
+            context = {'record': booking}
+            return render(request, 'delete_booking.html', context)
+        else:
+            # Redirect if the user doesn't have permission to delete this booking
+            return redirect('my_bookings')
+    else:
+        # Redirect if the user is not authenticated
+        return redirect('../accounts/signup')
 
 
 def home(request):

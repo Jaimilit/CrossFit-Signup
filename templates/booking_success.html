@@ -8,7 +8,6 @@
             <p>Day: {{ booked_session.day }}</p>
             <p>Time: {{ booked_session.time }}</p>
             <p>Instructor: {{ booked_session.instructor_name }}</p>
-           <!-- <a href="{% url 'change_booking' booked_session.id %}" class="btn btn-warning">Edit Booking</a> --> 
             <a href="{% url 'booking' %}" class="btn btn-primary">Go to Bookings</a>
             <a href="{% url 'my_bookings' %}" class="btn btn-primary">Go to My Bookings</a>
         </div>

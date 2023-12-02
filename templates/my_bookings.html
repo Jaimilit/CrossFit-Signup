@@ -1,31 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="booking_change">
+    <div class="booking">
         <div class="col-md-8 mt-3 offset-md-2">
-            <div class="booking-header"> <!-- Add a class to this div -->
+            <div class="booking-header">
                 <h3>My Bookings</h3>
-                <h4>Hello {{ request.user.username }}! These are your current bookings: </h4>
+                <h4>Hello {{ request.user.username }}! These are your current bookings:</h4>
             </div>
-            <ul>
+            <ul class="list-group">
                 {% for booking in user_bookings %}
-                    <div class="booking-item">
+                    <li class="list-group-item">
                         <div class="booking-details">
                             <p><strong>Title:</strong> {{ booking.workout_session.title }}</p>
                             <p><strong>Day:</strong> {{ booking.workout_session.day }}</p>
                             <p><strong>Time:</strong> {{ booking.workout_session.time }}</p>
                             <p><strong>Instructor:</strong> {{ booking.workout_session.instructor_name }}</p>
                         </div>
-                        <div class="delete-button">
-                            <!-- Delete button for each booking -->
-                            <form action="{% url 'delete_booking' booking.id %}" method="post" style="display: inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-small btn-danger" onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
-                            </form>
-                        </div>
-                    </div>
+                        <a href="{% url 'delete_booking' booking.id %}"
+                            class="card-link btn btn-secondary btn-book-secondary mt-3 mb-3">
+                            <i class="fa-solid fa-pen-to-square"></i> Delete
+                        </a>
+                    </li>
                 {% empty %}
-                    <li>No bookings found.</li>
+                    <li class="list-group-item">No bookings found.</li>
                 {% endfor %}
             </ul>
         </div>

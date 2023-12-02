@@ -231,11 +231,11 @@ input[type="password"] {
     margin-left: 10px; /* For some space between details and delete button */
 }
 
-.booking-header {
+.booking-header, .delete-booking {
     text-align: center;
     margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.center-text, .session-box {
+.center-text, .session-box, .delete-booking {
     text-align: center;
 }
