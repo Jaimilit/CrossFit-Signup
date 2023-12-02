@@ -11,16 +11,12 @@
             <p>Instructor: {{ record.workout_session.instructor_name }}</p>
             <form method="POST">
                 {% csrf_token %}
-                <div class="delete-contain align-items-center">
-                    <div class="delete-block pb-3 delete-block text-center">
                         <p>You are about to delete your booking.</p>
-                        <button class="delete-btn btn btn-danger mt-3 mb-3" type="submit">
-                            <i class="fa-solid fa-pen-to-square"></i> Yes, delete booking
+                        <button class="delete-btn btn btn-danger mt-3 mb-3" type="submit"> Yes, delete booking
                         </button>
-                        <a class="btn btn-primary mx-auto mb-2" href="{% url 'my_bookings' %}" role="button">
-                            Back to My Bookings
-                        </a>
+                        <a class="btn btn-primary" href="{% url 'my_bookings' %}" role="button"> Back to My Bookings</a>
                     </div>
                 </div>
-        </div>
-        {% endblock %}
+            </div>
+            {% endblock %}
+           

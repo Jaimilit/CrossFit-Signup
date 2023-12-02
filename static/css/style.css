@@ -42,13 +42,6 @@ text, h1 {
     background-color: #fff;
 }
 
-/*
-.home-overlay {
-    background-color: rgba(34, 87, 122, 0.7);
-    padding: 20px;
-    max-width: 800px;
-}
-*/
 
  .calendar {
     margin: 10px;
@@ -62,23 +55,6 @@ text, h1 {
     padding: 10px;
     text-align: center;
  }
-/*
- .row {
-    background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
-    background-color: rgba(34, 87, 122, 0.7);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 1rem;
-    opacity: 0.2;
- }
-
-.services h3,
-.services p {
-    color: white;
-    font-weight: bold;
-}
-*/
 
 .row {
     background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
@@ -236,6 +212,10 @@ input[type="password"] {
     margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.center-text, .session-box, .delete-booking {
+.center-text, .session-box {
     text-align: center;
+}
+
+.delete-booking {
+    
 }
