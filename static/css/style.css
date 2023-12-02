@@ -195,7 +195,3 @@ input[type="password"] {
 .booking-header, .delete-booking, .list-group-item, .already-booked, .booking-successful {
     text-align: center;
     margin-bottom: 20px; 
-
-.center-text, .session-box {
-    text-align: center;
-}
