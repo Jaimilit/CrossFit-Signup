@@ -23,7 +23,7 @@ def my_bookings(request):
 """retreives workout sessions from the database, it associates the booking with the current authenticated user"""
 @login_required
 def booking(request):
-    sessions = WorkoutSession.objects.all()  # Retrieve all workout sessions
+    sessions = WorkoutSession.objects.all()  
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -44,7 +44,7 @@ def booking(request):
 
 
 def book_session(request, session_id):
-    """this allows the user to book a session and tells the user if they have already booked that session or if they have booked successfull"""
+    """this allows the user to book a session and tells the user if they have already booked that session or if they have booked successfully"""
     if request.user.is_authenticated:
         session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id)
         user = request.user

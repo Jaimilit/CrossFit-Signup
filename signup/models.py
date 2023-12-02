@@ -16,7 +16,7 @@ class WorkoutSession(models.Model):
     title = models.CharField(max_length=200)
     time = models.TimeField(default='00:00')
     instructor_name = models.CharField(max_length=200)
-    day = models.CharField(max_length=20, choices=DAYS_OF_WEEK, default='Monday')  # New field for the day   
+    day = models.CharField(max_length=20, choices=DAYS_OF_WEEK, default='Monday')   
 
     def __str__(self):
         return self.title
