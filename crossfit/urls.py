@@ -19,16 +19,6 @@ from django.urls import path, include
 from signup import views
 
 
-
-# urlpatterns = [
-   # path('admin/', admin.site.urls),
-   # path("", include("signup.urls"), name="signup-urls"),
-   # path('summernote/', include('django_summernote.urls')),
-  #  path('accounts/', include('allauth.urls')),
-  #  path("booking/", views.booking, name="booking"),
-#
-#]
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("signup.urls"), name="signup-urls"),
@@ -36,18 +26,4 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     #path('accounts/', include('accounts.urls', namespace='accounts')),
 
-   # path("", views.WorkoutSessionListView.as_view(), name="home"),
-   # path("booking/", views.booking, name="booking"),
-
 ]
-
-"""
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include("blog.urls"), name="blog-urls"),
-    path('summernote/', include('django_summernote.urls')),
-]
-"""
