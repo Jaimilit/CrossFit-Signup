@@ -1,6 +1,5 @@
 from . import views
 from django.urls import path
-# from signup import views
 
 
 

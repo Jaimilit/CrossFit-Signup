@@ -1,7 +1,6 @@
 from django import forms
 from .models import WorkoutSession, Booking
 from django.contrib.auth.models import User
-# from allauth.account.forms import SignupForm
 
 
 
@@ -40,6 +39,5 @@ class BookingForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'user': 'Username',
-            'workout_session': 'Workout Session',  # Update the label if needed
-            # Add other labels as needed
+            'workout_session': 'Workout Session', 
         }

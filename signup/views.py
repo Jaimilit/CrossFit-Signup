@@ -2,16 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import WorkoutSession, Booking
 from .forms import UserForm, BookingForm
-# from django.views.generic.edit import FormView
-# from django.db.models import IntegerField, Case, When, Value, F, CharField, Count
 from django.contrib.auth.decorators import login_required
-# from datetime import datetime
-# from django.http import HttpResponse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.template import RequestContext
-
 
 
 class WorkoutSessionListView(generic.ListView):
