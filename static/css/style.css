@@ -231,7 +231,7 @@ input[type="password"] {
     margin-left: 10px; /* For some space between details and delete button */
 }
 
-.booking-header, .delete-booking {
+.booking-header, .delete-booking, .list-group-item {
     text-align: center;
     margin-bottom: 20px; /* Adjust margin as needed */
 }
