@@ -55,7 +55,9 @@ def book_session(request, session_id):
         user = request.user
 
         # Check if the user has already booked this session
-        existing_booking = Booking.objects.filter(user=user, workout_session=session_to_be_booked).first()
+        existing_booking = Booking.objects.filter(
+            user=user, workout_session=session_to_be_booked
+        ).first()
         if existing_booking:
             context = {'booked_session': session_to_be_booked}
             return render(request, 'already_booked.html', context)
@@ -95,4 +97,6 @@ def delete_booking(request, session_id):
 def home(request):
     """ creates index of workout sessions """
     workout_sessions = WorkoutSession.objects.all()
-    return render(request, "index.html", {"workout_sessions": workout_sessions})
+    return render(request, "index.html", {
+        "workout_sessions": workout_sessions
+        })
