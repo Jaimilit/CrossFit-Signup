@@ -4,15 +4,17 @@ from .models import WorkoutSession, Booking
 from .forms import UserForm, BookingForm
 from django.contrib.auth.decorators import login_required
 
+
 class WorkoutSessionListView(generic.ListView):
     """This view renders the index.html page and extends the base.html page"""
     model = WorkoutSession
     queryset = WorkoutSession.objects.order_by("title")
     template_name = "index.html"
 
-"""ensure authenticated users can access this view of booking options"""
+
 @login_required
 def my_bookings(request):
+    """ensure authenticated users can access this view of booking options"""
     user_bookings = Booking.objects.filter(user=request.user)
     context = {
         'user_bookings': user_bookings,
@@ -20,10 +22,11 @@ def my_bookings(request):
     return render(request, 'my_bookings.html', context)
 
 
-"""retreives workout sessions from the database, it associates the booking with the current authenticated user"""
 @login_required
 def booking(request):
-    sessions = WorkoutSession.objects.all()  
+    """retreives workout sessions from the database, it associates
+    the booking with the current authenticated user"""
+    sessions = WorkoutSession.objects.all()
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -38,13 +41,15 @@ def booking(request):
 
     context = {
         'form': form,
-        'sessions': sessions  
+        'sessions': sessions
     }
     return render(request, 'booking.html', context)
 
 
 def book_session(request, session_id):
-    """this allows the user to book a session and tells the user if they have already booked that session or if they have booked successfully"""
+    """this allows the user to book a session and tells the user
+    if they have already booked that session or if they have booked
+    successfully"""
     if request.user.is_authenticated:
         session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id)
         user = request.user
@@ -68,7 +73,8 @@ def book_session(request, session_id):
 
 
 def delete_booking(request, session_id):
-    """ this allows the user to delete a booking, send them to the delete booking page to check if they want to delete
+    """ this allows the user to delete a booking, send them to the
+    delete booking page to check if they want to delete
     a session or go back to the my bookings page"""
     if request.user.is_authenticated:
         booking = get_object_or_404(Booking, id=session_id)
@@ -76,8 +82,7 @@ def delete_booking(request, session_id):
         if booking.user == request.user:
             if request.method == "POST":
                 booking.delete()
-                
-                return redirect('my_bookings')  
+                return redirect('my_bookings')
 
             context = {'record': booking}
             return render(request, 'delete_booking.html', context)

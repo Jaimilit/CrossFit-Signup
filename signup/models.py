@@ -11,6 +11,7 @@ DAYS_OF_WEEK = (
     ('Sunday', 'Sunday'),
 )
 
+
 class WorkoutSession(models.Model):
     """this model provides the info of the workout sessions to be able to book"""
     title = models.CharField(max_length=200)

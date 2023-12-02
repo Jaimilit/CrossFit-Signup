@@ -12,6 +12,7 @@ class UserForm(forms.ModelForm):
             'username': 'Username (cannot be changed)',
         }
 
+
 class BookingForm(forms.ModelForm):
     """create form for booking for user"""
     def __init__(self, *args, **kwargs):
@@ -23,5 +24,5 @@ class BookingForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'user': 'Username',
-            'workout_session': 'Workout Session', 
+            'workout_session': 'Workout Session',
         }
