@@ -1,39 +1,49 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PROJECT GOALS
+This is the fourth project under the Code Institute Diploma in Software Development  program. This website is for a fictional gym called CrossFit - where the tough prevail. It is designed to be a website where members of this gym can sign up for CrossFit workout classes.
 
-Welcome,
+# UX
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+User stories
+First time visitor goals
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+As a first time visitor, I want:
 
-## Codeanywhere Reminders
+* to easily understand the main purpose of the site,
+* to be able to easily navigate through the site,
+* to be able to register a user account to access all content without restrictions,
+* to be able to reserve a day and time for a class, view my bookings and delete my bookings,
+* to be able to log out of my user account.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+Returning and frequent user goals
 
-`python3 -m http.server`
+As a returning user, I want:
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* to sign into my user account,
+* to make a booking for a class on a certain day and time,
+* to view my bookings,
+* to delete my bookings,
+* to sign out of my account
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Site Administrator goals
+* As a Site Administrator I would like to be able to create the workout sessions which users can book
 
-`http_server`
+# Agile Tools
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# Design and Structure
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The layout and design of this site was kept basic and simple. Miminal color was used to keep it simple. User are booking workout sessions and therefore this website is meant to be functional.  
 
-To log into the Heroku toolbelt CLI:
+# Functional Structure
+Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this part, which is kept dark, as not to take away fromt he important information given. The background image is of a box jump, something that they will expect to do in their classes.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Registration page: The user must create an account to make a booking. To do this,they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Login page: A username and password are required to log in existing users. Once signed in, they are directed to the home page.
 
----
+Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where he must confirm his desire to log out of the account. After a successful logout, the user is returned to the home page.
 
-Happy coding!
+Bookings page: The page  is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar and each day these are 4 workout sessions/classes to do choose from. For each sessions a title of the workout is given, as well as the day, time, and instructor. A user cannot access this page unless they are registered and logged in.
+
+My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings.It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting the user is returned to the My Bookings page. The user is informed if they have no bookings too.
