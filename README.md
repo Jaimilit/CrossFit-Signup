@@ -78,6 +78,8 @@ Delete Booking Page:
 
 No Bookings
 
+Footer
+
 # Responsive Design
 
 The site has been designed to be responsive and adapted for desktop and mobile use. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
@@ -152,5 +154,89 @@ Testing has been carried out on the following browsers:
 * Google Chrome
 * Firefox
 * Safari
+
+The site was constantly tested during the process of creating the site in the Gitpod Environment and the deployed site on Heroku was also tested in terms of user experience. The available functionality and user experience is reflected in the table below.
+
+| Golas and Actions | As a Guest | As a User | Comment |
+| -------- | -------- |  -------- | -------- |
+| I can use menu and navigating through pages   | X | X | Click on items
+| I can see the Home Page   | X | X | Click on items
+| I can see the Registration Page  | X | X | Click on items and this disapears from the nav bar once registered
+| I can see the Bookings Page |   | X | Need to be authorized to see
+| I can see the My Bookings page  |  | X | Need to be authorized to see
+| I can see the Sign Up Page | X | X | Click on items
+| I can see the Login/Logout Pages | X | X | You see one or the other depending on if you are logged in or logged out
+| I can complete the registration form  | X | X | Click on items
+| I can complete the Sign In form  | X | X | Click on items
+| I can complete make a booking for a particular session/class |  | X | Need to be authorized to do
+| I can complete delete a particular session/class |   | X | Need to be authorized to do
+| I can see if I have made a booking successfully  |   | X | Need to be authorized to do
+| I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
+
+# HTML Validation
+
+HTML Validation:
+The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without errors.
+
+Home page
+Services page
+Sign up page
+Login page
+Book Now page for guests
+Book Now page for authorized users
+Change booking page
+Delete booking page
+Logout page
+
+# CSS Validation:
+The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
+
+### Python Validation (PEP8)
+All Python code was manually checked using CI Python Linter. The Linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
+
+* urls.py
+* models.py
+* forms.py
+* views.py
+*
+
+# Deployment
+The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
+
+1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
+
+2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
+
+3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your CLOUDINARY account and ElephantSQL account. To create a SECRET KEY, use the online service or come up with your own.
+
+4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+
+5. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
+
+
+# Credits
+
+## Code
+The structure and the code of the project was based on two walkthroughs by the Code Institute:
+
+Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
+From I think therefore I blog - I used the main layout/structure of what they did. However, I altered it as it is not a blog. 
+
+## Content
+
+Information is fictional and created by me and I was inspired by my own CrossFit box. 
+[CrossFit Fabriken](https://www.cf-fabriken.com/) This is my CrossFit box and my inspiration for this project. Though this information is in Swedish. They use an app called [Wonder](https://wondr.cc/en-gb/home) in which members book their own CrossFit sessions for the week.
+
+## Media
+
+The one image was free to use from Pexels.
+
+## Inspiration
+
+This project was inspired by the Hello Django project and the I Think Therefore I Blog project.
+ Larisa LG's Readme.md file was used as a template for writing Readme.md.
+ CrossFit Fabriken website and Wondr App.
+
+
 
 
