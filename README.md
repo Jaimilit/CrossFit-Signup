@@ -179,14 +179,18 @@ HTML Validation:
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without errors.
 
 Home page
-Services page
-Sign up page
+Base
+Bookings page
+My Bookings
+Sign Up page
 Login page
-Book Now page for guests
-Book Now page for authorized users
-Change booking page
-Delete booking page
 Logout page
+Delete booking page
+Already booked page
+Booking Success
+
+
+
 
 # CSS Validation:
 The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
