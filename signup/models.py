@@ -12,6 +12,7 @@ DAYS_OF_WEEK = (
 )
 
 class WorkoutSession(models.Model):
+    """this model provides the info of the workout sessions to be able to book"""
     title = models.CharField(max_length=200)
     time = models.TimeField(default='00:00')
     instructor_name = models.CharField(max_length=200)
@@ -25,6 +26,7 @@ class WorkoutSession(models.Model):
 
 
 class Booking(models.Model):
+    """this model provides the booking info for the user to book workout sessions"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     workout_session = models.ForeignKey('WorkoutSession', on_delete=models.CASCADE)
    # attendees = models.ManyToManyField(User, related_name='signed_up_for', blank=True)

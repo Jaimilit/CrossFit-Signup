@@ -110,23 +110,11 @@ text, h1 {
     text-decoration: underline;
 }
 
-.btn-secondary {
-    background-color: #22577a !important;
-    border-color: #22577a !important;
-}
-
 .btn-secondary:hover {
     background-color: #38A3A5 !important;
     color: white;
     border-color: #22577a !important;
 }
-
-/* For forms - login & signup 
-.container {
-    text-align: center;
-    padding: 20px;
-}
-*/
 
 /* Style headers for forms */
 .signup, .login, .logout {
@@ -200,11 +188,7 @@ input[type="password"] {
 
 .booking-details {
     flex-grow: 1;
-    margin-bottom: 0; /* To remove bottom margin */
-}
-
-.delete-button {
-    margin-left: 10px; /* For some space between details and delete button */
+    margin-bottom: 0; 
 }
 
 .booking-header, .delete-booking, .list-group-item {
@@ -214,8 +198,4 @@ input[type="password"] {
 
 .center-text, .session-box {
     text-align: center;
-}
-
-.delete-booking {
-    
 }
