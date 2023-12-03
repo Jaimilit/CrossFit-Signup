@@ -22,10 +22,10 @@
           {% for session in sessions %}
           {% if session.day == 'Monday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
@@ -49,14 +49,14 @@
           {% for session in sessions %}
           {% if session.day == 'Tuesday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<b>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
+            <h3>You have already booked this session.</h3>
             {% endif %}
             {% endfor %}
             {% endif %}
@@ -76,10 +76,10 @@
           {% for session in sessions %}
           {% if session.day == 'Wednesday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
@@ -102,10 +102,10 @@
           {% for session in sessions %}
           {% if session.day == 'Thursday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
@@ -130,10 +130,10 @@
           {% for session in sessions %}
           {% if session.day == 'Friday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
@@ -157,10 +157,10 @@
           {% for session in sessions %}
           {% if session.day == 'Saturday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}
@@ -184,10 +184,10 @@
           {% for session in sessions %}
           {% if session.day == 'Sunday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <strong>Title:</strong> {{ session.title }}<br>
+            <strong>Day:</strong> {{ session.day }}<br>
+            <strong>Time:</strong> {{ session.time }}<br>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}

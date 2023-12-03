@@ -177,6 +177,10 @@ input[type="password"] {
     background: lightgray;
 }
 
+.session-box {
+    text-align: center;
+}
+
 .booking-item {
     border: 1px solid #ccc;
     border-radius: 5px;
