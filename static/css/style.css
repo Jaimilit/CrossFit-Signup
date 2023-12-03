@@ -208,17 +208,32 @@ input[type="password"] {
     display: none;
 }
 
-.container, .calendar-booking {
-    width: 85vw;
+.container {
+    width: 90vw;
     font-size: xx-small;
+    margin: 0 auto;
 }
 
+.calendar-booking {
+    width: 80vw;
+    margin: 0 auto;
+    
+}
+
+.btn {
+    font-size: 8px;
+    padding: 5px 5px;
+}
+
+}
+.container{ 
+    margin-top: 50px;
+}
 }
 
 /* for screens that are 480px wide or less */
 @media (max-width: 480px) {
  
-
 .calendar {
     display: none;
 }
