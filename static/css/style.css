@@ -80,12 +80,18 @@ text, h1 {
 }
 
 .services h3,
-.services p {
+.services p,
+.services i {
     color: white;
     font-weight: bold;
     position: relative;
     z-index: 1;
 }
+
+.services i {
+    font-size: 30px;
+}
+
 
 /*login & logout */
 

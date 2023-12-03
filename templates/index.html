@@ -1,15 +1,15 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block content %}
 
 <main class="flex-shrink-0 main-bg">
-    </main>
+</main>
 <h1>Make it a Lifestyle Choice</h1>
 <div class="calendar">
     <div class="day">Monday
         <hr>
         <p>8:00 - 9:00 WOD </p>
         <p>11:30 -12:30 Endurance </p>
-        <p>15:00 - 16:00  WOD </p>
+        <p>15:00 - 16:00 WOD </p>
         <p>17:00 - 18:00 Basic</p>
     </div>
     <div class="day">Tuesday
@@ -48,7 +48,7 @@
         <p>17:00 - 18:00 WOD</p>
     </div>
     <div class="day">Sunday
-        <hr> 
+        <hr>
         <p>9:00 - 10:00 WOD </p>
         <p>11:30 -12:30 WOD </p>
         <p>15:00 - 16:00 Endurance </p>
@@ -56,34 +56,40 @@
     </div>
 </div>
 
-    <div class="bg-photo">
-        <div class="row">
-            <div class="col-md-4 text-center animate-box">
-                <div class="services">
-                    <h3>WOD</h3>
-                    <h3><i class="fa-solid fa-heart-pulse"></i></h3>
-                    <p>WOD stands for Workout Of the Day and is just that – today's workout</p>
-                    <p>The exercises included in a WOD can be any of the basic lifting moments (Squat, Front Squat, Push Press, Push Jerk, Deadlift, etc.), which are complex and involve several
-                    muscles working together. In addition, we do pull-ups, push-ups, sit-ups, box jumps, etc. The exercises are many and the combination possibilities
+<div class="bg-photo">
+    <div class="row">
+        <div class="col-md-4 text-center animate-box">
+            <div class="services">
+                <h3>WOD</h3>
+                <span class="icons"><i class="fa-solid fa-heart-pulse"></i></span>
+                <p>WOD stands for Workout Of the Day and is just that – today's workout</p>
+                <p>The exercises included in a WOD can be any of the basic lifting moments (Squat, Front Squat, Push
+                    Press, Push Jerk, Deadlift, etc.), which are complex and involve several
+                    muscles working together. In addition, we do pull-ups, push-ups, sit-ups, box jumps, etc. The
+                    exercises are many and the combination possibilities
                     are endless - hence the name CrossFit!</p>
-                </div>
-            </div>
-            <div class="col-md-4 text-center animate-box">
-                <div class="services">
-                    <h3>Endurance</h3>
-                    <h3><i class="fa-solid fa-person-running"></i></h3>
-                    <p>Endurance WOD gives you an enduring tough workout where we don't focus on the technical movements or the heavy lifting. Rather, the focus is on endurance exercises and the use of machines - row, skierg, and echo bike.
-                    You will definitely be tired!</p>
-            
-                </div>
-            </div>
-            <div class="col-md-4 text-center animate-box">
-                <div class="services">
-                    <h3>Basic</h3>
-                    <h3><i class="fa-solid fa-dumbbell"></i></h3>
-                    <p>Do you feel like this CrossFit thing is completely new to you? Then it might be a good thing to start with our
-                    Basic-WOD, which is a copy of today's regular WOD but a little more simplified and more explanations of different scaling options.</p>
-                </div>
             </div>
         </div>
-{%endblock%}
+        <div class="col-md-4 text-center animate-box">
+            <div class="services">
+                <h3>Endurance</h3>
+                <span><i class="fa-solid fa-person-running"></i></span>
+                <p>Endurance WOD gives you an enduring tough workout where we don't focus on the technical movements or
+                    the heavy lifting. Rather, the focus is on endurance exercises and the use of machines - row,
+                    skierg, and echo bike.
+                    You will definitely be tired!</p>
+
+            </div>
+        </div>
+        <div class="col-md-4 text-center animate-box">
+            <div class="services">
+                <h3>Basic</h3>
+                <span><i class="fa-solid fa-dumbbell"></i></span>
+                <p>Do you feel like this CrossFit thing is completely new to you? Then it might be a good thing to start
+                    with our
+                    Basic-WOD, which is a copy of today's regular WOD but a little more simplified and more explanations
+                    of different scaling options.</p>
+            </div>
+        </div>
+    </div>
+    {%endblock%}
