@@ -60,30 +60,42 @@ Navigation for an unauthorized user:
 ![nav bar](./static/assets/features/nav-bar.png)
 
 Navigation for an authorized user - registration disappears:
+![nav bar when registered](./static/assets/features/nav-bar-login.png)
 
 Registration Page:
+![registration](./static/assets/features/sign-up-page.png)
 
 Sign-In Page:
+![sign-in](./static/assets/features/)
 
 Log Out Page:
+![logout](./static/assets/features/sign-out-page.png)
 
 Bookings Page:
+![bookings](./static/assets/features/calendar-page.png)
 
 My Bookings Page:
+![my bookings](./static/assets/features/my-bookings-page.png)
 
 Booking Successful:
+![booking successful](./static/assets/features/booking-successful-page.png)
 
 Booking Aleady Made Page: 
+![booked already](./static/assets/features/already-booked-page.png)
 
 Delete Booking Page:
+![delete booking](./static/assets/features/delete-booking-page.png)
 
 No Bookings
+![no bookings](./static/assets/features/no-bookings-page.png)
 
 Footer
+![footer](./static/assets/features/footer.png)
 
 # Responsive Design
 
 The site has been designed to be responsive and adapted for desktop and mobile use. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
+![responsive](./static/assets/validations/iamresponsive.png)
 
 # Future Features
 
@@ -191,19 +203,22 @@ Already booked page
 Booking Success
 
 
-
-
 # CSS Validation:
 The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
+![CSS](./static/assets/validations/css-validation.png)
 
 ### Python Validation (PEP8)
 All Python code was manually checked using CI Python Linter. The Linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
 
 * urls.py
+![urs.py](./static/assets/validations/urls-linter.png)
 * models.py
+![models.py](./static/assets/validations/linter-models.png)
 * forms.py
+![forms.py](./static/assets/validations/linter-forms.png)
 * views.py
-*
+![views.py](./static/assets/validations/linter-views.png)
+
 
 # Deployment
 The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
