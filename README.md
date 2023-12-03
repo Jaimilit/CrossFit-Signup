@@ -57,7 +57,7 @@ The wireframes were used to create the basic layout of the project. The wirefram
 The navigation bar is present on all pages of the site. The nav bar as different sections: Home, Bookings, My Bookings, Registration and Login/Logout. Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
 Navigation for an unauthorized user:
-![nav bar](../static/assets/features/nav-bar.png)
+![nav bar](../assets/features/nav-bar.png)
 
 Navigation for an authorized user - registration disappears:
 
