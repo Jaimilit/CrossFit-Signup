@@ -195,3 +195,32 @@ input[type="password"] {
 .booking-header, .delete-booking, .list-group-item, .already-booked, .booking-successful {
     text-align: center;
     margin-bottom: 20px; 
+}
+
+    /*** Media queries  ***/
+
+
+/* for screens that are 912px wide or less */
+
+@media (max-width: 912px){
+
+.calendar {
+    display: none;
+}
+
+.container, .calendar-booking {
+    width: 85vw;
+    font-size: xx-small;
+}
+
+}
+
+/* for screens that are 480px wide or less */
+@media (max-width: 480px) {
+ 
+
+.calendar {
+    display: none;
+}
+
+}
