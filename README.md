@@ -9,6 +9,7 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
 # Table of Contents
 - [Project Goals](#project goals)
 - [UX](#ux)
+    - [AgileTools](#Agile Tools)
 
 # PROJECT GOALS
 This is the fourth project under the Code Institute Diploma in Software Development  program. This website is for a fictional gym called CrossFit - where the tough prevail. It is designed to be a website where members of this gym can sign up for CrossFit workout classes like a real gym. It is kept basic because it is meant to be a place where users view and book their gym classes.
