@@ -245,28 +245,28 @@ input[type="password"] {
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
-
     .btn {
-        font-size: 6px;
-        padding: 2px;
+      font-size: 6px;
+      padding: 2px;
     }
+  
     .calendar-booking {
-        width: 90%;
-        margin: 0;
-        padding: 0;
-        border-spacing: 0;
-        table-layout: fixed;
-      }
-    
+      width: 90%;
+      margin: 0;
+      padding: 0;
+      border-spacing: 0;
+      table-layout: fixed;
+    }
+  
     .calendar-booking th.day::before {
-      content: attr(data-day);
+      content: attr(data-day); /* Display the data-day attribute content */
     }
   
     .calendar-booking th.day {
       font-size: 0; /* Hide the original day text */
     }
-
-  .session-box strong {
-    display: none;
+  
+    .session-box strong {
+      display: none; /* Hides the strong elements */
+    }
   }
-}
