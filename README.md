@@ -60,6 +60,16 @@ My Bookings page: Only authenticated users have access to this page. On this pag
 
 The wireframes were used to create the basic layout of the project. The wireframes can be seen below:
 
+Homepage:
+![wireframes-homepage](./static/assets/wireframes/wireframes-homepage.png)
+
+Booking Page:
+![wireframes-bookingpage](./static/assets/wireframes/wireframes-bookingpage.png)
+
+Booking Successful/Delete Booking/Booking Already Made:
+![wireframes-homepage](./static/assets/wireframes/wireframes-bookings.png)
+
+
 # FEATURES
 
 ## Navigation Bar
