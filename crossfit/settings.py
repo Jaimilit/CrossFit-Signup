@@ -33,6 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com', 
                 '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-us106.gitpod.io',
                 '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-eu106.gitpod.io',
