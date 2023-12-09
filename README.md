@@ -280,6 +280,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |Fixed |
 | CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | Fixed |
 | Delete Booking wouldn't go to delete_booking page | Need to delete function and return renders  | Fixed |
+| When Debug was set to False, none of the CSS was displayed | python command to collect static files | Fixed |
 
 
 ## Validation

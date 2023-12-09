@@ -219,15 +219,14 @@ input[type="password"] {
 }
 
 .container {
-    width: 90vw;
+    width: 90%;
     font-size: xx-small;
-    margin: 0 auto;
 }
 
 .calendar-booking {
-    width: 80vw;
+    width: 90%;
+    font-size: xx-small;
     margin: 0 auto;
-    
 }
 
 .btn {
@@ -236,16 +235,25 @@ input[type="password"] {
 }
 
 }
-.container{ 
-    margin-top: 50px;
-}
-}
 
 /* for screens that are 480px wide or less */
 @media (max-width: 480px) {
  
+.container {
+    width: 90vw;
+    font-size: xx-small;
+}
+    
 .calendar {
     display: none;
 }
 
+th, td {
+    padding: 3px; 
+    font-size: 6px; 
+
+.btn {
+    font-size: 5px;
+    padding: 2px 2px;
+}
 }
