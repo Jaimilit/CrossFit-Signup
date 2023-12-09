@@ -253,7 +253,8 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 
 
 # Deployment
-The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
+I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
+
 
 1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
 
@@ -261,9 +262,11 @@ The project was first created in GitHub, then using the workspace in CodeAnywher
 
 3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your [CLOUDINARY](https://cloudinary.com/) account and [ElephantSQL](https://www.elephantsql.com/) account. To create a SECRET KEY, use the online service or come up with your own.
 
-4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+4. The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies pip3 freeze --local > requirements.txt. Please note this file should be added to a .gitignore file to prevent the file from being committed.
 
-5. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
+5. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+
+6. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
 
 
 # Credits
@@ -272,12 +275,14 @@ The project was first created in GitHub, then using the workspace in CodeAnywher
 The structure and the code of the project was based on two walkthroughs by the Code Institute:
 
 Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
-From I think therefore I blog - I used the main layout/structure of what they did. However, I altered it as it is not a blog. 
+[Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
+[Bootstrap Documenation](https://getbootstrap.com/)  was used to provide examples of Bootstrap functionality and building blocks.
+[Code Institute WalkThroughs](https://codeinstitute.net/se/) walkthrough as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
 
 ## Content
 
 Information is fictional and created by me and I was inspired by my own CrossFit box. 
-[CrossFit Fabriken](https://www.cf-fabriken.com/) This is my CrossFit box and my inspiration for this project. Though this information is in Swedish. They use an app called [Wonder](https://wondr.cc/en-gb/home) in which members book their own CrossFit sessions for the week.
+[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. Though this information is in Swedish. They use an app called [Wondr](https://wondr.cc/en-gb/home) in which members book their own CrossFit sessions for the week.
 
 ## Media
 
