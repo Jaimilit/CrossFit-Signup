@@ -186,7 +186,7 @@ input[type="password"] {
     width: 100%;
     margin-bottom: 0.9375rem;
     border: 1px solid #c1c3c5;
-    background: lightgray;
+    background: lightgrey;
 }
 
 .session-box {
@@ -245,38 +245,7 @@ input[type="password"] {
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
-    /* Hide specific elements within session-box */
-    .session-box strong:nth-of-type(1),
-    .session-box strong:nth-of-type(2),
-    .session-box br:nth-of-type(3),
-    .session-box br:nth-of-type(4) {
-        display: none;
+    .session-box strong {
+      display: none;
     }
-
-    /* Adjust container width and font size */
-    .container {
-        width: 90vw;
-        font-size: xx-small;
-    }
-
-    /* Hide the calendar and modify the calendar booking width */
-    .calendar {
-        display: none;
-    }
-
-    .calendar-booking {
-        width: 95vw;
-    }
-
-    /* Adjust the styling for th, td, and .btn */
-    th,
-    td {
-        padding: 3px;
-        font-size: 6px;
-    }
-
-    .btn {
-        font-size: 5px;
-        padding: 2px 2px;
-    }
-}
+  }
