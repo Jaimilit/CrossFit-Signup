@@ -268,7 +268,7 @@ The site was constantly tested during the process of creating the site in the Gi
 * Example of format issue for the layout of the success page.
 ![Layout Format for Success Page](./static/assets/bugs/bug-layout-success.png)
 
-* Example of issues with functions between booking and booking_session not working correctly.
+* Example of issues with functions between booking and booking_session not working correctly. Automated testing to fix issue.
 ![Booking Issues](./static/assets/bugs/bug-testing.png)
 
 | Bug| Solution | Fixed 
@@ -313,6 +313,14 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 * views.py
 ![views.py](./static/assets/validations/linter-views.png)
 
+During testing a few issues were identified and corrected:
+
+Extra whitespace was deleted
+Indentations were corrected
+Two lines spaces between functions and classes
+All lines adjusted to <80 characters
+Minor errors with missing closing tags
+
 ### Lighthouse
 
 ![Lighthouse](./static/assets/validations/lighthouse-example.png)
@@ -321,19 +329,21 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 # Deployment
 I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
 
+## Github
+
+1. Create an account at GitHub or login to an existing account.
+2. Go to the GitHub repository for CrossFit-Signup.
+3. Click the 'Code' button and copy and paste code into Codeanywhere workspace or Gitpod workspace
+4. A copy of the repository will be available in your own repository.
+
+## Heroku
+The site is deployed to Heroku through the following steps:
 
 1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
-
 2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
-
 3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your [CLOUDINARY](https://cloudinary.com/) account and [ElephantSQL](https://www.elephantsql.com/) account. To create a SECRET KEY, use the online service or come up with your own.
-
-4. The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies pip3 freeze --local > requirements.txt. Please note this file should be added to a .gitignore file to prevent the file from being committed.
-
-5. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
-
-6. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
-
+4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+5. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
 
 # Credits
 
