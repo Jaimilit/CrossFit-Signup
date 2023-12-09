@@ -139,7 +139,7 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 
 ### Databse:
-* PostgreSQL: the database used to store all the data.
+* [PostgreSQL](https://www.elephantsql.com/): the database used to store all the data. 
 
 ### Programs and Tools
 
@@ -184,7 +184,7 @@ Testing has been carried out on the following browsers:
 
 The site was constantly tested during the process of creating the site in the Gitpod Environment and the deployed site on Heroku was also tested in terms of user experience. The available functionality and user experience is reflected in the table below.
 
-| Golas and Actions | As a Guest | As a User | Comment |
+| Goals and Actions | As a Guest | As a User | Comment |
 | -------- | -------- |  -------- | -------- |
 | I can use menu and navigating through pages   | X | X | Click on items
 | I can see the Home Page   | X | X | Click on items
@@ -208,6 +208,14 @@ The site was constantly tested during the process of creating the site in the Gi
 
 * Example of issues with functions between booking and booking_session not working correctly.
 ![Booking Issues](./static/assets/bugs/bug-testing.png)
+
+| Bug| Solution | Fixed 
+| -------- | -------- |  -------- |
+|  Issue with bookings showing all on Mondays | Need to adjust book_session and booking functions| Fixed |
+| Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |Fixed |
+| CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | Fixed |
+| Delete Booking wouldn't go to delete_booking page | Need to delete function and return renders  | Fixed |
+
 
 ## Validation
 
