@@ -80,7 +80,7 @@ The layout and design of this site was kept basic and simple. Miminal color was 
 ## Functional Structure
 Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this sectiom which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
 
-Registration page: The user must create an account to make a booking. To do this,they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
+Registration page: The user must create an account to make a booking. To do this, they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
 
 Login page: A username and password are required to log in for existing users. Once signed in, they are directed to the home page.
 
@@ -118,35 +118,44 @@ Navigation for an authorized user - registration disappears:
 
 ## Pages
 
-Registration Page:
+Registration Page - Where a user can sign up to use the platform:
 ![registration](./static/assets/features/sign-up-page.png)
 
-Sign-In Page:
+Sign-In Page - Where a returning user and return and log-in:
 ![sign-in](./static/assets/features/signin-page.png)
 
-Log Out Page:
+Log Out Page - Where a user can log out: 
 ![logout](./static/assets/features/sign-out-page.png)
 
-Bookings Page:
+Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
 ![bookings](./static/assets/features/calendar-page.png)
 
-My Bookings Page:
+My Bookings Page - Where an authenticated user can view all their bookings:
 ![my bookings](./static/assets/features/my-bookings-page.png)
 
-Booking Successful:
+Booking Successful - Where a user can be informed that their booking was successful:
 ![booking successful](./static/assets/features/booking-successful-page.png)
 
-Booking Aleady Made Page: 
+Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
 ![booked already](./static/assets/features/already-booked-page.png)
 
-Delete Booking Page:
+Delete Booking Page - Where a user can delete a booking:
 ![delete booking](./static/assets/features/delete-booking-page.png)
 
-No Bookings
+No Bookings - Where a user is informed if they currently have no bookings:
 ![no bookings](./static/assets/features/no-bookings-page.png)
 
-Footer
+Footer - Information that it was created by me and links:
 ![footer](./static/assets/features/footer.png)
+
+Main Admin Page - Main Admin page to create workouts and view bookings made:
+![admin-page](./static/assets/features/admin-page.png)
+
+Admin Workout - Where Admin created the workout sessions to be booked by users:
+![admin-workouts](./static/assets/features/admin-workouts.png)
+
+Admin Bookings - Where Admin can view the bookings made and deleted:
+![admin-bookings](./static/assets/features/admin-bookings.png)
 
 # Responsive Design
 
@@ -321,14 +330,10 @@ Information is fictional and created by me and I was inspired by my own CrossFit
 
 ## Media
 
-The one image was free to use from Pexels.
+The one image was free to use from [Pexels](https://www.pexels.com/).
 
 ## Inspiration
 
 This project was inspired by the Hello Django project and the I Think Therefore I Blog project.
  Larisa LG's Readme.md file was used as a template for writing Readme.md.
  CrossFit Fabriken website and Wondr App.
-
-
-
-
