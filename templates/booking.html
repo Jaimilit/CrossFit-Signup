@@ -52,7 +52,7 @@
             <strong>Title:</strong> {{ session.title }}<br>
             <strong>Day:</strong> {{ session.day }}<br>
             <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<b>
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
             {% if user_bookings %}
             {% for user_booking in user_bookings %}
             {% if user_booking.workout_session.id == session.id %}

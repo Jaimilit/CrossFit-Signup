@@ -253,5 +253,10 @@ input[type="password"] {
         font-size: 6px;
         padding: 2px;
     }
+
+    .calendar-booking {
+        width: 90%;
+        margin: 0 auto; /* To center the table within the container */
+      }
     
   }
