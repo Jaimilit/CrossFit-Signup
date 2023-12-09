@@ -87,7 +87,7 @@ Registration Page:
 ![registration](./static/assets/features/sign-up-page.png)
 
 Sign-In Page:
-![sign-in](./static/assets/features/)
+![sign-in](./static/assets/features/signin-page.png)
 
 Log Out Page:
 ![logout](./static/assets/features/sign-out-page.png)
@@ -135,7 +135,8 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 ### Frameworks, Libraries, Programs:
 
-* Django: python framework used to create all the backend
+* [Django](https://pypi.org/project/Django/3.2.14/): python framework used to create all the backend
+
 
 ### Databse:
 * PostgreSQL: the database used to store all the data.
@@ -158,6 +159,8 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 * [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website
 * [Github Projects](https://github.com/) and Kanban board was used to track the progress of the project in general and of every application in the project
+* [Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/) was used to created the outline for my project
+
 
 # Testing
 
@@ -168,17 +171,7 @@ No known bugs remaining
 
 # Manual Testing
 
-The Project was tested using a multi-device emulator with different display sizes in the Google Chrome Developer Dashboard. The following devices have been tested:
-
-Nest HubMax (Desktop)
-iPad Pro (Tablet)
-iPad Air (Tablet)
-iPad Mini (Tablet)
-Galaxy Tab S4 (Tablet)
-Nexus 7 (Mobile)
-Nokia N9 (Mobile)
-iPhone 5/SE (Mobile)
-iPhone 4 (Mobile)
+Testing was done throughout the process while developing the project by the use of Django debug pages and printing statements to check that the code functioned accordingly. In addition, thorough testing has been performed and is described below, it contains of manual test to check that all user stories and acceptance criteria are met, as well as testing and validating the code with different online tools as presented below.
 
 
 ### Browser Testing
@@ -206,6 +199,15 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can complete delete a particular session/class |   | X | Need to be authorized to do
 | I can see if I have made a booking successfully  |   | X | Need to be authorized to do
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
+
+* Example of format error was not putting the different days in the right place. It was putting all the workouts under Monday which was the default. This was later recified.
+![Layout Format](./static/assets/bugs/bug-layout-gym-session.png)
+
+* Example of format issue for the layout of the success page.
+![Layout Format for Success Page](./static/assets/bugs/bug-layout-success.png)
+
+* Example of issues with functions between booking and booking_session not working correctly.
+![Booking Issues](./static/assets/bugs/bug-testing.png)
 
 ## Validation
 
