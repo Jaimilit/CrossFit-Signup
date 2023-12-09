@@ -4,16 +4,17 @@
 <div class="container">
   <h2 class="mb-3 text-center">Choose a Gym Session</h2>
 
+
   <table id="calendar-booking" class="calendar-booking">
     <thead>
       <tr>
-        <th class="day" data-day="Mon">Monday</th>
-        <th class="day" data-day="Tue">Tuesday</th>
-        <th class="day" data-day="Wed">Wednesday</th>
-        <th class="day" data-day="Thu">Thursday</th>
-        <th class="day" data-day="Fri">Friday</th>
-        <th class="day" data-day="Sat">Saturday</th>
-        <th class="day" data-day="Sun">Sunday</th>
+        <th class="day">Monday</th>
+        <th class="day">Tuesday</th>
+        <th class="day">Wednesday</th>
+        <th class="day">Thursday</th>
+        <th class="day">Friday</th>
+        <th class="day">Saturday</th>
+        <th class="day">Sunday</th>
       </tr>
     </thead>
     <tbody>
@@ -22,77 +23,58 @@
           {% for session in sessions %}
           {% if session.day == 'Monday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
           {% endfor %}
         </td>
-
+        <!-- Repeat the structure for other days -->
         <td>
           {% for session in sessions %}
           {% if session.day == 'Tuesday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <h3>You have already booked this session.</h3>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
           {% endfor %}
         </td>
-
         <td>
           {% for session in sessions %}
           {% if session.day == 'Wednesday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
@@ -102,105 +84,77 @@
           {% for session in sessions %}
           {% if session.day == 'Thursday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
           {% endfor %}
         </td>
-
-
         <td>
           {% for session in sessions %}
           {% if session.day == 'Friday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
           {% endfor %}
         </td>
-
         <td>
           {% for session in sessions %}
           {% if session.day == 'Saturday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
           {% endfor %}
         </td>
-
         <td>
           {% for session in sessions %}
           {% if session.day == 'Sunday' %}
           <div class="session-box">
-            <strong>Title:</strong> {{ session.title }}<br>
-            <strong>Day:</strong> {{ session.day }}<br>
-            <strong>Time:</strong> {{ session.time }}<br>
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br>
-            {% if user_bookings %}
-            {% for user_booking in user_bookings %}
-            {% if user_booking.workout_session.id == session.id %}
-            <p>You have already booked this session.</p>
-            {% endif %}
-            {% endfor %}
-            {% endif %}
-            {% if not user_bookings %}
+            <strong>Title:</strong> {{ session.title }}<br />
+            <strong>Day:</strong> {{ session.day }}<br />
+            <strong>Time:</strong> {{ session.time }}<br />
+            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
-              <button type="submit" class="btn btn-primary">Book Session</button>
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
             </form>
-            {% endif %}
           </div>
           <hr>
           {% endif %}
