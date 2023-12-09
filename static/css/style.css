@@ -18,7 +18,7 @@ body {
 }
 
 .navbar-brand {
-  float: left;
+    float: left;
 }
 
 .nav-item {
@@ -35,7 +35,8 @@ body {
 
 /* for home page */
 
-text, h1 {
+text,
+h1 {
     color: lightgray;
     padding: 20px;
     font-weight: 900;
@@ -46,18 +47,18 @@ text, h1 {
     background-color: #fff;
 }
 
- .calendar {
+.calendar {
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     color: whitesmoke;
- }
+}
 
- .day {
+.day {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
- }
+}
 
 .row {
     background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
@@ -124,7 +125,9 @@ text, h1 {
 }
 
 /* Style headers for forms */
-.signup, .login, .logout {
+.signup,
+.login,
+.logout {
     color: black;
     font-weight: 300;
     margin-bottom: 20px;
@@ -132,7 +135,9 @@ text, h1 {
 }
 
 /* Style the introductory message for forms*/
-.signup, .login, .logout p {
+.signup,
+.login,
+.logout p {
     color: black;
     font-size: 16px;
     margin-bottom: 20px;
@@ -199,53 +204,75 @@ input[type="password"] {
 
 .booking-details {
     flex-grow: 1;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
-.booking-header, .delete-booking, .list-group-item, .already-booked, .booking-successful {
+.booking-header,
+.delete-booking,
+.list-group-item,
+.already-booked,
+.booking-successful {
     text-align: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-    /*** Media queries  ***/
+/*** Media queries  ***/
 
 
 /* for screens that are 912px wide or less */
 
-@media (max-width: 912px){
+@media (max-width: 912px) {
 
-.calendar {
-    display: none;
+
+    .calendar {
+        display: none;
+    }
+
+
+    .container {
+        width: 90%;
+        font-size: xx-small;
+    }
+
+
+    .calendar-booking {
+        width: 90%;
+        font-size: xx-small;
+        margin: 0 auto;
+    }
+
+
+    .btn {
+        font-size: 8px;
+        padding: 5px 5px;
+    }
 }
 
-.container {
-    width: 90vw;
-    font-size: xx-small;
-    margin: 0 auto;
-}
-
-.calendar-booking {
-    width: 80vw;
-    margin: 0 auto;
-    
-}
-
-.btn {
-    font-size: 8px;
-    padding: 5px 5px;
-}
-
-}
-.container{ 
-    margin-top: 50px;
-}
-}
 
 /* for screens that are 480px wide or less */
 @media (max-width: 480px) {
- 
-.calendar {
-    display: none;
-}
 
+
+    .container {
+        width: 90vw;
+        font-size: xx-small;
+    }
+
+
+    .calendar {
+        display: none;
+    }
+
+
+    th,
+    td {
+        padding: 3px;
+        font-size: 6px;
+    }
+
+
+    .btn {
+        font-size: 5px;
+        padding: 2px 2px;
+    }
 }
