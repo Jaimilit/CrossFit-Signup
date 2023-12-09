@@ -1,3 +1,11 @@
+# PROJECT PORTFOLIO FOUR - CROSSFIT BOOKING SYSTEM
+
+![responsive](./static/assets/validations/iamresponsive.png)
+
+The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/) 
+
+[Github Repository](https://github.com/Jaimilit/CrossFit-Signup) 
+
 # PROJECT GOALS
 This is the fourth project under the Code Institute Diploma in Software Development  program. This website is for a fictional gym called CrossFit - where the tough prevail. It is designed to be a website where members of this gym can sign up for CrossFit workout classes.
 
@@ -27,7 +35,7 @@ As a returning user, I want:
 Site Administrator goals
 * As a Site Administrator I would like to be able to create the workout sessions which users can book
 
-# Agile Tools
+## Agile Tools
 
 The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.
 
@@ -35,7 +43,7 @@ The Projects section in GitHub was used for this project. A Kanban board was use
 
 The layout and design of this site was kept basic and simple. Miminal color was used to keep it simple. User are booking workout sessions and therefore this website is meant to be functional.  
 
-# Functional Structure
+## Functional Structure
 Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this part, which is kept dark, as not to take away fromt he important information given. The background image is of a box jump, something that they will expect to do in their classes.
 
 Registration page: The user must create an account to make a booking. To do this,they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
@@ -52,7 +60,9 @@ My Bookings page: Only authenticated users have access to this page. On this pag
 
 The wireframes were used to create the basic layout of the project. The wireframes can be seen below:
 
-# Navigation Bar
+# FEATURES
+
+## Navigation Bar
 
 The navigation bar is present on all pages of the site. The nav bar as different sections: Home, Bookings, My Bookings, Registration and Login/Logout. Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
@@ -105,21 +115,21 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 # Technology Used:
 
-## Languages:
+### Languages:
 
 * Python
 * JavaScript
 * HTML5
 * CSS3
 
-## Frameworks, Libraries, Programs:
+### Frameworks, Libraries, Programs:
 
 * Django: python framework used to create all the backend
 
-## Databse:
+### Databse:
 * PostgreSQL: the database used to store all the data.
 
-## Programs and Tools
+### Programs and Tools
 
 * [Google Fonts](https://fonts.google.com/): Was used to to incorporate font styles
 * [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website
@@ -186,9 +196,9 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can see if I have made a booking successfully  |   | X | Need to be authorized to do
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
 
-# HTML Validation
+## Validation
 
-HTML Validation:
+### HTML Validation:
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without errors.
 
 * Home page
@@ -228,7 +238,7 @@ The project was first created in GitHub, then using the workspace in CodeAnywher
 
 2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
 
-3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your CLOUDINARY account and ElephantSQL account. To create a SECRET KEY, use the online service or come up with your own.
+3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your [CLOUDINARY](https://cloudinary.com/) account and [ElephantSQL](https://www.elephantsql.com/) account. To create a SECRET KEY, use the online service or come up with your own.
 
 4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
 
