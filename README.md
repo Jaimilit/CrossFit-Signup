@@ -313,6 +313,10 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 * views.py
 ![views.py](./static/assets/validations/linter-views.png)
 
+### Lighthouse
+
+![Lighthouse](./static/assets/validations/lighthouse-example.png)
+
 
 # Deployment
 I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
