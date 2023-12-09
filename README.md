@@ -82,7 +82,9 @@ Buttons were styled to standout with hover actions to provide user feedback. All
 
 ## Kanban Boards
 
-Kanban boards were created for this project.
+[Kanban Board](https://github.com/users/Jaimilit/projects/4) was used to create this project.
+User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board.
+All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. 
 
 Here you can see my overview of my kanban board and moving items around as I was working on them.
 ![Kanban Boards](./static/assets/features/kanban-board.png)
@@ -196,6 +198,7 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 ## Frameworks, Libraries, and Programs:
 
 * [Django](https://pypi.org/project/Django/3.2.14/): python framework used to create all the backend
+* [Bootstrap](https://getbootstrap.com/): Frontend framework used to provide structure, style, and responsive behaviour
 
 
 ## Databse:
@@ -205,7 +208,6 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 * [Google Fonts](https://fonts.google.com/): Was used to to incorporate font styles
 * [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website
-* [Bootstrap](https://getbootstrap.com/): Was used to create the front-end design
 * [Gitpod](https://gitpod.io/workspaces): Gitpod was used as IDE to commit and push the project to GitHub, though I started with Codeanywhere, but most of it was in Gitpod
 * [GitHub](https://github.com/): Was used to store my code
 * [Am I Responsive](https://ui.dev/amiresponsive): to generate an image showcasing the website's responsiveness to different screen sizes
