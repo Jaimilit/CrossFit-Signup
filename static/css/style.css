@@ -19,6 +19,7 @@ body {
 
 .navbar-brand {
     float: left;
+    float: left;
 }
 
 .nav-item {
@@ -37,6 +38,8 @@ body {
 
 text,
 h1 {
+text,
+h1 {
     color: lightgray;
     padding: 20px;
     font-weight: 900;
@@ -48,16 +51,20 @@ h1 {
 }
 
 .calendar {
+.calendar {
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     color: whitesmoke;
 }
+}
 
+.day {
 .day {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+}
 }
 
 .row {
@@ -128,6 +135,9 @@ h1 {
 .signup,
 .login,
 .logout {
+.signup,
+.login,
+.logout {
     color: black;
     font-weight: 300;
     margin-bottom: 20px;
@@ -135,6 +145,9 @@ h1 {
 }
 
 /* Style the introductory message for forms*/
+.signup,
+.login,
+.logout p {
 .signup,
 .login,
 .logout p {
@@ -212,7 +225,13 @@ input[type="password"] {
 .list-group-item,
 .already-booked,
 .booking-successful {
+.booking-header,
+.delete-booking,
+.list-group-item,
+.already-booked,
+.booking-successful {
     text-align: center;
+    margin-bottom: 20px;
     margin-bottom: 20px;
 }
 
@@ -242,6 +261,10 @@ input[type="password"] {
     }
 
 
+    .btn {
+        font-size: 8px;
+        padding: 5px 5px;
+    }
     .btn {
         font-size: 8px;
         padding: 5px 5px;
