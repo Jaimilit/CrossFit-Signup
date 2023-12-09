@@ -248,4 +248,10 @@ input[type="password"] {
     .session-box strong {
       display: none;
     }
+
+    .btn {
+        font-size: 6px;
+        padding: 2px;
+    }
+    
   }
