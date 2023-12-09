@@ -285,19 +285,10 @@ The site was constantly tested during the process of creating the site in the Gi
 ## Validation
 
 ### HTML Validation:
-The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without errors.
+The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, and unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without significant errors.
 
-* Home page
-
-* Base
-* Bookings page
-* My Bookings
-* Sign Up page
-* Login page
-* Logout page
-* Delete booking page
-* Already booked page
-* Booking Success
+It shows one error here but I have fixed it, but it still shows.
+![HTMl Validation](./static/assets/validations/html.png)
 
 
 ### CSS Validation:
