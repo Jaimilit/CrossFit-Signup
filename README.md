@@ -12,6 +12,7 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
 - [UX](#ux)
     - [Agile Tools](#Agile-Tools)
 - [Design and Structure](#design-and-structure)
+    - [Kanban Boards](#kanban-boards)
     - [Fuctional Structure](#functional-structure)
 - [WireFrames](#Wireframes)
 - [Features](#features)
@@ -75,7 +76,20 @@ The Projects section in GitHub was used for this project. A Kanban board was use
 
 # Design and Structure
 
-The layout and design of this site was kept basic and simple. Miminal color was used to keep it simple. Users are booking workout sessions and therefore this website is meant to be functional.  
+The layout and design of this site was kept basic and simple. Miminal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. Users are booking workout sessions and therefore this website is meant to be functional.  
+
+Buttons were styled to standout with hover actions to provide user feedback. All delete buttons were styled in red as a widely accepted color to direct user caution. And this is in contrast to the blue buttons.
+
+## Kanban Boards
+
+Kanban boards were created for this project.
+
+Here you can see my overview of my kanban board and moving items around as I was working on them.
+![Kanban Boards](./static/assets/features/kanban-board.png)
+
+Here is an example and this one has the "should have" option to it.
+![Kanban Boards Example](./static/assets/features/kanban-example.png)
+
 
 ## Functional Structure
 Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this sectiom which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
@@ -103,6 +117,8 @@ Booking Page:
 Booking Successful/Delete Booking/Booking Already Made:
 ![wireframes-homepage](./static/assets/wireframes/wireframes-bookings.png)
 
+Models for creating bookings:
+![wireframes-models](./static/assets/wireframes/models.png)
 
 # FEATURES
 
