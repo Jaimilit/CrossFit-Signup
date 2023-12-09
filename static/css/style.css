@@ -245,15 +245,11 @@ input[type="password"] {
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
-    .session-box strong {
-      display: none;
-    }
 
     .btn {
         font-size: 6px;
         padding: 2px;
     }
-
     .calendar-booking {
         width: 90%;
         margin: 0;
@@ -262,4 +258,15 @@ input[type="password"] {
         table-layout: fixed;
       }
     
+    .calendar-booking th.day::before {
+      content: attr(data-day);
+    }
+  
+    .calendar-booking th.day {
+      font-size: 0; /* Hide the original day text */
+    }
+
+  .session-box strong {
+    display: none;
   }
+}
