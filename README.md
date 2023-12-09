@@ -7,9 +7,37 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
 [Github Repository](https://github.com/Jaimilit/CrossFit-Signup) 
 
 # Table of Contents
-- [Project Goals](#project goals)
+
+- [Project Goals](#project-goals)
 - [UX](#ux)
-    - [AgileTools](#Agile Tools)
+    - [Agile Tools](#Agile-Tools)
+- [Design and Structure](#design-and-structure)
+    - [Fuctional Structure](#functional-structure)
+- [WireFrames](#Wireframes)
+- [Features](#features)
+    - [Navigation Bar](#navigation-bar)
+    - [Pages](#pages)
+- [Responsive Design](#responsive-design)
+- [Future Features](#future-features)
+- [Technology Used](#technology-used)
+    - [Languages](#languages)
+    - [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
+    - [Database](#database)
+    - [Program and Tools](#program-and-tools)
+- [Testing](#testing)
+    - [Bugs](#bugs)
+        - [Manuel Testing](#manuel-testing)
+        - [Browser Testing](#browser-testing)
+    - [Validation](#validation)
+        - [HTML Validation](#html-validation)
+        - [CSS Validation](#css-validation)
+        - [Python Validation](#python-validation)
+- [Deployment](#deployment)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Content](#content)
+    - [Media](#media)
+    - [Inspiration](#inspiration)
 
 # PROJECT GOALS
 This is the fourth project under the Code Institute Diploma in Software Development  program. This website is for a fictional gym called CrossFit - where the tough prevail. It is designed to be a website where members of this gym can sign up for CrossFit workout classes like a real gym. It is kept basic because it is meant to be a place where users view and book their gym classes.
@@ -88,6 +116,8 @@ Navigation for an unauthorized user:
 Navigation for an authorized user - registration disappears:
 ![nav bar when registered](./static/assets/features/nav-bar-login.png)
 
+## Pages
+
 Registration Page:
 ![registration](./static/assets/features/sign-up-page.png)
 
@@ -131,22 +161,22 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 # Technology Used:
 
-### Languages:
+## Languages:
 
 * Python
 * JavaScript
 * HTML5
 * CSS3
 
-### Frameworks, Libraries, Programs:
+## Frameworks, Libraries, and Programs:
 
 * [Django](https://pypi.org/project/Django/3.2.14/): python framework used to create all the backend
 
 
-### Databse:
+## Databse:
 * [PostgreSQL](https://www.elephantsql.com/): the database used to store all the data. 
 
-### Programs and Tools
+## Programs and Tools:
 
 * [Google Fonts](https://fonts.google.com/): Was used to to incorporate font styles
 * [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website
@@ -174,7 +204,7 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 ###
 No known bugs remaining
 
-# Manual Testing
+### Manual Testing
 
 Testing was done throughout the process while developing the project by the use of Django debug pages and printing statements to check that the code functioned accordingly. In addition, thorough testing has been performed and is described below, it contains of manual test to check that all user stories and acceptance criteria are met, as well as testing and validating the code with different online tools as presented below.
 
@@ -240,7 +270,7 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 * Booking Success
 
 
-# CSS Validation:
+### CSS Validation:
 The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
 ![CSS](./static/assets/validations/css-validation.png)
 
