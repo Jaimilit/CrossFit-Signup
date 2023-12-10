@@ -245,7 +245,6 @@ input[type="password"] {
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
-
     .btn {
       font-size: 6px;
       padding: 0;
@@ -260,34 +259,30 @@ input[type="password"] {
     }
   
     .calendar-booking th.day {
-        font-size: 6px; /* Adjust header font size */
-        padding: 3px; /* Add padding to table headers */
-      }
-    
-      .calendar-booking td {
-        font-size: 6px; /* Adjust cell font size */
-        padding: 3px; /* Add padding to table cells */
-      }
-    
-      .session-box strong {
-        display: none; /* Hide the strong elements */
-      }
-
-      .session-box {
-        display: grid; /* Use display: grid to create a grid layout */
-        grid-template-columns: repeat(7, 1fr); /* 7 columns for each day */
-        grid-auto-rows: minmax(100px, auto); /* Set a minimum height for rows */
-      }
-      
-      .session-box .session-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%; /* Ensure the content takes up the entire height of the row */
-      }
-      
-      .session-box button {
-        align-self: flex-end; /* Align buttons to the bottom of the row */
-        margin-top: auto; /* Add space above the button if needed */
-      }
+      font-size: 6px;
+      padding: 3px;
     }
+  
+    .calendar-booking td {
+      font-size: 6px;
+      padding: 3px;
+    }
+  
+    .session-box {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-auto-rows: minmax(60px, auto); /* Adjust the minimum height for smaller session boxes */
+      gap: 5px; /* Add a gap between session boxes */
+    }
+  
+    .session-box .session-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  
+    .session-box button {
+      align-self: flex-end;
+    }
+  }
