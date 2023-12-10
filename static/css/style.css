@@ -325,6 +325,7 @@ input[type="password"] {
         bottom: 0;
         right: 5px;
         position: absolute;
+        margin: 0 auto; 
     }
 
     .session-box strong {
