@@ -275,15 +275,20 @@ input[type="password"] {
         border: 1px solid #ccc; /* Add a border for each session box */
         padding: 5px; /* Adjust the padding inside each session box */
         margin-bottom: 10px; /* Add margin between session boxes */
-      }
-    
-      .session-box strong {
-        display: none;
+        display: flex; /* Use flexbox for the session box content */
+        flex-direction: column; /* Stack content vertically */
+        justify-content: space-between; /* Space items evenly */
+        height: 100%; /* Occupy full height */
       }
     
       .session-box button {
         font-size: 6px; /* Adjust button font size */
         padding: 0; /* Adjust button padding */
+        margin-top: auto; /* Push the button to the bottom */
+      }
+    
+      .session-box strong {
+        display: none;
       }
     }
 
