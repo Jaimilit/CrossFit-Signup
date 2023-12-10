@@ -251,6 +251,7 @@ input[type="password"] {
       padding: 0;
       border-spacing: 0;
       table-layout: fixed;
+      text-align: center;
     }
   
     .calendar-booking th.day {
@@ -270,22 +271,22 @@ input[type="password"] {
         grid-template-columns: repeat(7, 1fr);
         grid-auto-rows: minmax(75px, auto);
         gap: 1px;
-        padding: 0; /* Add padding for inner content */
+        padding: 0; 
         margin: 0;
-        position: relative; /* Set session box position to relative */
+        position: relative; 
     }
     
     .session-box > div {
-        border: 1px solid #ccc; /* Add a border for each session box */
-        padding: 1px; /* Adjust the padding inside each session box */
+        border: 1px solid #ccc; 
+        padding: 1px; 
     }
     
     .session-box button {
-        font-size: 6px; /* Adjust button font size */
-        padding: 0; /* Adjust button padding */
-        bottom: 0; /* Align button to the bottom */
-        right: 5px; /* Align button to the right */
-        position: absolute; /* Set button position */
+        font-size: 6px; 
+        padding: 0; 
+        bottom: 0; 
+        right: 5px; 
+        position: absolute; 
     }
     
     .session-box strong {
