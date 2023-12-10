@@ -75,11 +75,11 @@ Site Administrator goals
 
 ## Agile Tools
 
-The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.  In addition, labels were used to further define the priority of eacn user story in the Kanban board.
+The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.  In addition, labels were used to further define the priority of each user story in the Kanban board.
 
 # Design and Structure
 
-The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. Users are booking workout sessions and therefore this website is meant to be functional.  
+The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. Users are booking workout sessions and; therefore, this website is meant to be functional.  
 
 Buttons were styled to standout with hover actions to provide user feedback. All delete buttons were styled in red as a widely accepted color to direct user caution. And this is in contrast to the blue buttons.
 
@@ -107,7 +107,7 @@ Logout page: Logging out of the account is done through the menu, after which th
 
 Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day these are 4 workout sessions/classes to do choose from. For each sessions a title of the workout is given, as well as the day, time, and instructor. A user cannot access this page unless they are registered and logged in.
 
-My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting the user is returned to the My Bookings page. The user is informed if they have no bookings too.
+My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too.
 
 # Wireframes
 
@@ -142,7 +142,7 @@ Navigation for an authorized user - registration disappears:
 Registration Page - Where a user can sign up to use the platform:
 ![registration](./static/assets/features/sign-up-page.png)
 
-Sign-In Page - Where a returning user and return and log-in:
+Sign-In Page - Where a returning user can log-in:
 ![sign-in](./static/assets/features/signin-page.png)
 
 Log Out Page - Where a user can log out. It asks for confirmation to log out: 
@@ -154,7 +154,7 @@ Bookings Page - Where an authenicated user can view the bookings and choose a se
 My Bookings Page - Where an authenticated user can view all their bookings:
 ![my bookings](./static/assets/features/my-bookings-page.png)
 
-Booking Successful - Where a user can be informed that their booking was successful:
+Booking Successful - Where a user is informed that their booking was successful:
 ![booking successful](./static/assets/features/booking-successful-page.png)
 
 Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
@@ -251,9 +251,9 @@ The site was constantly tested during the process of creating the site in the Gi
 
 | Goals and Actions | As a Guest | As a User | Comment |
 | -------- | -------- |  -------- | -------- |
-| I can use menu and navigate through the pages   | X | X | Click on items
+| I can use the menu and navigate through the pages   | X | X | Click on items
 | I can see the Home Page   | X | X | Click on items
-| I can see the Registration Page  | X | X | Click on items and this disapears from the nav bar once registered
+| I can see the Registration Page  | X | X | Click on items and this disappears from the nav bar once registered
 | I can see the Bookings Page |   | X | Need to be authorized to see
 | I can see the My Bookings page  |  | X | Need to be authorized to see
 | I can see the Sign Up Page | X | X | Click on items
@@ -280,7 +280,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
 | CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | 
 | Delete Booking wouldn't go to delete_booking page | Needed to rework delete function and return renders outcomes | 
-| When Debug was set to False, none of the CSS was displayed in Heroku app| python command to collect static files | 
+| When Debug was set to False, none of the CSS was displayed in Heroku app| Python command to collect static files | 
 
 
 ## Validation
