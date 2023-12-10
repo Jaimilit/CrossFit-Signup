@@ -30,7 +30,7 @@ class Booking(models.Model):
     """this model provides the booking info for the user to book workout sessions"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     workout_session = models.ForeignKey('WorkoutSession', on_delete=models.CASCADE)
-   # attendees = models.ManyToManyField(User, related_name='signed_up_for', blank=True)
+  
 
     def __str__(self):
         return f"{self.user.username} booked {self.workout_session.title} on {self.workout_session.day} at {self.workout_session.time}"
