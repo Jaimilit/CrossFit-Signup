@@ -13,7 +13,7 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
     - [Agile Tools](#Agile-Tools)
 - [Design and Structure](#design-and-structure)
     - [Kanban Boards](#kanban-boards)
-    - [Fuctional Structure](#functional-structure)
+    - [Functional Structure](#functional-structure)
 - [WireFrames](#Wireframes)
 - [Features](#features)
     - [Navigation Bar](#navigation-bar)
@@ -27,7 +27,7 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
     - [Program and Tools](#program-and-tools)
 - [Testing](#testing)
     - [Bugs](#bugs)
-        - [Manuel Testing](#manuel-testing)
+        - [Manual Testing](#manual-testing)
         - [Browser Testing](#browser-testing)
     - [Validation](#validation)
         - [HTML Validation](#html-validation)
@@ -71,7 +71,7 @@ As a returning user, I want:
 Site Administrator goals
 
 * As a Site Administrator I would like to be able to create the workout sessions which users can book
-* As a Site Adminstrator I also can view bookings and deletions
+* As a Site Administrator I also can view bookings and deletions
 
 ## Agile Tools
 
@@ -79,7 +79,7 @@ The Projects section in GitHub was used for this project. A Kanban board was use
 
 # Design and Structure
 
-The layout and design of this site was kept basic and simple. Miminal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. Users are booking workout sessions and therefore this website is meant to be functional.  
+The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. Users are booking workout sessions and therefore this website is meant to be functional.  
 
 Buttons were styled to standout with hover actions to provide user feedback. All delete buttons were styled in red as a widely accepted color to direct user caution. And this is in contrast to the blue buttons.
 
@@ -109,7 +109,7 @@ Bookings page: The page is only available to authenticated users and displays th
 
 My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting the user is returned to the My Bookings page. The user is informed if they have no bookings too.
 
-# Wire Frames
+# Wireframes
 
 Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
@@ -166,7 +166,7 @@ Delete Booking Page - Where a user can delete a booking:
 No Bookings - Where a user is informed if they currently have no bookings:
 ![no bookings](./static/assets/features/no-bookings-page.png)
 
-Footer - Information that it was created by me plus appropiate links:
+Footer - Information that it was created by me plus appropriate links:
 ![footer](./static/assets/features/footer.png)
 
 Main Admin Page - Main Admin page to create workouts and view bookings made:
@@ -180,7 +180,7 @@ Admin Bookings - Where Admin can view the bookings made and deleted:
 
 # Responsive Design
 
-The site has been designed to be responsive and adapted for desktop and mobile use. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
+The site has been designed to be responsive and adapted for use on both desktop and mobile devices. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
 ![responsive](./static/assets/validations/iamresponsive.png)
 
 # Future Features
@@ -204,7 +204,7 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 * [Bootstrap](https://getbootstrap.com/): Frontend framework used to provide structure, style, and responsive behaviour
 
 
-## Databse:
+## Database:
 * [PostgreSQL](https://www.elephantsql.com/): The database used to store all the data 
 
 ## Programs and Tools:
@@ -276,7 +276,7 @@ The site was constantly tested during the process of creating the site in the Gi
 
 | Bug| Solution | Fixed 
 | -------- | -------- |  -------- |
-|  Issue with bookings showing all on Mondays | Need to adjust book_session and booking functions |
+|  Issue with bookings showing all on Mondays | Need to adjust the book_session and booking functions |
 | Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
 | CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | 
 | Delete Booking wouldn't go to delete_booking page | Needed to rework delete function and return renders outcomes | 
@@ -328,8 +328,8 @@ I followed the below steps using the Code Institute tutorial. The project was fi
 
 1. Create an account at GitHub or login to an existing account.
 2. Go to the GitHub repository for CrossFit-Signup.
-3. Click the 'Code' button and copy and paste code into Codeanywhere workspace or Gitpod workspace
-4. A copy of the repository will be available in your own repository.
+3. Click the 'Code' button and copy and paste code into Codeanywhere workspace or Gitpod workspace.
+4. A copy of the repository will be available in your own workspace.
 
 ## Heroku
 The site is deployed to Heroku through the following steps:
