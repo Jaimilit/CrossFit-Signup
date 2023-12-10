@@ -254,18 +254,6 @@ input[type="password"] {
       width: 100%;
       margin: 0;
       padding: 0;
-      border-spacing: 0;
-      table-layout: fixed;
-    }
-  
-    .calendar-booking th.day {
-      font-size: 6px;
-      padding: 3px;
-    }
-  
-    .calendar-booking td {
-      font-size: 6px;
-      padding: 3px;
     }
   
     .session-box {
