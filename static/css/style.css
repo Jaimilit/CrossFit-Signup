@@ -271,7 +271,7 @@ input[type="password"] {
     .session-box {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      grid-auto-rows: minmax(60px, auto); /* Adjust the minimum height for smaller session boxes */
+      grid-auto-rows: minmax(25px, auto); /* Adjust the minimum height for smaller session boxes */
       gap: 5px; /* Add a gap between session boxes */
     }
   
@@ -280,6 +280,10 @@ input[type="password"] {
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+    }
+
+    .session-box strong {
+        display: none;
     }
   
     .session-box button {
