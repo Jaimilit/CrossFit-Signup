@@ -317,9 +317,10 @@ input[type="password"] {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        text-align: center;
     }
 
-    .session-box td:nth-child(5) .session-box>div {
+    .calendar-booking td:nth-child(5) .session-box>div {
         display: flex;
         align-items: center;
         justify-content: center;
