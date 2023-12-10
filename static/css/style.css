@@ -269,20 +269,31 @@ input[type="password"] {
     }
   
     .session-box {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-auto-rows: minmax(60px, auto); /* Adjust the minimum height for smaller session boxes */
-      gap: 5px; /* Add a gap between session boxes */
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-auto-rows: minmax(60px, auto);
+        gap: 5px;
+        padding: 10px; /* Add padding for inner content */
+      }
+    
+      .session-box > div {
+        border: 1px solid #ccc; /* Add a border for each session box */
+        padding: 5px; /* Adjust the padding inside each session box */
+        margin-bottom: 10px; /* Add margin between session boxes */
+      }
+    
+      .session-box strong {
+        font-weight: bold; /* Adjust strong text font weight */
+        margin-right: 5px; /* Add spacing between labels and data */
+      }
+    
+      .session-box form {
+        margin-top: 10px; /* Add space between session details and button */
+      }
+    
+      .session-box button {
+        font-size: 10px; /* Adjust button font size */
+        padding: 5px 10px; /* Adjust button padding */
+      }
     }
-  
-    .session-box .session-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-    }
-  
-    .session-box button {
-      align-self: flex-end;
-    }
-  }
+
