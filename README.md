@@ -97,7 +97,7 @@ Here is an example and this one has the "should have" option to it.
 
 
 ## Functional Structure
-Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this section which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
+Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has an icon for it. There is an image in the background of this section which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
 
 Registration page: The user must create an account to make a booking. To do this, they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
 
@@ -275,7 +275,7 @@ The site was constantly tested during the process of creating the site in the Gi
 ![Booking Issues](./static/assets/bugs/bug-testing.png)
 
 | Bug| Solution | Fixed 
-| -------- | -------- |  -------- |
+| -------- | -------- |  
 |  Issue with bookings showing all on Mondays | Need to adjust the book_session and booking functions |
 | Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
 | CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | 
