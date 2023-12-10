@@ -317,10 +317,10 @@ input[type="password"] {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        text-align: center;
     }
 
-    .calendar-booking td:nth-child(5) .session-box>div {
+    /* Target the content within Friday sessions specifically */
+    .session-box td:nth-child(5) .session-box>div {
         display: flex;
         align-items: center;
         justify-content: center;
