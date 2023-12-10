@@ -274,8 +274,20 @@ input[type="password"] {
       }
 
       .session-box {
-        display: grid; /* Use display: grid to ensure uniform cells */
+        display: grid; /* Use display: grid to create a grid layout */
         grid-template-columns: repeat(7, 1fr); /* 7 columns for each day */
-        grid-auto-rows: minmax(20px, auto); /* Set a minimum height for rows */
+        grid-auto-rows: minmax(100px, auto); /* Set a minimum height for rows */
+      }
+      
+      .session-box .session-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* Ensure the content takes up the entire height of the row */
+      }
+      
+      .session-box button {
+        align-self: flex-end; /* Align buttons to the bottom of the row */
+        margin-top: auto; /* Add space above the button if needed */
       }
     }
