@@ -269,26 +269,25 @@ input[type="password"] {
         grid-auto-rows: minmax(50px, auto);
         gap: 5px;
         padding: 2px; /* Add padding for inner content */
-      }
+    }
     
-      .session-box > div {
+    .session-box > div {
         border: 1px solid #ccc; /* Add a border for each session box */
-        padding: 2px; /* Adjust the padding inside each session box */
-        margin-bottom: 2px; /* Add margin between session boxes */
-        display: flex; /* Use flexbox for the session box content */
-        flex-direction: column; /* Stack content vertically */
-        justify-content: space-between; /* Space items evenly */
-        height: 100%; /* Occupy full height */
-      }
+        padding: 5px; /* Adjust the padding inside each session box */
+        margin-bottom: 10px; /* Add margin between session boxes */
+        position: relative; /* Set position to relative */
+    }
     
-      .session-box button {
+    .session-box button {
         font-size: 6px; /* Adjust button font size */
         padding: 0; /* Adjust button padding */
-        margin-top: auto; /* Push the button to the bottom */
-      }
+        position: absolute; /* Set button position */
+        bottom: 5px; /* Align button to the bottom */
+        right: 5px; /* Align button to the right */
+    }
     
-      .session-box strong {
+    .session-box strong {
         display: none;
-      }
+    }
     }
 
