@@ -282,6 +282,7 @@ input[type="password"] {
         padding: 0; /* Adjust button padding */
         bottom: 0px; /* Align button to the bottom */
         right: 5px; /* Align button to the right */
+        position: absolute; /* Set button position */
     }
     
     .session-box strong {
