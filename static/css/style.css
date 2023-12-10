@@ -271,13 +271,10 @@ input[type="password"] {
     .session-box {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      grid-auto-rows: minmax(30px, auto); /* Adjust the minimum height for smaller session boxes */
+      grid-auto-rows: minmax(40px, auto); /* Adjust the minimum height for smaller session boxes */
     }
   
     .session-box .session-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
       height: 100%;
       padding-bottom: 0;
     }
