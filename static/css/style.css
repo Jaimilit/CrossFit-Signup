@@ -327,8 +327,6 @@ input[type="password"] {
         font-size: 6px;
         padding: 0;
         position: absolute;
-        margin-top: auto; /* Align button to the bottom of each session box */
-        align-self: center; 
     }
 
     .session-box strong {
