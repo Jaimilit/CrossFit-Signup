@@ -288,12 +288,12 @@ input[type="password"] {
       }
     
       .session-box form {
-        margin-top: 10px; /* Add space between session details and button */
+        margin-top: 2px; /* Add space between session details and button */
       }
     
       .session-box button {
-        font-size: 10px; /* Adjust button font size */
-        padding: 5px 10px; /* Adjust button padding */
+        font-size: 6px; /* Adjust button font size */
+        padding: 0; /* Adjust button padding */
       }
     }
 
