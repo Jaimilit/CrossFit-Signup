@@ -258,7 +258,6 @@ input[type="password"] {
       border-spacing: 0;
       table-layout: fixed;
       display: grid; /* Use display: grid to ensure uniform cells */
-      grid-auto-rows: minmax(50px, auto); /* Set a minimum height for rows */
     }
   
     .calendar-booking th.day {
