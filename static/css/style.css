@@ -280,12 +280,7 @@ input[type="password"] {
       justify-content: flex-end;
       height: 100%;
       padding-bottom: 0;
-      position: relative;
     }
-    .session-box .session-content .session-button-wrapper {
-        margin-top: auto; /* Align the button to the bottom */
-        position: absolute; /* Position the button absolutely within the session content */
-      }
 
     .session-box strong {
         display: none;
