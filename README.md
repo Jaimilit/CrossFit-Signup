@@ -352,7 +352,7 @@ The structure and the code of the project was based on two walkthroughs by the C
 
 ## Content
 
-Information is fictional and created by me and I was inspired by my own CrossFit box. 
+Information is fictional and created by me and I was inspired by my own CrossFit box 
 [CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. Though this information is in Swedish. They use an app called [Wondr](https://wondr.cc/en-gb/home) in which members book their own CrossFit sessions for the week.
 
 ## Media
@@ -361,6 +361,6 @@ The one image was free to use from [Pexels](https://www.pexels.com/).
 
 ## Inspiration
 
-* This project was inspired by the "Hello Django" project and the "I Think Therefore I Blog" projects from Code Institute.
+* This project was inspired by the "Hello Django" and the "I Think Therefore I Blog" projects from Code Institute.
  * Larisa LG's Readme.md file was used as a template for writing my own Readme.md.
  * CrossFit Fabriken website and Wondr App were used as inspiration for my app.
