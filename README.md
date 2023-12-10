@@ -71,6 +71,7 @@ As a returning user, I want:
 Site Administrator goals
 
 * As a Site Administrator I would like to be able to create the workout sessions which users can book
+* As a Site Adminstrator I also can view bookings and deletions
 
 ## Agile Tools
 
@@ -96,7 +97,7 @@ Here is an example and this one has the "should have" option to it.
 
 
 ## Functional Structure
-Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this sectiom which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
+Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given basic information about the class scheduled offered, and a brief explanation of the different sessions that are offered - WOD, Endurance, & Basic. Each section also has a icon for it. There is an image in the background of this section which is kept dark, as not to take away from the important information given. The background image is of a girl completing a box jump, something that they will expect to do in their classes.
 
 Registration page: The user must create an account to make a booking. To do this, they are asked to fill out a form on the page with the required fields: username and password. There is also an optional email field.
 
@@ -110,7 +111,7 @@ My Bookings page: Only authenticated users have access to this page. On this pag
 
 # Wire Frames
 
-The wireframes were used to create the basic layout of the project. The wireframes can be seen below:
+Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
 Homepage:
 ![wireframes-homepage](./static/assets/wireframes/wireframes-homepage.png)
@@ -144,7 +145,7 @@ Registration Page - Where a user can sign up to use the platform:
 Sign-In Page - Where a returning user and return and log-in:
 ![sign-in](./static/assets/features/signin-page.png)
 
-Log Out Page - Where a user can log out: 
+Log Out Page - Where a user can log out. It asks for confirmation to log out: 
 ![logout](./static/assets/features/sign-out-page.png)
 
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
@@ -165,7 +166,7 @@ Delete Booking Page - Where a user can delete a booking:
 No Bookings - Where a user is informed if they currently have no bookings:
 ![no bookings](./static/assets/features/no-bookings-page.png)
 
-Footer - Information that it was created by me and links:
+Footer - Information that it was created by me plus appropiate links:
 ![footer](./static/assets/features/footer.png)
 
 Main Admin Page - Main Admin page to create workouts and view bookings made:
@@ -184,8 +185,8 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 # Future Features
 
-* page with information about the instructors
-* ability to have 10 attendee max for each session and inform the user that the session is full
+* Page with information about the instructors
+* Ability to have 10 attendee max for each session and inform the user that the session is full
 * Create a user profile which the user can view 
 
 # Technology Used:
@@ -199,31 +200,31 @@ The site has been designed to be responsive and adapted for desktop and mobile u
 
 ## Frameworks, Libraries, and Programs:
 
-* [Django](https://pypi.org/project/Django/3.2.14/): python framework used to create all the backend
+* [Django](https://pypi.org/project/Django/3.2.14/): Python framework used to create all the backend
 * [Bootstrap](https://getbootstrap.com/): Frontend framework used to provide structure, style, and responsive behaviour
 
 
 ## Databse:
-* [PostgreSQL](https://www.elephantsql.com/): the database used to store all the data. 
+* [PostgreSQL](https://www.elephantsql.com/): The database used to store all the data 
 
 ## Programs and Tools:
 
 * [Google Fonts](https://fonts.google.com/): Was used to to incorporate font styles
-* [Font Awesome](https://fontawesome.com/): was used to create the icons used on the website
+* [Font Awesome](https://fontawesome.com/): Was used to create the icons used on the website
 * [Gitpod](https://gitpod.io/workspaces): Gitpod was used as IDE to commit and push the project to GitHub, though I started with Codeanywhere, but most of it was in Gitpod
 * [GitHub](https://github.com/): Was used to store my code
-* [Am I Responsive](https://ui.dev/amiresponsive): to generate an image showcasing the website's responsiveness to different screen sizes
-* [Pip3](https://pypi.org/project/pip/): to install Python modules and libraries
+* [Am I Responsive](https://ui.dev/amiresponsive): To generate an image showcasing the website's responsiveness to different screen sizes
+* [Pip3](https://pypi.org/project/pip/): To install Python modules and libraries
 * [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand
 * [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python
-* [Cloudinary](https://cloudinary.com/): the image hosting service used to upload images and other media
-* [Heroku](https://dashboard.heroku.com/apps): the hosting service used to host the website
-* [VSCode](hhttps://code.visualstudio.com/): the IDE used to develop the website
-* [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): was used to debug the website
-* [W3C Validator](https://validator.w3.org/): was used to validate HTML5 code for the website
-* [W3C CSS validator](https://jigsaw.w3.org/css-validator/): was used to validate CSS code for the website
-* [Github Projects](https://github.com/) and Kanban board was used to track the progress of the project in general and of every application in the project
-* [Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/) was used to created the outline for my project
+* [Cloudinary](https://cloudinary.com/): The image hosting service used to upload images and other media
+* [Heroku](https://dashboard.heroku.com/apps): The hosting service used to host the website
+* [VSCode](https://code.visualstudio.com/): The IDE used to develop the website
+* [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): Was used to debug the website
+* [W3C Validator](https://validator.w3.org/): Was used to validate HTML5 code for the website
+* [W3C CSS validator](https://jigsaw.w3.org/css-validator/): Was used to validate CSS code for the website
+* [Github Projects](https://github.com/): Kanban board was used to track the progress of the project in general and of every application in the project
+* [Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/): Was used to created the outline for my project
 
 
 # Testing
@@ -235,7 +236,7 @@ No known bugs remaining
 
 ### Manual Testing
 
-Testing was done throughout the process while developing the project by the use of Django debug pages and printing statements to check that the code functioned accordingly. In addition, thorough testing has been performed and is described below, it contains of manual test to check that all user stories and acceptance criteria are met, as well as testing and validating the code with different online tools as presented below.
+Testing was done throughout the process while developing the project by the use of Django debug pages and printing statements to check that the code functioned accordingly. In addition, thorough testing has been performed and is described below, it contains manual test to check that all user stories and acceptance criteria are met, as well as testing and validating the code with different online tools as presented below.
 
 
 ### Browser Testing
@@ -250,17 +251,17 @@ The site was constantly tested during the process of creating the site in the Gi
 
 | Goals and Actions | As a Guest | As a User | Comment |
 | -------- | -------- |  -------- | -------- |
-| I can use menu and navigating through pages   | X | X | Click on items
+| I can use menu and navigate through the pages   | X | X | Click on items
 | I can see the Home Page   | X | X | Click on items
 | I can see the Registration Page  | X | X | Click on items and this disapears from the nav bar once registered
 | I can see the Bookings Page |   | X | Need to be authorized to see
 | I can see the My Bookings page  |  | X | Need to be authorized to see
 | I can see the Sign Up Page | X | X | Click on items
 | I can see the Login/Logout Pages | X | X | You see one or the other depending on if you are logged in or logged out
-| I can complete the registration form  | X | X | Click on items
+| I can complete the Registration form  | X | X | Click on items
 | I can complete the Sign In form  | X | X | Click on items
-| I can complete make a booking for a particular session/class |  | X | Need to be authorized to do
-| I can complete delete a particular session/class |   | X | Need to be authorized to do
+| I can make a booking for a particular session/class |  | X | Need to be authorized to do
+| I can delete a particular session/class |   | X | Need to be authorized to do
 | I can see if I have made a booking successfully  |   | X | Need to be authorized to do
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
 
@@ -275,11 +276,11 @@ The site was constantly tested during the process of creating the site in the Gi
 
 | Bug| Solution | Fixed 
 | -------- | -------- |  -------- |
-|  Issue with bookings showing all on Mondays | Need to adjust book_session and booking functions| Fixed |
-| Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |Fixed |
-| CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | Fixed |
-| Delete Booking wouldn't go to delete_booking page | Need to delete function and return renders  | Fixed |
-| When Debug was set to False, none of the CSS was displayed | python command to collect static files | Fixed |
+|  Issue with bookings showing all on Mondays | Need to adjust book_session and booking functions |
+| Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
+| CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | 
+| Delete Booking wouldn't go to delete_booking page | Needed to rework delete function and return renders outcomes | 
+| When Debug was set to False, none of the CSS was displayed in Heroku app| python command to collect static files | 
 
 
 ## Validation
@@ -309,11 +310,11 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 
 During testing a few issues were identified and corrected:
 
-Extra whitespace was deleted
-Indentations were corrected
-Two lines spaces between functions and classes
-All lines adjusted to <80 characters
-Minor errors with missing closing tags
+* Extra whitespace was deleted
+* Indentations were corrected
+* Two lines spaces between functions and classes
+* All lines adjusted to <80 characters
+* Minor errors with missing closing tags
 
 ### Lighthouse
 
@@ -344,10 +345,10 @@ The site is deployed to Heroku through the following steps:
 ## Code
 The structure and the code of the project was based on two walkthroughs by the Code Institute:
 
-Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
+* Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
 [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
-[Bootstrap Documenation](https://getbootstrap.com/)  was used to provide examples of Bootstrap functionality and building blocks.
-[Code Institute WalkThroughs](https://codeinstitute.net/se/) walkthrough as inspiration and code examples, the code institute walkthroughs "Hello Django" and "I Think Therefore I Blog" was used.
+* [Bootstrap Documenation](https://getbootstrap.com/)  was used to provide examples of Bootstrap functionality and building blocks.
+* [Code Institute WalkThroughs](https://codeinstitute.net/se/) "Hello Django" and "I Think Therefore I Blog" worked as inspiration and code examples.
 
 ## Content
 
@@ -360,6 +361,6 @@ The one image was free to use from [Pexels](https://www.pexels.com/).
 
 ## Inspiration
 
-This project was inspired by the Hello Django project and the I Think Therefore I Blog project.
- Larisa LG's Readme.md file was used as a template for writing Readme.md.
- CrossFit Fabriken website and Wondr App.
+* This project was inspired by the "Hello Django" project and the "I Think Therefore I Blog" projects from Code Institute.
+ * Larisa LG's Readme.md file was used as a template for writing my own Readme.md.
+ * CrossFit Fabriken website and Wondr App were used as inspiration for my app.
