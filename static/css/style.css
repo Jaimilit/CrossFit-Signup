@@ -307,6 +307,7 @@ input[type="password"] {
         margin: 0;
         position: relative;
         text-align: center;
+        align-items: center;
         justify-content: center;
     }
 
@@ -318,6 +319,7 @@ input[type="password"] {
         align-items: center;
         justify-content: center;
         text-align: center;
+        flex-direction: column; /* Ensure content is aligned vertically */
     }
 
     .session-box button {
