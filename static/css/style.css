@@ -245,11 +245,6 @@ input[type="password"] {
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
-    .btn {
-      font-size: 6px;
-      padding: 0;
-    }
-  
     .calendar-booking {
       width: 100%;
       margin: 0;
@@ -283,12 +278,7 @@ input[type="password"] {
       }
     
       .session-box strong {
-        font-weight: bold; /* Adjust strong text font weight */
-        margin-right: 5px; /* Add spacing between labels and data */
-      }
-    
-      .session-box form {
-        margin-top: 2px; /* Add space between session details and button */
+        display: none;
       }
     
       .session-box button {
