@@ -274,8 +274,7 @@ input[type="password"] {
     
     .session-box > div {
         border: 1px solid #ccc; /* Add a border for each session box */
-        padding: 5px; /* Adjust the padding inside each session box */
-        margin-bottom: 1px; /* Add margin between session boxes */
+        padding: 1px; /* Adjust the padding inside each session box */
     }
     
     .session-box button {
