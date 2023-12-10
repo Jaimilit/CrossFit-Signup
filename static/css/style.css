@@ -315,16 +315,20 @@ input[type="password"] {
     }
 
     .session-box>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         border: 1px solid #ccc;
         padding: 1px;
+        height: 100%; 
     }
 
     .session-box button {
         font-size: 6px;
         padding: 0;
-        bottom: 0;
-        right: 5px;
         position: absolute;
+        margin-top: auto; /* Align button to the bottom of each session box */
+        align-self: center; 
     }
 
     .session-box strong {
