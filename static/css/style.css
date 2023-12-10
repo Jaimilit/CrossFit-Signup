@@ -322,6 +322,7 @@ input[type="password"] {
         border: 1px solid #ccc;
         padding: 1px;
         height: 100%;
+        text-align: center;
     }
 
     .session-box button {
