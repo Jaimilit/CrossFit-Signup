@@ -49,7 +49,6 @@ This is the fourth project under the Code Institute Diploma in Software Developm
 # UX
 
 User stories
-First time visitor goals
 
 As a first time visitor, I want:
 
