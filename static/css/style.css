@@ -269,13 +269,13 @@ input[type="password"] {
         grid-auto-rows: minmax(50px, auto);
         gap: 5px;
         padding: 2px; /* Add padding for inner content */
+        position: relative; /* Set session box position to relative */
     }
     
     .session-box > div {
         border: 1px solid #ccc; /* Add a border for each session box */
         padding: 5px; /* Adjust the padding inside each session box */
         margin-bottom: 10px; /* Add margin between session boxes */
-        position: relative; /* Set position to relative */
     }
     
     .session-box button {
