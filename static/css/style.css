@@ -305,7 +305,7 @@ input[type="password"] {
         gap: 1px;
         padding: 0;
         margin: 0;
-        position: relative;
+        position: absolute;
         text-align: center;
     }
 
@@ -317,14 +317,6 @@ input[type="password"] {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    }
-
-    /* Target the content within Friday sessions specifically */
-    .session-box td:nth-child(5) .session-box>div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
     }
 
     .session-box button {
