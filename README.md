@@ -52,21 +52,21 @@ User stories
 
 As a first time visitor, I want:
 
-* to easily understand the main purpose of the site
-* to be able to easily navigate through the site
-* to be able to register a user account to access all content without restrictions
-* to be able to reserve a day and time for a class, view my bookings, and delete my bookings
-* to be able to log out of my user account
+* To easily understand the main purpose of the site
+* To be able to easily navigate through the site
+* To be able to register a user account to access all content without restrictions
+* To be able to reserve a day and time for a class, view my bookings, and delete my bookings
+* To be able to log out of my user account
 
 Returning and frequent user goals
 
 As a returning user, I want:
 
-* to sign into my user account
-* to make a booking for a class on a certain day and time
-* to view my bookings
-* to delete my bookings
-* to sign out of my account
+* To sign into my user account
+* To make a booking for a class on a certain day and time
+* To view my bookings
+* To delete my bookings
+* To sign out of my account
 
 Site Administrator goals
 
@@ -105,7 +105,7 @@ Login page: A username and password are required to log in for existing users. O
 
 Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where they must confirm their desire to log out of the account. After a successful logout, the user is returned to the home page.
 
-Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day these are 4 workout sessions/classes to do choose from. For each sessions a title of the workout is given, as well as the day, time, and instructor. A user cannot access this page unless they are registered and logged in.
+Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day offers four workout sessions/classes to choose from. For each sessions a title of the workout is given, as well as the day, time, and instructor. A user cannot access this page unless they are registered and logged in.
 
 My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too.
 
