@@ -241,56 +241,52 @@ input[type="password"] {
         font-size: 8px;
         padding: 5px 5px;
     }
-}
 
-/* For screens that are 480px wide or less */
-@media (max-width: 480px) {
     .calendar-booking {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      border-spacing: 0;
-      table-layout: fixed;
-      text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        table-layout: fixed;
+        text-align: center;
     }
-  
+
     .calendar-booking th.day {
-      font-size: 6px;
-      padding: 3px;
-      text-align: center;
+        font-size: 6px;
+        padding: 3px;
+        text-align: center;
     }
-  
+
     .calendar-booking td {
-      font-size: 6px;
-      padding: 3px;
-      text-align: center;
+        font-size: 6px;
+        padding: 3px;
+        text-align: center;
     }
-  
+
     .session-box {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-auto-rows: minmax(75px, auto);
         gap: 1px;
-        padding: 0; 
+        padding: 0;
         margin: 0;
-        position: relative; 
+        position: relative;
     }
-    
-    .session-box > div {
-        border: 1px solid #ccc; 
-        padding: 1px; 
+
+    .session-box>div {
+        border: 1px solid #ccc;
+        padding: 1px;
     }
-    
+
     .session-box button {
-        font-size: 6px; 
-        padding: 0; 
-        bottom: 0; 
-        right: 5px; 
-        position: absolute; 
+        font-size: 6px;
+        padding: 0;
+        bottom: 0;
+        right: 5px;
+        position: absolute;
     }
-    
+
     .session-box strong {
         display: none;
     }
-    }
-
+}
