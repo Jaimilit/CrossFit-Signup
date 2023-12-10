@@ -279,14 +279,22 @@ input[type="password"] {
       flex-direction: column;
       justify-content: flex-end;
       height: 100%;
-      padding-bottom: 5px;
+      padding-bottom: 0;
+      position: relative;
     }
 
     .session-box strong {
         display: none;
     }
   
+    .session-box .session-content .session-button-wrapper {
+        margin-top: auto; /* Align the button to the bottom */
+        position: absolute; /* Position the button absolutely within the session content */
+        bottom: 5px; /* Adjust this value for the desired distance from the bottom */
+        width: 100%; /* Ensure the button wrapper takes full width */
+      }
+    
     .session-box button {
-        margin-top: auto; 
-    }
+        width: 100%; /* Ensure the button takes full width of its container */
+      }
   }
