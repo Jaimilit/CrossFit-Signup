@@ -319,6 +319,14 @@ input[type="password"] {
         flex-direction: column;
     }
 
+    .session-box td:nth-child(5) .session-box>div {
+        /* Adjust the styling for Friday sessions */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .session-box button {
         font-size: 6px;
         padding: 0;
