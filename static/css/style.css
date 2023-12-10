@@ -307,8 +307,7 @@ input[type="password"] {
         margin: 0;
         position: relative;
         text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
+        justify-content: center;
     }
 
     .session-box>div {
