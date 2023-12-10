@@ -288,7 +288,7 @@ The site was constantly tested during the process of creating the site in the Gi
 ### HTML Validation:
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, and unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without significant errors.
 
-It shows one error here but I have fixed it, but it still shows.
+It shows one error here and I have fixed it, but it still shows.
 ![HTMl Validation](./static/assets/validations/html.png)
 
 
@@ -322,7 +322,7 @@ During testing a few issues were identified and corrected:
 
 
 # Deployment
-I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
+I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod again for most of the project. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
 
 ## Github
 

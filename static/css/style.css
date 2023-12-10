@@ -255,12 +255,14 @@ input[type="password"] {
   
     .calendar-booking th.day {
       font-size: 6px;
-      padding: 1px;
+      padding: 3px;
+      text-align: center;
     }
   
     .calendar-booking td {
       font-size: 6px;
-      padding: 1px;
+      padding: 3px;
+      text-align: center;
     }
   
     .session-box {
