@@ -268,7 +268,7 @@ input[type="password"] {
         grid-template-columns: repeat(7, 1fr);
         grid-auto-rows: minmax(50px, auto);
         gap: 5px;
-        padding: 2px; /* Add padding for inner content */
+        padding: 0; /* Add padding for inner content */
         position: relative; /* Set session box position to relative */
     }
     
