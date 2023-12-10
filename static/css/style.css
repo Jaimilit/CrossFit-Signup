@@ -317,6 +317,8 @@ input[type="password"] {
     .session-box>div {
         display: flex;
         flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
         border: 1px solid #ccc;
         padding: 1px;
         height: 100%;
@@ -327,8 +329,8 @@ input[type="password"] {
         padding: 0;
         bottom: 0;
         position: absolute;
-        left: 50%; /* Align button to the center horizontally */
-        transform: translateX(-50%); /* Center the button horizontally */
+        left: 50%; 
+        transform: translateX(-50%); 
     }
 
     .session-box strong {
