@@ -280,7 +280,6 @@ input[type="password"] {
 }
 
 
-
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
     .calendar-booking {
@@ -328,6 +327,8 @@ input[type="password"] {
         padding: 0;
         bottom: 0;
         position: absolute;
+        left: 50%; /* Align button to the center horizontally */
+        transform: translateX(-50%); /* Center the button horizontally */
     }
 
     .session-box strong {
