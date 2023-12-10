@@ -266,9 +266,10 @@ input[type="password"] {
     .session-box {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-auto-rows: minmax(50px);
+        grid-auto-rows: minmax(50px, auto);
         gap: 1px;
         padding: 0; /* Add padding for inner content */
+        margin: 0;
         position: relative; /* Set session box position to relative */
     }
     

@@ -44,7 +44,7 @@ The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/)
     - [Inspiration](#inspiration)
 
 # PROJECT GOALS
-This is the fourth project under the Code Institute Diploma in Software Development Program. This website is for a fictional gym called CrossFit - where the tough prevail. It is designed to be a website where members of this gym can sign up for CrossFit workout classes like a real gym. It is kept basic because it is meant to be a place where users view and book their gym classes.
+This is the fourth project under the Code Institute Diploma in Software Development Program. This website is for a fictional gym called "CrossFit - where the tough prevail." It is designed to be a website where members of this gym can sign up for CrossFit workout classes like a real gym. It is kept basic because it is meant to be a place where users view and book their gym classes.
 
 # UX
 
@@ -55,7 +55,7 @@ As a first time visitor, I want:
 * to easily understand the main purpose of the site
 * to be able to easily navigate through the site
 * to be able to register a user account to access all content without restrictions
-* to be able to reserve a day and time for a class, view my bookings and delete my bookings
+* to be able to reserve a day and time for a class, view my bookings, and delete my bookings
 * to be able to log out of my user account
 
 Returning and frequent user goals
