@@ -269,14 +269,14 @@ input[type="password"] {
     }
   
     .session-box {
-      display: grid;
+      display: grid !important;
       grid-template-columns: repeat(7, 1fr);
-      grid-auto-rows: minmax(40px, auto); /* Adjust the minimum height for smaller session boxes */
+      grid-auto-rows: minmax(40px, auto) !important;
     }
   
     .session-box .session-content {
-      height: 100%;
-      padding: 0;
+      height: 100% !important;
+      padding: 0 !important;
     }
 
     .session-box strong {
