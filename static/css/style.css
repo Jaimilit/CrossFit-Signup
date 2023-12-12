@@ -265,13 +265,13 @@ input[type="password"] {
     }
 
     .calendar-booking th.day {
-        font-size: 6px;
+        font-size: 3vw;
         padding: 3px;
         text-align: center;
     }
 
     .calendar-booking td {
-        font-size: 6px;
+        font-size: 3vw;
         padding: 3px;
         text-align: center;
     }
