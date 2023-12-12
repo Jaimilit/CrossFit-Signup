@@ -208,17 +208,16 @@ input[type="password"] {
     margin-bottom: 0.9375rem;
     border: 1px solid #c1c3c5;
     background: lightgrey;
+    table-layout: fixed; /* Set the table layout to fixed */
 }
 
-
-.session-box {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 1px;
-    padding: 0;
-    margin: 0;
-    position: relative;
+/* Set fixed dimensions for table cells */
+.calendar-booking td,
+.calendar-booking th {
+    width: 14.28%; /* Each cell takes up 1/7th of the width */
+    height: 100px; /* Adjust the height as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc;
     text-align: center;
 }
 
