@@ -19,7 +19,6 @@ class WorkoutSession(models.Model):
     time = models.TimeField(default='00:00')
     instructor_name = models.CharField(max_length=200)
     day = models.CharField(max_length=20, choices=DAYS_OF_WEEK, default='Monday')  
-    # attendees = models.ManyToManyField(User, related_name='signed_up_for', blank=True) 
     available_spots = models.IntegerField(default=20, validators=[MaxValueValidator(20)])
     booked_spots = models.IntegerField(default=0, validators=[MaxValueValidator(20)])
 

@@ -240,6 +240,28 @@ input[type="password"] {
     margin-bottom: 20px;
 }
 
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+  }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Style each social media icon */
+  .social-icons i {
+    /* Other styles for the icons */
+    font-size: 24px; /* Adjust icon size */
+    color: darkgray;
+  }
+
+
 
 /* Media queries */
 
@@ -283,7 +305,7 @@ input[type="password"] {
     .session-box button {
         font-size: 8px;
         padding: 4px;
-        margin-bottom: -125px;
+        margin-bottom: -150px;
         margin-left: auto;
         margin-right: auto;
     }
