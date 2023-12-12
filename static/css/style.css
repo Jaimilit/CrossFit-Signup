@@ -271,9 +271,9 @@ input[type="password"] {
     }
 
     .session-box {
-        border: 1px solid #ccc;
+        border: none;
         height: 100px; /* Set a fixed height for session boxes */
-        padding: 8px; /* Adjust padding */
+        padding: 0px; /* Adjust padding */
         margin-bottom: 10px; /* Add space between rows */
         display: flex;
         flex-direction: column;
@@ -329,11 +329,9 @@ input[type="password"] {
     }
 
     .session-box>div {
-        /* Remove border and padding */
         border: none;
         padding: 0;
         height: 100%;
-        /* Center text content */
         display: flex;
         align-items: center;
         justify-content: center;
