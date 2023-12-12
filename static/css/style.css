@@ -352,8 +352,8 @@ input[type="password"] {
         transform: translateX(-50%);
     }    
     
-    .calendar-booking th.day {
-        display: none;
+    .calendar-booking th.day::after {
+        content: attr(data-abbr); /* Display abbreviated days */
     }
 
     /* Update the content for day abbreviations */
