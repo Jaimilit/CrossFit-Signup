@@ -292,6 +292,7 @@ input[type="password"] {
         justify-content: center;
         text-align: center;
         height: 100%; /* Ensure the div takes up full height */
+        padding: 5px; /* Add padding to center the content */
     }
 
     /* Ensure text inside the div is centered */
