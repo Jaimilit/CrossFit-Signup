@@ -275,10 +275,17 @@ input[type="password"] {
         text-align: center;
     }
 
-    .session-box td {
-        text-align: center;
+    /* Target the div elements inside .session-box */
+    .session-box > div {
+        display: flex;
+        align-items: center; /* Align content vertically */
+        justify-content: center; /* Center content horizontally */
+        flex-direction: column;
+        padding: 0px; /* Adjust the padding as needed */
+        margin: 0; /* Ensure no additional margin */
+        height: 100%; /* Ensure the div takes up full height */
     }
-    
+
         
     .session-box button {
         font-size: 8px;
@@ -293,22 +300,6 @@ input[type="password"] {
         display: none;
     }
 }
-
-
-/*
-    .calendar-booking {
-    width: 90%;
-    font-size: xx-small;
-    margin: 0 auto;
-    }
-    
-
-    .btn {
-    font-size: 8px;
-    padding: 5px 5px;
-    }
-    }
-    */
 
 
 /* For screens that are 480px wide or less */
@@ -339,7 +330,7 @@ input[type="password"] {
 
     .session-box button {
         font-size: 6px;
-        padding: 0;
+        padding: 1;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
