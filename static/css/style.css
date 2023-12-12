@@ -335,7 +335,6 @@ input[type="password"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
         text-align: center;
     }
 
@@ -346,5 +345,10 @@ input[type="password"] {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    /* Additional style to ensure text alignment */
+    .session-box div>* {
+        text-align: center;
     }
 }
