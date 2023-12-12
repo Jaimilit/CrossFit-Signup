@@ -312,6 +312,7 @@ input[type="password"] {
         flex-direction: column;
         padding: 5px; /* Adjust the padding as needed */
         margin: 0; /* Ensure no additional margin */
+        height: 100%; /* Ensure the div takes up full height */
     }
 
     .session-box button {
