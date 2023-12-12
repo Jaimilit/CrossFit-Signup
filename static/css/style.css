@@ -260,12 +260,10 @@ input[type="password"] {
         display: none;
     }
 
-
     .container {
         width: 90%;
         font-size: xx-small;
     }
-
 
     .calendar-booking {
         width: 90%;
@@ -273,10 +271,13 @@ input[type="password"] {
         margin: 0 auto;
     }
 
-
     .btn {
         font-size: 8px;
         padding: 5px 5px;
+    }
+
+    .session-box strong {
+        display: none;
     }
 }
 
@@ -332,9 +333,5 @@ input[type="password"] {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    .session-box strong {
-        display: none;
     }
 }
