@@ -3,6 +3,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+      
 }
 
 /* Navigation */

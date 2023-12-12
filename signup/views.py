@@ -18,7 +18,6 @@ class WorkoutSessionListView(generic.ListView):
 @login_required
 def my_bookings(request):
     """ensure authenticated users can access this view of booking options"""
-    # user_bookings = Booking.objects.filter(user=request.user)
     day_mapping = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
     
     user_bookings = Booking.objects.filter(user=request.user).annotate(
