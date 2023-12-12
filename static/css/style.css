@@ -111,7 +111,6 @@ h6 {
 
 /* Login & Logout */
 
-
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
@@ -250,12 +249,11 @@ input[type="password"] {
     margin-bottom: 20px;
 }
 
-
 /* Media queries */
 
 
 /* For screens that are 912px wide or less */
-@media (max-width: 920px) {
+@media (max-width: 912px) {
     .calendar {
         display: none;
     }
