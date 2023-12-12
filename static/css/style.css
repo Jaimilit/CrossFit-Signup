@@ -201,9 +201,6 @@ input[type="password"] {
     font-weight: bold;
 }
 
-
-
-
 /* Booking page and associated pages */
 
 
@@ -214,15 +211,9 @@ input[type="password"] {
     background: lightgrey;
 }
 
-
-
-
 .session-box {
     text-align: center;
 }
-
-
-
 
 .booking-item {
     border: 1px solid #ccc;
@@ -234,14 +225,10 @@ input[type="password"] {
     align-items: center;
 }
 
-
-
-
 .booking-details {
     flex-grow: 1;
     margin-bottom: 0;
 }
-
 
 .booking-header,
 .delete-booking,
@@ -254,20 +241,7 @@ input[type="password"] {
 }
 
 
-
-
 /* Media queries */
-
-
-
-
-/* Media queries */
-
-
-
-
-
-
 
 
 /* For screens that are 912px wide or less */
@@ -276,12 +250,10 @@ input[type="password"] {
         display: none;
     }
 
-
     .container {
         width: 90%;
         font-size: xx-small;
     }
-
 
     .calendar-booking {
         width: 100%;
@@ -292,26 +264,17 @@ input[type="password"] {
         text-align: center;
     }
 
-
-
-
     .calendar-booking th.day {
         font-size: 9px;
         padding: 3px;
         text-align: center;
     }
 
-
-
-
     .calendar-booking td {
         font-size: 9px;
         padding: 3px;
         text-align: center;
     }
-
-
-
 
     .session-box {
         display: grid;
@@ -321,35 +284,20 @@ input[type="password"] {
         padding: 0;
         margin: 0;
         position: relative;
-        text-align: center;
     }
-
-
-
 
     .session-box>div {
-        text-align: center;
         display: flex;
         align-items: center;
-        /* Align content vertically */
         justify-content: center;
-        flex-direction: column;
-        padding: 0px;
-        /* Adjust the padding as needed */
-        margin: 0;
-        /* Ensure no additional margin */
+        text-align: center;
         height: 100%;
-        /* Ensure the div takes up full height */
     }
-
 
     .session-box button {
         font-size: 8px;
-        /* Adjust button font size */
         padding: 2px 4px;
-        /* Adjust button padding */
         bottom: -8px;
-        /* Adjust the button position */
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -368,21 +316,13 @@ input[type="password"] {
     margin: 0 auto;
     }
     
-    
-    
-    
-    
-    
-    
-    
+
     .btn {
     font-size: 8px;
     padding: 5px 5px;
     }
     }
     */
-
-
 
 
 /* For screens that are 480px wide or less */
