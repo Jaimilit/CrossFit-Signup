@@ -273,20 +273,15 @@ input[type="password"] {
         margin: 0;
         position: relative;
         text-align: center;
-        vertical-align: middle;
-        }
-        
+    }
     
     .session-box > div {
-        text-align: center;
         display: flex;
-        align-items: center; /* Align content vertically */
+        align-items: center;
         justify-content: center;
-        flex-direction: column;
-        padding: 0px; /* Adjust the padding as needed */
-        margin: 0; /* Ensure no additional margin */
-        height: 100%; /* Ensure the div takes up full height */
-        }
+        height: 100%;
+        padding: 5px; /* Adjust the padding as needed */
+    }
         
     .session-box button {
         font-size: 8px;
