@@ -298,15 +298,6 @@ input[type="password"] {
         flex-direction: column;
     }
 
-    .session-box button {
-        font-size: 6px;
-        padding: 0;
-        bottom: 0;
-        position: absolute;
-        left: 50%; 
-        transform: translateX(-50%); 
-    }
-
     .session-box strong {
         display: none;
     }
