@@ -281,6 +281,9 @@ input[type="password"] {
         justify-content: center;
         height: 100%;
         padding: 5px; /* Adjust the padding as needed */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
         
     .session-box button {
