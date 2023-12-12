@@ -270,7 +270,7 @@ input[type="password"] {
         padding: 5px;
     }
 
-    .session-box > div {
+    .session-box>div {
         text-align: center;
         display: flex;
         align-items: center;
@@ -284,23 +284,10 @@ input[type="password"] {
         font-size: 8px;
         padding: 4px;
         margin-bottom: -125px;
-        margin-left: auto; 
+        margin-left: auto;
         margin-right: auto;
     }
 
- /*
-    .session-box button {
-        font-size: 8px;
-        padding: 2px 4px;
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-  
-   */
-   
 
     .session-box strong {
         display: none;
@@ -333,17 +320,4 @@ input[type="password"] {
         text-align: center;
     }
 
-
-    .session-box button {
-        font-size: 6px;
-        padding: 1;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-
-    .session-box strong {
-        display: none;
-    }
 }
