@@ -307,15 +307,17 @@ input[type="password"] {
     .session-box>div {
         text-align: center;
         display: flex;
-        align-items: center;
+        align-items: flex-start; /* Align content to the top */
         justify-content: center;
         flex-direction: column;
+        padding: 5px; /* Adjust the padding as needed */
+        margin: 0; /* Ensure no additional margin */
     }
 
 
     .session-box button {
         font-size: 10px;
-        padding: 1;
+        padding: 0;
         bottom: 0;
         position: absolute;
         left: 50%;
