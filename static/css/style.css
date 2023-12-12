@@ -337,7 +337,7 @@ input[type="password"] {
     }
 
     .session-box>div>* {
-        margin-top: 5px; /* Adjust the value as needed */
+        margin-top: 2px; /* Adjust the value as needed */
     }
 
     .session-box button {
@@ -348,4 +348,14 @@ input[type="password"] {
         left: 50%;
         transform: translateX(-50%);
     }    
+
+    
+    .calendar-booking th.day:nth-child(1):before { content: "Mon"; }
+    .calendar-booking th.day:nth-child(2):before { content: "Tue"; }
+    .calendar-booking th.day:nth-child(3):before { content: "Wed"; }
+    .calendar-booking th.day:nth-child(4):before { content: "Thu"; }
+    .calendar-booking th.day:nth-child(5):before { content: "Fri"; }
+    .calendar-booking th.day:nth-child(6):before { content: "Sat"; }
+    .calendar-booking th.day:nth-child(7):before { content: "Sun"; }
+
 }
