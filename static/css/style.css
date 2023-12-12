@@ -211,14 +211,22 @@ input[type="password"] {
     table-layout: fixed; /* Set the table layout to fixed */
 }
 
-/* Set fixed dimensions for table cells */
-.session-box td,
 .session-box {
-    width: 14.28%; /* Each cell takes up 1/7th of the width */
-    height: 120px; /* Adjust the height as needed */
-    padding: 10px; /* Adjust padding as needed */
-    border: 1px solid #ccc;
+    height: 100%; /* Ensure all boxes are of equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
+    padding: 10px; /* Adjust padding as needed */
+}
+
+/* For the cells in the calendar-booking table */
+.calendar-booking td {
+    width: 14.28%; /* Each cell takes up 1/7th of the width */
+    height: 100px; /* Adjust the height as needed */
+    padding: 0; /* Reset padding to zero */
+    border: 1px solid #ccc;
 }
 
 
