@@ -1,4 +1,4 @@
-/* Main */
+/* Main Styles*/
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -298,23 +298,24 @@ input[type="password"] {
 /* For screens that are 480px wide or less */
 @media screen and (max-width: 480px) {
     .calendar-booking th.day {
-      position: relative;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 0; /* Hide original day text */
-      text-align: center; /* Center align content */
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0;
+        text-align: center;
     }
+
     .calendar-booking th.day::before {
-      content: attr(data-day); /* Display abbreviated day */
-      font-size: 12px; /* Set font size for abbreviated day */
-      position: absolute;
-      top: 50%; /* Position at 50% from top */
-      left: 50%; /* Position at 50% from left */
-      transform: translate(-50%, -50%); /* Center the content */
+        content: attr(data-day);
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .session-box {
         font-size: 7px;
     }
-  }
+}
