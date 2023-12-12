@@ -273,6 +273,7 @@ input[type="password"] {
         margin: 0;
         position: relative;
         text-align: center;
+        vertical-align: middle;
         }
         
     
@@ -285,7 +286,6 @@ input[type="password"] {
         padding: 0px; /* Adjust the padding as needed */
         margin: 0; /* Ensure no additional margin */
         height: 100%; /* Ensure the div takes up full height */
-        vertical-align: middle;
         }
         
     .session-box button {
