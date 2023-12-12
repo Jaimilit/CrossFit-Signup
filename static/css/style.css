@@ -340,8 +340,6 @@ input[type="password"] {
     .session-box>div>* {
         margin-top: 2px; /* Adjust the value as needed */
     }
-
-    }    
     
     .calendar-booking th.day::after {
         content: attr(data-abbr); /* Display abbreviated days */
