@@ -316,9 +316,9 @@ input[type="password"] {
     }
 
     .session-box button {
-        font-size: 10px;
-        padding: 4px;
-        bottom: -5px; /* Adjust the button position */
+        font-size: 8px; /* Adjust button font size */
+        padding: 2px 4px; /* Adjust button padding */
+        bottom: -8px; /* Adjust the button position */
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
