@@ -265,7 +265,7 @@ input[type="password"] {
 
     .calendar-booking th.day,
     .calendar-booking td {
-        font-size: 12px; /* Adjust font size as needed */
+        font-size: 10px; /* Adjust font size as needed */
         padding: 8px; /* Adjust cell padding */
         width: 14.28%; /* Set equal widths for each day column */
     }
@@ -294,7 +294,7 @@ input[type="password"] {
         
 }
 
-/* For screens that are 480px wide or less 
+/* For screens that are 480px wide or less */
 @media (max-width: 480px) {
     .calendar-booking {
         width: 100%;
@@ -348,4 +348,3 @@ input[type="password"] {
         transform: translateX(-50%);
     }
 }
-*/
