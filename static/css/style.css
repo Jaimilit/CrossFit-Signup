@@ -283,7 +283,7 @@ input[type="password"] {
     }
 
     .session-box button {
-        margin-top: 10px; /* Adjust the space between text and button */
+        margin-top: 5px; /* Adjust the space between text and button */
         padding: 4px 8px; 
         font-size: 10px;
     }
