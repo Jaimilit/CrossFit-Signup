@@ -274,7 +274,7 @@ input[type="password"] {
     .session-box > div {
         width: 100%;
         text-align: center; /* Center text horizontally */
-        margin-bottom: 10px; /* Add spacing between items */
+        margin-bottom: 2px; /* Add spacing between items */
     }
 
         
