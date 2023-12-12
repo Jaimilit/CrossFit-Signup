@@ -310,7 +310,7 @@ input[type="password"] {
         align-items: center; /* Align content vertically */
         justify-content: center;
         flex-direction: column;
-        padding: 5px; /* Adjust the padding as needed */
+        padding: 0px; /* Adjust the padding as needed */
         margin: 0; /* Ensure no additional margin */
         height: 100%; /* Ensure the div takes up full height */
     }
