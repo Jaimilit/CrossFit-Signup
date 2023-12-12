@@ -5,7 +5,7 @@ from .models import WorkoutSession, Booking
 @admin.register(WorkoutSession)
 # create workout sessions in admin panel
 class WorkoutSessionAdmin(admin.ModelAdmin):
-    list_display = ('title', 'time', 'instructor_name', 'day')  # Add 'day' to display
+    list_display = ('title', 'time', 'instructor_name', 'day', 'available_spots', 'booked_spots')  # Add 'day' to display
 
 
 @admin.register(Booking)

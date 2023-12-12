@@ -27,7 +27,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
@@ -48,8 +48,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
@@ -68,8 +67,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
@@ -88,8 +86,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
@@ -108,8 +105,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
@@ -128,8 +124,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
@@ -148,8 +143,7 @@
             <strong>Day:</strong> {{ session.day }}<br />
             <strong>Time:</strong> {{ session.time }}<br />
             <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <!-- <strong>Available Spots:</strong> {{ session.available_spots }} -->
-            <form method="POST" action="{% url 'book_session' session.id %}">
+            <strong>Available Spots:</strong> {{  session.booked_spots }} / {{ session.available_spots }}<br />            <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
                 Book 
