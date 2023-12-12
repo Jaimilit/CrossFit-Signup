@@ -276,7 +276,7 @@ input[type="password"] {
         }
         
     
-    .session-box>div {
+    .session-box > div {
         text-align: center;
         display: flex;
         align-items: center; /* Align content vertically */
@@ -285,6 +285,7 @@ input[type="password"] {
         padding: 0px; /* Adjust the padding as needed */
         margin: 0; /* Ensure no additional margin */
         height: 100%; /* Ensure the div takes up full height */
+        vertical-align: middle;
         }
         
     .session-box button {
