@@ -329,14 +329,16 @@ input[type="password"] {
     }
 
     .session-box>div {
-        border: 1px solid #ccc;
-        padding: 1px;
+        /* Remove border and padding */
+        border: none;
+        padding: 0;
         height: 100%;
-        text-align: center;
+        /* Center text content */
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        text-align: center;
     }
 
     .session-box button {
