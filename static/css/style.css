@@ -341,11 +341,6 @@ input[type="password"] {
         margin-top: 2px; /* Adjust the value as needed */
     }
 
-    /* Hide the full-day text, display the abbreviated days */
-    .calendar-booking th.day {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
     }    
     
     .calendar-booking th.day::after {
