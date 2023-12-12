@@ -1,121 +1,87 @@
+/* Main */
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: black;
-    }
-    
-    
-    
-    
-    /* Navigation */
-    
-    
-    
-    
-    .navbar {
+}
+
+/* Navigation */
+
+.navbar {
     letter-spacing: 0.25rem;
     margin-bottom: 0;
     border: 0;
     opacity: 0.9;
     font-weight: bold;
-    }
-    
-    
-    
-    
-    .navbar-nav {
+}
+
+.navbar-nav {
     margin-left: auto;
-    }
-    
-    
-    
-    
-    .navbar-brand {
+}
+
+.navbar-brand {
     float: left;
-    }
-    
-    
-    
-    
-    .nav-item {
+}
+
+.nav-item {
     margin: 0 20px;
-    }
-    
-    
-    
-    
-    .navbar-nav li a:hover {
+}
+
+.navbar-nav li a:hover {
     color: #c7f9cc !important;
-    }
-    
-    
-    
-    
-    .main-bg {
+}
+
+.main-bg {
     background-color: #4A4A4F;
-    }
-    
-    
-    
-    
-    /* For the home page */
-    
-    
-    
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+}
+
+
+/* For the home page */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: black;
     padding: 20px;
     font-weight: 900;
     text-align: center;
-    }
-    
-    
-    
-    
-    .light-bg {
+}
+
+
+.light-bg {
     background-color: #fff;
-    }
-    
-    
-    
-    
-    .calendar {
+}
+
+
+.calendar {
     margin: 10px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     color: whitesmoke;
-    }
-    
-    
-    
-    
-    .day {
+}
+
+
+.day {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    }
-    
-    
-    
-    
-    .row {
+}
+
+
+.row {
     background-image: url('https://image.boxrox.com/2020/11/dani-speegle-box-jump-over-scaled-e1637337556649.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1rem;
     position: relative;
-    }
-    
-    
-    
-    
-    .row::before {
+}
+
+
+.row::before {
     content: "";
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
@@ -124,167 +90,141 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
-    }
-    
-    
-    
-    
-    .services h3,
-    .services p,
-    .services i {
+}
+
+
+.services h3,
+.services p,
+.services i {
     color: white;
     font-weight: bold;
     position: relative;
     z-index: 1;
-    }
-    
-    
-    
-    
-    /* Login & Logout */
-    
-    
-    .btn-signup {
+}
+
+
+/* Login & Logout */
+
+
+.btn-signup {
     background-color: #23BBBB;
     color: #fff;
-    }
-    
-    
-    
-    
-    .btn-signup:hover,
-    .btn-signup:active {
+}
+
+
+.btn-signup:hover,
+.btn-signup:active {
     background-color: #fff;
     color: #23BBBB;
-    }
-    
-    
-    
-    
-    .link {
+}
+
+
+.link {
     color: #23BBBB;
     text-decoration: none;
-    }
-    
-    
-    
-    
-    .link:hover,
-    .link:active {
+}
+
+
+.link:hover,
+.link:active {
     color: #445261;
     text-decoration: underline;
-    }
-    
-    
-    
-    
-    .btn-secondary:hover {
+}
+
+
+.btn-secondary:hover {
     background-color: #38A3A5 !important;
     color: white;
     border-color: #22577a !important;
-    }
-    
-    
-    
-    
-    /* Style headers for forms */
-    .signup,
-    .login,
-    .logout {
+}
+
+
+/* Style headers for forms */
+.signup,
+.login,
+.logout {
     color: black;
     font-weight: 300;
     margin-bottom: 20px;
     text-align: center;
-    }
-    
-    
-    
-    
-    /* Style the introductory message for forms*/
-    .signup p,
-    .login p,
-    .logout p {
+}
+
+
+/* Style the introductory message for forms*/
+.signup p,
+.login p,
+.logout p {
     color: black;
     font-size: 16px;
     margin-bottom: 20px;
-    }
-    
-    
-    
-    
-    /* Style the form container */
-    .container {
+}
+
+
+/* Style the form container */
+.container {
     background-color: #f5f5f5;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 20px;
-    }
-    
-    
-    
-    
-    /* Style the form elements */
-    .form-group {
+}
+
+
+/* Style the form elements */
+.form-group {
     margin-bottom: 20px;
-    }
-    
-    
-    
-    
-    /* Style form labels */
-    label {
+}
+
+
+/* Style form labels */
+label {
     font-weight: bold;
     color: black;
-    }
-    
-    
-    
-    
-    /* Style form input fields */
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+}
+
+
+/* Style form input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    }
-    
-    
-    
-    
-    /* Style links within the introductory message */
-    .link {
+}
+
+
+/* Style links within the introductory message */
+.link {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
-    }
-    
-    
-    
-    
-    /* Booking page and associated pages */
-    
-    
-    .calendar-booking {
+}
+
+
+
+
+/* Booking page and associated pages */
+
+
+.calendar-booking {
     width: 100%;
     margin-bottom: 0.9375rem;
     border: 1px solid #c1c3c5;
     background: lightgrey;
-    }
-    
-    
-    
-    
-    .session-box {
+}
+
+
+
+
+.session-box {
     text-align: center;
-    }
-    
-    
-    
-    
-    .booking-item {
+}
+
+
+
+
+.booking-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -292,134 +232,136 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
-    
-    
-    
-    
-    .booking-details {
+}
+
+
+
+
+.booking-details {
     flex-grow: 1;
     margin-bottom: 0;
-    }
-    
-    
-    .booking-header,
-    .delete-booking,
-    .list-group-item,
-    .already-booked,
-    .booking-successful {
+}
+
+
+.booking-header,
+.delete-booking,
+.list-group-item,
+.already-booked,
+.booking-successful {
     text-align: center;
     margin-bottom: 20px;
     margin-bottom: 20px;
-    }
-    
-    
-    
-    
-    /* Media queries */
-    
-    
-    
-    
-    /* Media queries */
-    
-    
-    
-    
-    
-    
-    
-    
-    /* For screens that are 912px wide or less */
-    @media (max-width: 912px) {
+}
+
+
+
+
+/* Media queries */
+
+
+
+
+/* Media queries */
+
+
+
+
+
+
+
+
+/* For screens that are 912px wide or less */
+@media (max-width: 912px) {
     .calendar {
-    display: none;
+        display: none;
     }
-    
-    
+
+
     .container {
-    width: 90%;
-    font-size: xx-small;
+        width: 90%;
+        font-size: xx-small;
     }
-    
-    
+
+
     .calendar-booking {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-spacing: 0;
-    table-layout: fixed;
-    text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        table-layout: fixed;
+        text-align: center;
     }
-    
-    
-    
-    
+
+
+
+
     .calendar-booking th.day {
-    font-size: 9px;
-    padding: 3px;
-    text-align: center;
+        font-size: 9px;
+        padding: 3px;
+        text-align: center;
     }
-    
-    
-    
-    
+
+
+
+
     .calendar-booking td {
-    font-size: 9px;
-    padding: 3px;
-    text-align: center;
+        font-size: 9px;
+        padding: 3px;
+        text-align: center;
     }
-    
-    
-    
-    
+
+
+
+
     .session-box {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-auto-rows: minmax(80px, auto);
-    gap: 1px;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    text-align: center;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-auto-rows: minmax(80px, auto);
+        gap: 1px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-align: center;
     }
-    
-    
-    
-    
+
+
+
+
     .session-box>div {
-    text-align: center;
-    display: flex;
-    align-items: center; /* Align content vertically */
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px; /* Adjust the padding as needed */
-    margin: 0; /* Ensure no additional margin */
-    height: 100%; /* Ensure the div takes up full height */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        /* Align content vertically */
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+        /* Adjust the padding as needed */
+        margin: 0;
+        /* Ensure no additional margin */
+        height: 100%;
+        /* Ensure the div takes up full height */
     }
-    
-    
+
+
     .session-box button {
-    font-size: 8px; /* Adjust button font size */
-    padding: 2px 4px; /* Adjust button padding */
-    bottom: -8px; /* Adjust the button position */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+        font-size: 8px;
+        /* Adjust button font size */
+        padding: 2px 4px;
+        /* Adjust button padding */
+        bottom: -8px;
+        /* Adjust the button position */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    
-    
-    
-    
+
     .session-box strong {
-    display: none;
+        display: none;
     }
-    }
-    
-    
-    
-    
-    /*
+}
+
+
+/*
     .calendar-booking {
     width: 90%;
     font-size: xx-small;
@@ -439,48 +381,46 @@ body {
     }
     }
     */
-    
-    
-    
-    
-    /* For screens that are 480px wide or less */
-    @media (max-width: 480px) {
+
+
+
+
+/* For screens that are 480px wide or less */
+@media (max-width: 480px) {
     .calendar-booking {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-spacing: 0;
-    table-layout: fixed;
-    text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        table-layout: fixed;
+        text-align: center;
     }
-    
-    
+
+
     .calendar-booking th.day {
-    font-size: 7px;
-    padding: 3px;
-    text-align: center;
+        font-size: 7px;
+        padding: 3px;
+        text-align: center;
     }
-    
-    
+
+
     .calendar-booking td {
-    font-size: 7px;
-    padding: 3px;
-    text-align: center;
+        font-size: 7px;
+        padding: 3px;
+        text-align: center;
     }
-    
-    
+
+
     .session-box button {
-    font-size: 6px;
-    padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+        font-size: 6px;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    
-    
+
+
     .session-box strong {
-    display: none;
+        display: none;
     }
-    }
-    
-    
+}
