@@ -276,7 +276,6 @@ input[type="password"] {
     }
     
     .session-box > div {
-        display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
