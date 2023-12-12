@@ -252,47 +252,45 @@ input[type="password"] {
 /* Media queries */
 
 
+/* Media queries */
+
+
+
+
 /* For screens that are 912px wide or less */
 @media (max-width: 912px) {
-    .calendar-booking {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        border-spacing: 0;
-        table-layout: fixed;
-        text-align: center;
-    }
-
-    .calendar-booking th.day,
-    .calendar-booking td {
-        font-size: 10px; /* Adjust font size as needed */
-        padding: 8px; /* Adjust cell padding */
-        width: 14.28%; /* Set equal widths for each day column */
-    }
-
-    .session-box {
-        border: none;
-        height: 100px; /* Set a fixed height for session boxes */
-        padding: 0px; /* Adjust padding */
-        margin-bottom: 10px; /* Add space between rows */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .session-box button {
-        margin-top: 5px; /* Adjust the space between text and button */
-        padding: 4px 8px; 
-        font-size: 10px;
-    }
-
-    .session-box strong {
+    .calendar {
         display: none;
-        }
-        
+    }
+
+
+
+
+    .container {
+        width: 90%;
+        font-size: xx-small;
+    }
+
+
+
+
+    .calendar-booking {
+        width: 90%;
+        font-size: xx-small;
+        margin: 0 auto;
+    }
+
+
+
+
+    .btn {
+        font-size: 8px;
+        padding: 5px 5px;
+    }
 }
+
+
+
 
 /* For screens that are 480px wide or less */
 @media (max-width: 480px) {
@@ -305,15 +303,20 @@ input[type="password"] {
         text-align: center;
     }
 
+
     .calendar-booking th.day {
-        font-size: 10px;
+        font-size: 6px;
+        padding: 3px;
         text-align: center;
     }
 
+
     .calendar-booking td {
-        font-size: 10px;
+        font-size: 6px;
+        padding: 3px;
         text-align: center;
     }
+
 
     .session-box {
         display: grid;
@@ -326,19 +329,30 @@ input[type="password"] {
         text-align: center;
     }
 
+
     .session-box>div {
-        border: none;
-        padding: 0;
-        margin: 0;
+        border: 1px solid #ccc;
+        padding: 1px;
         height: 100%;
-        display: flex;
-        align-items: flex-start; /* Align content to the top */
-        justify-content: center;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 
-    .session-box>div>* {
-        margin-top: 2px; /* Adjust the value as needed */
+
+    .session-box button {
+        font-size: 6px;
+        padding: 0;
+        bottom: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .session-box strong {
+        display: none;
     }
 }
