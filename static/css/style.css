@@ -331,9 +331,13 @@ input[type="password"] {
         padding: 0;
         height: 100%;
         display: flex;
-        align-items: flex-start; /* Change this line */
+        align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .session-box>div>* {
+        margin-top: 5px; /* Adjust the value as needed */
     }
 
     .session-box button {
