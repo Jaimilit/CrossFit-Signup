@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="booking-successful">
+        <div class="col-md-8 mt-3 offset-md-2 center-text">
+            <h3>Something went wrong</h3>
+            <p>Error: {{ message }}</p>
+            <a href="{% url 'booking' %}" class="btn btn-primary">Go to Bookings</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

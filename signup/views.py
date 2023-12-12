@@ -5,6 +5,7 @@ from .forms import UserForm, BookingForm
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Concat
 from django.db.models import Case, When, Value, IntegerField
+from django.contrib import messages 
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -85,6 +86,12 @@ def book_session(request, session_id):
                 'booked_session': session_to_be_booked,
             }
             return render(request, 'booking_success.html', context)
+        else:
+            context = {
+                'message': 'Error',
+                'next_page': 'booking.html'
+            }
+            return render(request, 'error.html', context)
     else:
         return redirect('../accounts/signup')
 
