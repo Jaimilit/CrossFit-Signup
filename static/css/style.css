@@ -329,6 +329,7 @@ input[type="password"] {
     .session-box>div {
         border: none;
         padding: 0;
+        margin: 0;
         height: 100%;
         display: flex;
         align-items: flex-start; /* Align content to the top */
@@ -338,7 +339,7 @@ input[type="password"] {
     }
 
     .session-box>div>* {
-        margin-top: 2px; /* Adjust the value as needed */
+        margin-top: 0; /* Adjust the value as needed */
         padding: 0;
     }
 
@@ -351,7 +352,7 @@ input[type="password"] {
         transform: translateX(-50%);
     }    
     
-    .calendar-booking th.day:before {
+    .calendar-booking th.day {
         display: none;
     }
 
