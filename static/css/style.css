@@ -267,12 +267,11 @@ input[type="password"] {
     .session-box {
         width: 100px; /* Set a fixed width for the session box */
         height: 100px; /* Set a fixed height for the session box */
-        border: 1px solid #000; /* Add borders for clarity */
         text-align: center; /* Align content horizontally */
         vertical-align: middle; /* Align content vertically */
         margin: 5px; /* Add margin for spacing */
         padding: 5px; /* Add padding for content spacing */
-        /* Add any other desired styles */
+    
     }
 
     .session-box button {
