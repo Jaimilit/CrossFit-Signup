@@ -212,8 +212,7 @@ input[type="password"] {
 }
 
 /* Set fixed dimensions for table cells */
-.calendar-booking td,
-.calendar-booking th {
+.session-box {
     width: 14.28%; /* Each cell takes up 1/7th of the width */
     height: 120px; /* Adjust the height as needed */
     padding: 10px; /* Adjust padding as needed */
