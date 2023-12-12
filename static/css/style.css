@@ -296,28 +296,21 @@ input[type="password"] {
 
 
 /* For screens that are 480px wide or less */
-@media (max-width: 480px) {
-    .calendar-booking {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        border-spacing: 0;
-        table-layout: fixed;
-        text-align: center;
-    }
-
-
+@media screen and (max-width: 480px) {
     .calendar-booking th.day {
-        font-size: 7px;
-        padding: 3px;
-        text-align: center;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0; /* Hide original day text */
+      text-align: center; /* Center align content */
     }
-
-
-    .calendar-booking td {
-        font-size: 7px;
-        padding: 3px;
-        text-align: center;
+    .calendar-booking th.day::before {
+      content: attr(data-day); /* Display abbreviated day */
+      font-size: 12px; /* Set font size for abbreviated day */
+      position: absolute;
+      top: 50%; /* Position at 50% from top */
+      left: 50%; /* Position at 50% from left */
+      transform: translate(-50%, -50%); /* Center the content */
     }
-
-}
+  }
