@@ -108,7 +108,7 @@ Logout page: Logging out of the account is done through the menu, after which th
 
 Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day offers four workout sessions/classes to choose from. For each sessions a title of the workout is given, as well as the day, time, instructor, and spots available out of 20. A user cannot access this page unless they are registered and logged in.
 
-My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too.
+My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too. Users are also informed if the session is full.
 
 # Wireframes
 
@@ -152,7 +152,7 @@ Log Out Page - Where a user can log out. It asks for confirmation to log out:
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
 ![bookings](./static/assets/features/calendar-page.png)
 
-My Bookings Page - Where an authenticated user can view all their bookings. This is also filtered by day and then by time:
+My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time:
 ![my bookings](./static/assets/features/my-bookings-page.png)
 
 Booking Successful - Where a user is informed that their booking was successful:
