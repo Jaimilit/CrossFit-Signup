@@ -17,7 +17,8 @@ class WorkoutSessionListView(generic.ListView):
 
 @login_required
 def my_bookings(request):
-    """Ensure authenticated users can access this view of booking options"""
+    """Ensure authenticated users can access this view of booking options.
+        Also orders the list of bookings first by day and then by time"""
     day_mapping = {
         'Monday': 1,
         'Tuesday': 2,
@@ -49,7 +50,7 @@ def my_bookings(request):
 
 @login_required
 def booking(request):
-    """retreives workout sessions from the database, it associates
+    """Retreives workout sessions from the database, it associates
     the booking with the current authenticated user"""
     sessions = WorkoutSession.objects.order_by('time')
 
@@ -75,7 +76,7 @@ def booking(request):
 def book_session(request, session_id):
     """this allows the user to book a session and tells the user
     if they have already booked that session or if they have booked
-    successfully"""
+    successfully. Also calculates spaces available for booking"""
     if request.user.is_authenticated:
         session_to_be_booked = get_object_or_404(WorkoutSession, pk=session_id)
         user = request.user
@@ -114,7 +115,8 @@ def book_session(request, session_id):
 def delete_booking(request, session_id):
     """ this allows the user to delete a booking, send them to the
     delete booking page to check if they want to delete
-    a session or go back to the my bookings page"""
+    a session or go back to the my bookings page.
+    Also recalculates spots available"""
     if request.user.is_authenticated:
         booking = get_object_or_404(Booking, id=session_id)
 
