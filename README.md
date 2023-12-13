@@ -72,6 +72,7 @@ Site Administrator goals
 
 * As a Site Administrator I would like to be able to create the workout sessions which users can book
 * As a Site Administrator I also can view bookings and deletions
+* As a Site Administrator I cap classes at 20 people like a real gym 
 
 ## Agile Tools
 
@@ -151,7 +152,7 @@ Log Out Page - Where a user can log out. It asks for confirmation to log out:
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
 ![bookings](./static/assets/features/calendar-page.png)
 
-My Bookings Page - Where an authenticated user can view all their bookings:
+My Bookings Page - Where an authenticated user can view all their bookings. This is also filtered by day and then by time:
 ![my bookings](./static/assets/features/my-bookings-page.png)
 
 Booking Successful - Where a user is informed that their booking was successful:
@@ -166,7 +167,7 @@ Delete Booking Page - Where a user can delete a booking:
 No Bookings - Where a user is informed if they currently have no bookings:
 ![no bookings](./static/assets/features/no-bookings-page.png)
 
-Booking Full - No more available spots for booking a specific workout session
+Booking Full - No more available spots for booking a specific workout session as the max is 20:
 ![booking full](./static/assets/features/booking-full.png)
 
 Footer - Information that it was created by me plus appropriate links:
@@ -190,6 +191,7 @@ The site has been designed to be responsive and adapted for use on both desktop 
 
 * Page with information about the instructors
 * Create a user profile which the user can view 
+* A list where users can view all their previous bookings/attendance for classes
 
 # Technology Used:
 
@@ -267,6 +269,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can delete a particular session/class |   | X | Need to be authorized to do
 | I can see if I have made a booking successfully  |   | X | Need to be authorized to do
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
+| I can see if a session has availability (max 20)  |  | X | Need to be authorized to do
 
 * Example of format error was not putting the different days in the right place. It was putting all the workouts under Monday which was the default. This was later recified.
 ![Layout Format](./static/assets/bugs/bug-layout-gym-session.png)
@@ -277,7 +280,7 @@ The site was constantly tested during the process of creating the site in the Gi
 * Example of issues with functions between booking and booking_session not working correctly. Automated testing to fix issue.
 ![Booking Issues](./static/assets/bugs/bug-testing.png)
 
-| Bug| Solution | Fixed 
+| Bug| Solution | Fixed |
 | -------- | -------- |  
 |  Issue with bookings showing all on Mondays | Need to adjust the book_session and booking functions |
 | Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
