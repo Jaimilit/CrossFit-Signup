@@ -142,6 +142,18 @@ h6 {
     border-color: #22577a !important;
 }
 
+.btn-primary:hover {
+    background-color: blue !important;
+    color: white;
+    border-color: #22577a !important;
+}
+
+.btn-success:hover {
+    background-color: blue !important;
+    color: white;
+    border-color: #22577a !important;
+}
+
 
 /* Style headers for forms */
 .signup,
@@ -346,6 +358,5 @@ input[type="password"] {
 
     .btn-success {
         margin-bottom: 10px;
-        background-color: #007bff;
     }
 }
