@@ -31,7 +31,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -40,6 +40,7 @@ ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com',
                 '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-eu106.gitpod.io',
                 '8000-jaimilit-crossfit-for-cr-vzklb5takw.us2.codeanyapp.com/',
                  'crossfit-signup.herokuapp.com', 
+                 'https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/',
                  '8000-jaimilit-crossfit-for-cr-vzklb5takw.us2.codeanyapp.com', 
                  'crossfit-signup-4bbbc5fa58ea.herokuapp.com', 
                  'localhost'
