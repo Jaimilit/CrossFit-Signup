@@ -64,7 +64,6 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'signup',
-    # # 'crossfit',
 ]
 
 SITE_ID = 1

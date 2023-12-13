@@ -310,6 +310,8 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 ![forms.py](./static/assets/validations/linter-forms.png)
 * views.py
 ![views.py](./static/assets/validations/linter-views.png)
+* admin.py
+![admin.py](./static/assets/validations/linter-admin.png)
 
 During testing a few issues were identified and corrected:
 
