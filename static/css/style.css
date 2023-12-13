@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-      
+
 }
 
 /* Navigation */
@@ -212,70 +212,34 @@ input[type="password"] {
 }
 
 /* Booking page and associated pages */
-/* .calendar-booking {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        border-spacing: 0;
-        table-layout: fixed;
-        text-align: center;
-    }
-
-    .session-box {
-        display: grid;
-        grid-template-rows: repeat(7, 15px);
-        padding: 5px;
-    }
-
-    .session-box>div {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 5px;
-        height: 100%;
-    }
-
-    .session-box button {
-        font-size: 8px;
-        padding: 4px;
-        margin-bottom: -150px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    */
 
 .calendar-booking {
     width: 100%;
     margin-bottom: 0.9375rem;
     border: 1px solid #c1c3c5;
     background: lightgrey;
-    border-spacing: 0;
     text-align: center;
-    table-layout: fixed;
-}
-
+    }
+    
 .session-box {
     display: grid;
-    grid-template-rows: repeat(7, 100px);
-    display: inline;
+    grid-template-rows: repeat(7, 30px);
 }
 
-.session-box > div {
+.session-box>div {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 5px;
-    height: 100%;
-    min-height: 150px;
 }
 
-  
 .session-box button {
-    margin-top: 5px; 
+    font-size: 15px;
+    padding: 4px;
+    margin: 5px;
 }
+
 
 .booking-item {
     border: 1px solid #ccc;
@@ -307,21 +271,20 @@ input[type="password"] {
     width: 100%;
     text-align: center;
     bottom: 0;
-  }
+}
 
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; 
-  }
-  
-  /* Style each social media icon */
-  .social-icons i {
-    font-size: 24px; 
-    color: darkgray;
-  }
+    margin-top: 10px;
+}
 
+/* Style each social media icon */
+.social-icons i {
+    font-size: 24px;
+    color: darkgray;
+}
 
 
 /* Media queries */
@@ -349,7 +312,7 @@ input[type="password"] {
 
     .session-box {
         display: grid;
-        grid-template-rows: repeat(7, 15px);
+        grid-template-rows: repeat(7, 20px);
         padding: 5px;
     }
 
@@ -360,17 +323,17 @@ input[type="password"] {
         justify-content: center;
         flex-direction: column;
         padding: 5px;
+        padding-bottom: 5px;
         height: 100%;
     }
 
     .session-box button {
         font-size: 8px;
         padding: 4px;
-        margin-bottom: -150px;
+        margin-bottom: -200px;
         margin-left: auto;
         margin-right: auto;
     }
-
 
     .session-box strong {
         display: none;
