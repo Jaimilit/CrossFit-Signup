@@ -105,7 +105,7 @@ Login page: A username and password are required to log in for existing users. O
 
 Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where they must confirm their desire to log out of the account. After a successful logout, the user is returned to the home page.
 
-Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day offers four workout sessions/classes to choose from. For each sessions a title of the workout is given, as well as the day, time, and instructor. A user cannot access this page unless they are registered and logged in.
+Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day offers four workout sessions/classes to choose from. For each sessions a title of the workout is given, as well as the day, time, instructor, and spots available out of 20. A user cannot access this page unless they are registered and logged in.
 
 My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too.
 
@@ -166,6 +166,9 @@ Delete Booking Page - Where a user can delete a booking:
 No Bookings - Where a user is informed if they currently have no bookings:
 ![no bookings](./static/assets/features/no-bookings-page.png)
 
+Booking Full - No more available spots for booking a specific workout session
+![booking full](./static/assets/features/booking-full.png)
+
 Footer - Information that it was created by me plus appropriate links:
 ![footer](./static/assets/features/footer.png)
 
@@ -186,7 +189,6 @@ The site has been designed to be responsive and adapted for use on both desktop 
 # Future Features
 
 * Page with information about the instructors
-* Ability to have 10 attendee max for each session and inform the user that the session is full
 * Create a user profile which the user can view 
 
 # Technology Used:
@@ -223,6 +225,7 @@ The site has been designed to be responsive and adapted for use on both desktop 
 * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): Was used to debug the website
 * [W3C Validator](https://validator.w3.org/): Was used to validate HTML5 code for the website
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/): Was used to validate CSS code for the website
+* [Pep8 Validator](https://pep8ci.herokuapp.com/): Was used to validate python code for the website
 * [Github Projects](https://github.com/): Kanban board was used to track the progress of the project in general and of every application in the project
 * [Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/): Was used to created the outline for my project
 
