@@ -343,4 +343,9 @@ input[type="password"] {
     .session-box {
         font-size: 7px;
     }
+
+    .btn-success {
+        margin-bottom: 10px;
+        background-color: #007bff;
+    }
 }
