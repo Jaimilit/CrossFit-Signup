@@ -237,8 +237,12 @@ input[type="password"] {
     padding: 5px;
 }
 
+.session-details strong {
+    font-weight: bold !important;
+}
+
 .session-box button {
-    font-size: 15px;
+    font-size: 20px;
     padding: 4px;
     margin-bottom: -350px;
 }

@@ -24,12 +24,12 @@
           {% if session.day == 'Monday' %}
           <div class="session-box">
             <div class="session-details">
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
-          </div>
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
@@ -45,7 +45,7 @@
           {% for session in sessions %}
           {% if session.day == 'Tuesday' %}
           <div class="session-box">
-            <div class="session-details"> 
+            <div class="session-details">
               <strong>Title:</strong> {{ session.title }}<br />
               <strong>Day:</strong> {{ session.day }}<br />
               <strong>Time:</strong> {{ session.time }}<br />
@@ -67,13 +67,13 @@
           {% for session in sessions %}
           {% if session.day == 'Wednesday' %}
           <div class="session-box">
-            <div class="session-details"> 
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
-          </div>
+            <div class="session-details">
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary">
@@ -89,12 +89,12 @@
           {% for session in sessions %}
           {% if session.day == 'Thursday' %}
           <div class="session-box">
-            <div class="session-details"> 
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            <div class="session-details">
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
             </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
@@ -111,12 +111,12 @@
           {% for session in sessions %}
           {% if session.day == 'Friday' %}
           <div class="session-box">
-            <div class="session-details"> 
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            <div class="session-details">
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
             </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
@@ -133,12 +133,12 @@
           {% for session in sessions %}
           {% if session.day == 'Saturday' %}
           <div class="session-box">
-            <div class="session-details"> 
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            <div class="session-details">
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
             </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
@@ -155,12 +155,12 @@
           {% for session in sessions %}
           {% if session.day == 'Sunday' %}
           <div class="session-box">
-            <div class="session-details"> 
-            <strong>Title:</strong> {{ session.title }}<br />
-            <strong>Day:</strong> {{ session.day }}<br />
-            <strong>Time:</strong> {{ session.time }}<br />
-            <strong>Instructor:</strong> {{ session.instructor_name }}<br />
-            <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
+            <div class="session-details">
+              <strong>Title:</strong> {{ session.title }}<br />
+              <strong>Day:</strong> {{ session.day }}<br />
+              <strong>Time:</strong> {{ session.time }}<br />
+              <strong>Instructor:</strong> {{ session.instructor_name }}<br />
+              <strong>Spots:</strong> {{ session.booked_spots }} / {{ session.available_spots }}<br />
             </div>
             <form method="POST" action="{% url 'book_session' session.id %}">
               {% csrf_token %}
