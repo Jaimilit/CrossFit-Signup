@@ -255,13 +255,12 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Adjust margin as needed */
+    margin-top: 10px; 
   }
   
   /* Style each social media icon */
   .social-icons i {
-    /* Other styles for the icons */
-    font-size: 24px; /* Adjust icon size */
+    font-size: 24px; 
     color: darkgray;
   }
 
