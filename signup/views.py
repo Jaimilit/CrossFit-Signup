@@ -5,7 +5,7 @@ from .forms import UserForm, BookingForm
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Concat
 from django.db.models import Case, When, Value, IntegerField
-from django.contrib import messages 
+from django.contrib import messages
 
 
 class WorkoutSessionListView(generic.ListView):
@@ -17,20 +17,33 @@ class WorkoutSessionListView(generic.ListView):
 
 @login_required
 def my_bookings(request):
-    """ensure authenticated users can access this view of booking options"""
-    day_mapping = {'Monday': 1, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'Friday': 5, 'Saturday': 6, 'Sunday': 7}
-    
+    """Ensure authenticated users can access this view of booking options"""
+    day_mapping = {
+        'Monday': 1,
+        'Tuesday': 2,
+        'Wednesday': 3,
+        'Thursday': 4,
+        'Friday': 5,
+        'Saturday': 6,
+        'Sunday': 7
+    }
+
+    day_conditions = [
+        When(workout_session__day=day, then=Value(num))
+        for day, num in day_mapping.items()
+    ]
+
     user_bookings = Booking.objects.filter(user=request.user).annotate(
         day_numeric=Case(
-            *[When(workout_session__day=day, then=Value(num)) for day, num in day_mapping.items()],
+            *day_conditions,
             output_field=IntegerField()
         )
     ).order_by('day_numeric', 'workout_session__time')
-    
+
     context = {
         'user_bookings': user_bookings,
     }
-    
+
     return render(request, 'my_bookings.html', context)
 
 
@@ -39,7 +52,7 @@ def booking(request):
     """retreives workout sessions from the database, it associates
     the booking with the current authenticated user"""
     sessions = WorkoutSession.objects.order_by('time')
-    
+
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -76,7 +89,10 @@ def book_session(request, session_id):
             return render(request, 'already_booked.html', context)
 
         # Check if are available spots before booking
-        if session_to_be_booked.available_spots > session_to_be_booked.booked_spots:
+        if (
+            session_to_be_booked.available_spots >
+            session_to_be_booked.booked_spots
+        ):
             session_to_be_booked.booked_spots += 1
             session_to_be_booked.save()
             booking = Booking(user=user, workout_session=session_to_be_booked)
@@ -101,7 +117,7 @@ def delete_booking(request, session_id):
     a session or go back to the my bookings page"""
     if request.user.is_authenticated:
         booking = get_object_or_404(Booking, id=session_id)
-        
+
         if booking.user == request.user:
             if request.method == "POST":
                 booking.workout_session.booked_spots -= 1

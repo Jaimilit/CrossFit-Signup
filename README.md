@@ -304,6 +304,8 @@ All Python code was manually checked using CI Python Linter. The Linter reports 
 
 * urls.py
 ![urs.py](./static/assets/validations/urls-linter.png)
+* urls.py for signup
+![urs.py](./static/assets/validations/linter-urls-signup.png)
 * models.py
 ![models.py](./static/assets/validations/linter-models.png)
 * forms.py
