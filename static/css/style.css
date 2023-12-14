@@ -219,8 +219,8 @@ input[type="password"] {
     border: 1px solid #c1c3c5;
     background: lightgrey;
     text-align: center;
-    }
-  
+}
+
 .session-box {
     display: grid;
     grid-template-rows: repeat(7, 40px);
@@ -232,23 +232,10 @@ input[type="password"] {
     justify-content: center;
 }
 
-.session-details {
-    display: inline-block;
-    padding: 5px;
-}
-
-.session-details strong {
-    font-weight: bold !important;
-}
-
 .session-box button {
     font-size: 20px;
     padding: 4px;
-    margin-bottom: -350px;
-}
-
-.session-box strong {
-    font-weight: bold;
+    margin-bottom: -400px;
 }
 
 .booking-item {
@@ -275,6 +262,8 @@ input[type="password"] {
     margin-bottom: 20px;
     margin-bottom: 20px;
 }
+
+/* Footer elements */
 
 .footer {
     margin-top: auto;
@@ -377,7 +366,7 @@ input[type="password"] {
         grid-template-rows: repeat(7, 10px);
         padding: 5px;
     }
-    
+
 
     .btn-primary {
         margin: 5px;

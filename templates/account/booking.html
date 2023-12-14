@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+
+<style>
+  .bold-text {
+    font-weight: bold;
+  }
+</style>
+
 <div class="container">
   <h2 class="mb-3 text-center">Choose a Gym Session</h2>
 
@@ -20,129 +27,128 @@
       <tr>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Monday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </td>
-        <!-- Repeat the structure for other days -->
-        <td>
-          {% for session in sessions %}
-            {% if session.day == 'Tuesday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Monday' %}
+          <div class="session-box">
+            <span>Title:{{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time: {{ session.time }}</span> <br />
+            <span>Instructor:{{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Wednesday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Tuesday' %}
+          <div class="session-box">
+            <span>Title:{{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time: {{ session.time }}</span> <br />
+            <span>Instructor:{{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Thursday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Wednesday' %}
+          <div class="session-box">
+            <span>Title:{{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time:{{ session.time }}</span> <br />
+            <span>Instructor:{{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Friday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Thursday' %}
+          <div class="session-box">
+            <span>Title:{{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time:{{ session.time }}</span> <br />
+            <span>Instructor: {{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Saturday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Friday' %}
+          <div class="session-box">
+            <span>Title:{{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time:{{ session.time }</span> }<br />
+            <span>Instructor:{{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
         <td>
           {% for session in sessions %}
-            {% if session.day == 'Sunday' %}
-              <div class="session-box">
-                <strong>Title:</strong> {{ session.title }}<br />
-                <strong>Day:</strong> {{ session.day }}<br />
-                <strong>Time:</strong> {{ session.time }}<br />
-                <strong>Instructor:</strong> {{ session.instructor_name }}<br/>
-                <form method="POST" action="{% url 'book_session' session.id %}">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-primary">
-                    Book Session
-                  </button>
-                </form>
-              </div>
-            {% endif %}
+          {% if session.day == 'Saturday' %}
+          <div class="session-box">
+            <span>itle: {{ session.title }}</span> <br />
+            <span>Day: {{ session.day }}</span> <br />
+            <span> Time: {{ session.time }}</span> <br />
+            <span>Instructor: {{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </td>
+        <td>
+          {% for session in sessions %}
+          {% if session.day == 'Sunday' %}
+          <div class="session-box">
+            <span>Title: {{ session.title }}</span> <br />
+            <span>Day:{{ session.day }}</span> <br />
+            <span>Time: {{ session.time }}</span> <br />
+            <span>Instructor: {{ session.instructor_name }}</span> <br />
+            <form method="POST" action="{% url 'book_session' session.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">
+                Book Session
+              </button>
+            </form>
+          </div>
+          {% endif %}
           {% endfor %}
         </td>
       </tr>
