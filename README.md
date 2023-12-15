@@ -1,6 +1,6 @@
 # PROJECT PORTFOLIO FOUR - CROSSFIT BOOKING SYSTEM
 
-![responsive](./static/assets/validations/iamresponsive.png)
+![responsive](./static/assets/images/validations/iamresponsive.png)
 
 The deployed app [Heroku](https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/) 
 
