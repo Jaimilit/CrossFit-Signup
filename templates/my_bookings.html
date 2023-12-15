@@ -15,13 +15,12 @@
                             <p><strong>Day:</strong> {{ booking.workout_session.day }}</p>
                             <p><strong>Time:</strong> {{ booking.workout_session.time }}</p>
                             <p><strong>Instructor:</strong> {{ booking.workout_session.instructor_name }}</p>
+                            <p><strong>Note:</strong> {{ booking.note }}</p> <!-- Show the note here -->
                         </div>
-                        <a href="{% url 'delete_booking' booking.id %}"
-                           class="card-link btn btn-danger mt-3 mb-3">
+                        <a href="{% url 'delete_booking' booking.id %}" class="card-link btn btn-danger mt-3 mb-3">
                             <i class="fa-solid fa-pen-to-square"></i> Delete
                         </a>
-                        <a href="{% url 'edit_booking' booking.id %}"
-                           class="card-link btn btn-primary mt-3 mb-3">
+                        <a href="{% url 'edit_booking' booking.id %}" class="card-link btn btn-primary mt-3 mb-3">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
                     </li>

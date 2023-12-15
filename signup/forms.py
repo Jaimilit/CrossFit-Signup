@@ -15,15 +15,15 @@ class UserForm(forms.ModelForm):
 
 class BookingForm(forms.ModelForm):
     """create form for booking for user"""
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['workout_session'].queryset = WorkoutSession.objects.all()
 
     class Meta:
         model = Booking
         fields = '__all__'
         labels = {
-            'user': 'Username',
             'workout_session': 'Workout Session',
             'note': 'Note',  
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['workout_session'].queryset = WorkoutSession.objects.all()
