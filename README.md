@@ -55,7 +55,8 @@ As a first time visitor, I want:
 * To easily understand the main purpose of the site
 * To be able to easily navigate through the site
 * To be able to register a user account to access all content without restrictions
-* To be able to reserve a day and time for a class, view my bookings, edit my booksings, and delete my bookings
+* To be able to reserve a day and time for a class
+* To view my bookings, edit my bookings (with a note), and delete my bookings
 * To be able to log out of my user account
 
 Returning and frequent user goals
@@ -149,6 +150,9 @@ Sign-In Page - Where a returning user can log-in:
 
 Log Out Page - Where a user can log out. It asks for confirmation to log out: 
 ![logout](./static/assets/images/features/sign-out-page.png)
+
+Home Page - Where a user can see the workout schedule and see some info about the type of classes offered: 
+![home page](./static/assets/images/features/home-page.png)
 
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
 ![bookings](./static/assets/images/features/calendar-page.png)

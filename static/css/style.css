@@ -96,6 +96,9 @@ h6 {
     z-index: 0;
 }
 
+.icons i {
+    font-size: 2em; 
+}
 
 .services h3,
 .services p,
