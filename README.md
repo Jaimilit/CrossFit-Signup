@@ -161,6 +161,9 @@ Booking Successful - Where a user is informed that their booking was successful:
 Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
 ![booked already](./static/assets/features/already-booked-page.png)
 
+Edit Booking Page - Where a user can edit a booking by adding a note:
+![edit booking](./static/assets/features/edit-booking.png)
+
 Delete Booking Page - Where a user can delete a booking:
 ![delete booking](./static/assets/features/delete-booking-page.png)
 
