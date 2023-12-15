@@ -11,8 +11,9 @@ class WorkoutSessionAdmin(admin.ModelAdmin):
         'instructor_name',
         'day',
         'available_spots',
-        'booked_spots',
-)
+        'booked_spots'
+    )
+
 
 @admin.register(Booking)
 # create booking opporunities based on the workout sessions in admin panel

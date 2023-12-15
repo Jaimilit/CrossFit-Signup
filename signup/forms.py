@@ -26,7 +26,7 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['workout_session'].queryset = WorkoutSession.objects.all()
-        
+
 
 class BookingNoteForm(forms.ModelForm):
     """Create form for editing the note in a booking"""
