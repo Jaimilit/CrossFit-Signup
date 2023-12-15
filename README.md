@@ -55,7 +55,7 @@ As a first time visitor, I want:
 * To easily understand the main purpose of the site
 * To be able to easily navigate through the site
 * To be able to register a user account to access all content without restrictions
-* To be able to reserve a day and time for a class, view my bookings, and delete my bookings
+* To be able to reserve a day and time for a class, view my bookings, edit my booksings, and delete my bookings
 * To be able to log out of my user account
 
 Returning and frequent user goals
@@ -65,6 +65,7 @@ As a returning user, I want:
 * To sign into my user account
 * To make a booking for a class on a certain day and time
 * To view my bookings
+* To edit my bookings with a note
 * To delete my bookings
 * To sign out of my account
 
@@ -88,7 +89,7 @@ Buttons were styled to standout with hover actions to provide user feedback. All
 
 [Kanban Board](https://github.com/users/Jaimilit/projects/4) was used to create this project.
 User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board.
-All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. 
+All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. I also used the Milestone feature as well.
 
 Here you can see my overview of my kanban board and moving items around as I was working on them.
 ![Kanban Boards](./static/assets/images/features/kanban-board.png)
@@ -108,7 +109,7 @@ Logout page: Logging out of the account is done through the menu, after which th
 
 Bookings page: The page is only available to authenticated users and displays the classes/sessions offered. It is displayed in a calendar format and each day offers four workout sessions/classes to choose from. For each sessions a title of the workout is given, as well as the day, time, instructor, and spots available out of 20. A user cannot access this page unless they are registered and logged in.
 
-My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking. When clicked, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too. Users are also informed if the session is full.
+My Bookings page: Only authenticated users have access to this page. On this page displays all the user's bookings. It provides the user with information for each session booked: title, day, time, & instructor. There's an option to delete each booking or edit the booking. When editing, the user can write a note. When wanting to delete the booking, the user is brought to a new page in which the user needs to confirm if they want to delete the booking or can choose to return to My Bookings page. After deleting, the user is returned to the My Bookings page. The user is informed if they have no bookings too. Users are also informed if the session is full which means it has 20 people registered for that particular session.
 
 # Wireframes
 
@@ -120,7 +121,7 @@ Homepage:
 Booking Page:
 ![wireframes-bookingpage](./static/assets/images/wireframes/wireframes-bookingpage.png)
 
-Booking Successful/Delete Booking/Booking Already Made:
+Booking Successful/Delete Booking/Booking Already Made/Edit Booking:
 ![wireframes-homepage](./static/assets/images/wireframes/wireframes-bookings.png)
 
 Models for creating bookings:
@@ -152,7 +153,7 @@ Log Out Page - Where a user can log out. It asks for confirmation to log out:
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
 ![bookings](./static/assets/images/features/calendar-page.png)
 
-My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time:
+My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time. They can choose to edit or delete each individual booking:
 ![my bookings](./static/assets/images/features/my-bookings-page.png)
 
 Booking Successful - Where a user is informed that their booking was successful:
@@ -164,7 +165,7 @@ Booking Aleady Made Page - Where a user is informed if they previously made thei
 Edit Booking Page - Where a user can edit a booking by adding a note:
 ![edit booking](./static/assets/images/features/edit-booking.png)
 
-Delete Booking Page - Where a user can delete a booking:
+Delete Booking Page - Where a user can delete a booking after asking for confirmation if they want to delete the booking:
 ![delete booking](./static/assets/images/features/delete-booking-page.png)
 
 No Bookings - Where a user is informed if they currently have no bookings:
@@ -270,6 +271,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can complete the Sign In form  | X | X | Click on items
 | I can make a booking for a particular session/class |  | X | Need to be authorized to do
 | I can delete a particular session/class |   | X | Need to be authorized to do
+| I can edit a particular session/class by adding a note |   | X | Need to be authorized to do
 | I can see if I have made a booking successfully  |   | X | Need to be authorized to do
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
 | I can see if a session has availability (max 20)  |  | X | Need to be authorized to do
