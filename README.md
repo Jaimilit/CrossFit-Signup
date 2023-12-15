@@ -91,10 +91,10 @@ User Stories were moved through the process from To do >> In Progress >> Done on
 All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. 
 
 Here you can see my overview of my kanban board and moving items around as I was working on them.
-![Kanban Boards](./static/assets/features/kanban-board.png)
+![Kanban Boards](./static/assets/images/features/kanban-board.png)
 
 Here is an example and this one has the "should have" option to it.
-![Kanban Boards Example](./static/assets/features/kanban-example.png)
+![Kanban Boards Example](./static/assets/images/features/kanban-example.png)
 
 
 ## Functional Structure
@@ -115,16 +115,16 @@ My Bookings page: Only authenticated users have access to this page. On this pag
 Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
 Homepage:
-![wireframes-homepage](./static/assets/wireframes/wireframes-homepage.png)
+![wireframes-homepage](./static/assets/images/wireframes/wireframes-homepage.png)
 
 Booking Page:
-![wireframes-bookingpage](./static/assets/wireframes/wireframes-bookingpage.png)
+![wireframes-bookingpage](./static/assets/images/wireframes/wireframes-bookingpage.png)
 
 Booking Successful/Delete Booking/Booking Already Made:
-![wireframes-homepage](./static/assets/wireframes/wireframes-bookings.png)
+![wireframes-homepage](./static/assets/images/wireframes/wireframes-bookings.png)
 
 Models for creating bookings:
-![wireframes-models](./static/assets/wireframes/models.png)
+![wireframes-models](./static/assets/images/wireframes/models.png)
 
 # FEATURES
 
@@ -133,62 +133,62 @@ Models for creating bookings:
 The navigation bar is present on all pages of the site. The nav bar as different sections: Home, Bookings, My Bookings, Registration and Login/Logout. Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
 Navigation for an unauthorized user:
-![nav bar](./static/assets/features/nav-bar.png)
+![nav bar](./static/assets/images/features/nav-bar.png)
 
 Navigation for an authorized user - registration disappears:
-![nav bar when registered](./static/assets/features/nav-bar-login.png)
+![nav bar when registered](./static/assets/images/features/nav-bar-login.png)
 
 ## Pages
 
 Registration Page - Where a user can sign up to use the platform:
-![registration](./static/assets/features/sign-up-page.png)
+![registration](./static/assets/images/features/sign-up-page.png)
 
 Sign-In Page - Where a returning user can log-in:
-![sign-in](./static/assets/features/signin-page.png)
+![sign-in](./static/assets/images/features/signin-page.png)
 
 Log Out Page - Where a user can log out. It asks for confirmation to log out: 
-![logout](./static/assets/features/sign-out-page.png)
+![logout](./static/assets/images/features/sign-out-page.png)
 
 Bookings Page - Where an authenicated user can view the bookings and choose a session to book: 
-![bookings](./static/assets/features/calendar-page.png)
+![bookings](./static/assets/images/features/calendar-page.png)
 
 My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time:
-![my bookings](./static/assets/features/my-bookings-page.png)
+![my bookings](./static/assets/images/features/my-bookings-page.png)
 
 Booking Successful - Where a user is informed that their booking was successful:
-![booking successful](./static/assets/features/booking-successful-page.png)
+![booking successful](./static/assets/images/features/booking-successful-page.png)
 
 Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
-![booked already](./static/assets/features/already-booked-page.png)
+![booked already](./static/assets/images/features/already-booked-page.png)
 
 Edit Booking Page - Where a user can edit a booking by adding a note:
-![edit booking](./static/assets/features/edit-booking.png)
+![edit booking](./static/assets/images/features/edit-booking.png)
 
 Delete Booking Page - Where a user can delete a booking:
-![delete booking](./static/assets/features/delete-booking-page.png)
+![delete booking](./static/assets/images/features/delete-booking-page.png)
 
 No Bookings - Where a user is informed if they currently have no bookings:
-![no bookings](./static/assets/features/no-bookings-page.png)
+![no bookings](./static/assets/images/features/no-bookings-page.png)
 
 Booking Full - No more available spots for booking a specific workout session as the max is 20:
-![booking full](./static/assets/features/booking-full.png)
+![booking full](./static/assets/images/features/booking-full.png)
 
 Footer - Information that it was created by me plus appropriate links:
-![footer](./static/assets/features/footer.png)
+![footer](./static/assets/images/features/footer.png)
 
 Main Admin Page - Main Admin page to create workouts and view bookings made:
-![admin-page](./static/assets/features/admin-page.png)
+![admin-page](./static/assets/images/features/admin-page.png)
 
 Admin Workout - Where Admin created the workout sessions to be booked by users:
-![admin-workouts](./static/assets/features/admin-workouts.png)
+![admin-workouts](./static/assets/images/features/admin-workouts.png)
 
 Admin Bookings - Where Admin can view the bookings made and deleted:
-![admin-bookings](./static/assets/features/admin-bookings.png)
+![admin-bookings](./static/assets/images/features/admin-bookings.png)
 
 # Responsive Design
 
 The site has been designed to be responsive and adapted for use on both desktop and mobile devices. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
-![responsive](./static/assets/validations/iamresponsive.png)
+![responsive](./static/assets/images/validations/iamresponsive.png)
 
 # Future Features
 
@@ -275,13 +275,13 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can see if a session has availability (max 20)  |  | X | Need to be authorized to do
 
 * Example of format error was not putting the different days in the right place. It was putting all the workouts under Monday which was the default. This was later recified.
-![Layout Format](./static/assets/bugs/bug-layout-gym-session.png)
+![Layout Format](./static/assets/images/bugs/bug-layout-gym-session.png)
 
 * Example of format issue for the layout of the success page.
-![Layout Format for Success Page](./static/assets/bugs/bug-layout-success.png)
+![Layout Format for Success Page](./static/assets/images/bugs/bug-layout-success.png)
 
 * Example of issues with functions between booking and booking_session not working correctly. Automated testing to fix issue.
-![Booking Issues](./static/assets/bugs/bug-testing.png)
+![Booking Issues](./static/assets/images/bugs/bug-testing.png)
 
 | Bug| Solution | 
 | ------- | ------- |  
@@ -299,28 +299,28 @@ The site was constantly tested during the process of creating the site in the Gi
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, and unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without significant errors.
 
 It shows one error here and I have fixed it, but it still shows.
-![HTMl Validation](./static/assets/validations/html.png)
+![HTMl Validation](./static/assets/images/validations/html.png)
 
 
 ### CSS Validation:
 The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
-![CSS](./static/assets/validations/css-validation.png)
+![CSS](./static/assets/images/validations/css-validation.png)
 
 ### Python Validation (PEP8)
 All Python code was manually checked using CI Python Linter. The Linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
 
 * urls.py
-![urs.py](./static/assets/validations/urls-linter.png)
+![urs.py](./static/assets/images/validations/urls-linter.png)
 * urls.py for signup
-![urs.py](./static/assets/validations/linter-urls-signup.png)
+![urs.py](./static/assets/images/validations/linter-urls-signup.png)
 * models.py
-![models.py](./static/assets/validations/linter-models.png)
+![models.py](./static/assets/images/validations/linter-models.png)
 * forms.py
-![forms.py](./static/assets/validations/linter-forms.png)
+![forms.py](./static/assets/images/validations/linter-forms.png)
 * views.py
-![views.py](./static/assets/validations/linter-views.png)
+![views.py](./static/assets/images/validations/linter-views.png)
 * admin.py
-![admin.py](./static/assets/validations/linter-admin.png)
+![admin.py](./static/assets/images/validations/linter-admin.png)
 
 During testing a few issues were identified and corrected:
 
@@ -332,7 +332,7 @@ During testing a few issues were identified and corrected:
 
 ### Lighthouse
 
-![Lighthouse](./static/assets/validations/lighthouse-example.png)
+![Lighthouse](./static/assets/images/validations/lighthouse-example.png)
 
 
 # Deployment
