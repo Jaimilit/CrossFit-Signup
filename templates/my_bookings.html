@@ -17,8 +17,12 @@
                             <p><strong>Instructor:</strong> {{ booking.workout_session.instructor_name }}</p>
                         </div>
                         <a href="{% url 'delete_booking' booking.id %}"
-                        class="card-link btn btn-danger mt-3 mb-3">
+                           class="card-link btn btn-danger mt-3 mb-3">
                             <i class="fa-solid fa-pen-to-square"></i> Delete
+                        </a>
+                        <a href="{% url 'edit_booking' booking.id %}"
+                           class="card-link btn btn-primary mt-3 mb-3">
+                            <i class="fa-solid fa-pen-to-square"></i> Edit
                         </a>
                     </li>
                 {% empty %}

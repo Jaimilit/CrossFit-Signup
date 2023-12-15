@@ -25,4 +25,5 @@ class BookingForm(forms.ModelForm):
         labels = {
             'user': 'Username',
             'workout_session': 'Workout Session',
+            'note': 'Note',  
         }

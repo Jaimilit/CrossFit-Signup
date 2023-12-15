@@ -111,6 +111,31 @@ def book_session(request, session_id):
     else:
         return redirect('../accounts/signup')
 
+def edit_booking(request, booking_id):
+    """The view that renders the edit_booking page where the user can
+    update a current booking with a note.
+    """
+    if request.user.is_authenticated:
+        booking_to_edit = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+        if request.method == 'POST':
+            form = BookingForm(request.POST, instance=booking_to_edit)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Booking has been updated')
+                return redirect('my_bookings')
+        else:
+            form = BookingForm(instance=booking_to_edit)
+
+        context = {
+            'form': form,
+            'booking_to_edit': booking_to_edit,
+        }
+        return render(request, 'edit_booking.html', context)
+    else:
+        return redirect('../accounts/signup')
+
+
 
 def delete_booking(request, session_id):
     """ this allows the user to delete a booking, send them to the

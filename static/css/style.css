@@ -257,10 +257,24 @@ input[type="password"] {
 .delete-booking,
 .list-group-item,
 .already-booked,
-.booking-successful {
+.booking-successful,
+.edit-booking {
     text-align: center;
     margin-bottom: 20px;
     margin-bottom: 20px;
+}
+
+#id_note {
+    width: 50%;
+    resize: vertical; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* Footer elements */

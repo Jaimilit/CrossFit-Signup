@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="edit-booking">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>Edit Booking</h3>
+            <p>Do You Want to Add a Note to Your Booking?</p>
+            <p>Title: {{ booking_to_edit.workout_session.title }}</p>
+            <p>Day: {{ booking_to_edit.workout_session.day }}</p>
+            <p>Time: {{ booking_to_edit.workout_session.time }}</p>
+            <p>Instructor: {{ booking_to_edit.workout_session.instructor_name }}</p>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <label for="id_note">Note:</label><br>
+                {{ form.note }}
+                <br><br> <!-- Add some space between the form elements -->
+                <button class="save-btn btn btn-primary" type="submit"> Save Changes </button>
+                <a class="btn btn-secondary" href="{% url 'my_bookings' %}" role="button">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

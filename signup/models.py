@@ -48,6 +48,8 @@ class Booking(models.Model):
         'WorkoutSession',
         on_delete=models.CASCADE
     )
+    note = models.TextField(
+        'Any additional comments', blank=True, null=True)
 
     def __str__(self):
         return (
