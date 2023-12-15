@@ -41,7 +41,7 @@ class WorkoutSession(models.Model):
 
 
 class Booking(models.Model):
-    """this model provides the booking info for the user to
+    """This model provides the booking info for the user to
     book workout sessions"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     workout_session = models.ForeignKey(

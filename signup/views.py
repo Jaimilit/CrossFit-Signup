@@ -74,7 +74,7 @@ def booking(request):
 
 
 def book_session(request, session_id):
-    """this allows the user to book a session and tells the user
+    """This allows the user to book a session and tells the user
     if they have already booked that session or if they have booked
     successfully. Also calculates spaces available for booking"""
     if request.user.is_authenticated:
@@ -113,7 +113,7 @@ def book_session(request, session_id):
 
 
 def edit_booking(request, booking_id):
-    """ user can edit booking with a note"""
+    """ User can edit booking with a note"""
     if request.user.is_authenticated:
         booking_to_edit = get_object_or_404(
             Booking,
@@ -166,7 +166,7 @@ def delete_booking(request, session_id):
 
 
 def home(request):
-    """ creates index of workout sessions """
+    """ Creates index of workout sessions """
     workout_sessions = WorkoutSession.objects.all()
     return render(request, "index.html", {
         "workout_sessions": workout_sessions
