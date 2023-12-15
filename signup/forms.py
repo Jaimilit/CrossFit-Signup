@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class UserForm(forms.ModelForm):
-    """create form for user"""
+    """Create form for user"""
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email',)
@@ -14,16 +14,25 @@ class UserForm(forms.ModelForm):
 
 
 class BookingForm(forms.ModelForm):
-    """create form for booking for user"""
-
+    """Create form for booking for user"""
     class Meta:
         model = Booking
         fields = '__all__'
         labels = {
             'workout_session': 'Workout Session',
-            'note': 'Note',  
+            'note': 'Note',
         }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['workout_session'].queryset = WorkoutSession.objects.all()
+        
+
+class BookingNoteForm(forms.ModelForm):
+    """Create form for editing the note in a booking"""
+    class Meta:
+        model = Booking
+        fields = ['note']
+        labels = {
+            'note': 'Note',
+        }

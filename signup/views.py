@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import WorkoutSession, Booking
-from .forms import UserForm, BookingForm
+from .forms import UserForm, BookingForm, BookingNoteForm
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Concat
 from django.db.models import Case, When, Value, IntegerField
@@ -119,14 +119,13 @@ def edit_booking(request, booking_id):
 
         if booking_to_edit.user == request.user:
             if request.method == 'POST':
-                form = BookingForm(request.POST, instance=booking_to_edit)
+                form = BookingNoteForm(request.POST, instance=booking_to_edit)
                 if form.is_valid():
                     form.save()
-                    messages.success(request, 'Booking has been updated')
+                    messages.success(request, 'Note has been updated')
                     return redirect('my_bookings')
-
             else:
-                form = BookingForm(instance=booking_to_edit)
+                form = BookingNoteForm(instance=booking_to_edit)
 
             context = {
                 'form': form,
