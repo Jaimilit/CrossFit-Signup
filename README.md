@@ -297,6 +297,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Delete Booking wouldn't go to delete_booking page | Needed to rework delete function and return renders outcomes | 
 | When Debug was set to False, none of the CSS was displayed in Heroku app| Python command to collect static files | 
 | When trying to implement 20 max for session, it would write none instead of a message when at 20 spots| Change functions and create error page | 
+| When I was creating the editing function I first used the booking form to edit, but then the user could change the username and workout session | I created a new form which was just the note so that could be edited| 
 
 
 ## Validation
