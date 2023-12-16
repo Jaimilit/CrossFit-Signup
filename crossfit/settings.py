@@ -36,8 +36,10 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-jaimilit-crossfit-signup-siv2xmvjiw.us2.codeanyapp.com', 
+                '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-us107.gitpod.io',
                 '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-us106.gitpod.io',
                 '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-eu106.gitpod.io',
+                '8000-jaimilit-crossfitsignup-3oooz75sodn.ws-us107.gitpod.io/',
                 '8000-jaimilit-crossfit-for-cr-vzklb5takw.us2.codeanyapp.com/',
                  'crossfit-signup.herokuapp.com', 
                  'https://crossfit-signup-4bbbc5fa58ea.herokuapp.com/',
